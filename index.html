@@ -1,9 +1,22 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="GreenLedger 绿账：中小出口工厂的买家合规助手"><style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style></head><body>
-<title>GreenLedger 绿账</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>GreenLedger 绿账 · 中小出口工厂的买家合规助手</title>
+<meta name="description" content="GreenLedger 绿账：帮中小出口工厂看懂欧盟 CBAM、EUDR、电池法、包装法等绿色合规要求，免费自测订单风险、计算碳排放、解读客户 ESG 问卷。">
+<meta name="keywords" content="CBAM,碳边境调节机制,EUDR,欧盟电池法,PPWR,ESG问卷,碳排放计算,出口合规,范围二排放,GRI">
+<meta name="theme-color" content="#0E4A37">
+<link rel="canonical" href="https://zachclaude.github.io/greenledger/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 72'%3E%3Cpath d='M32 2 L60 10 V35 C60 52 47 64 32 70 C17 64 4 52 4 35 V10 Z' fill='%230E4A37'/%3E%3Cpath d='M32 17 C45 23 47.5 40 32 56 C16.5 40 19 23 32 17 Z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GreenLedger 绿账">
+<meta property="og:title" content="欧洲客户的新规则，会不会卡住你的订单？ · GreenLedger 绿账">
+<meta property="og:description" content="选你的行业，3 分钟看清 CBAM、EUDR、电池法等规则和你有没有关系、客户会找你要什么。免费，每条结论都标明官方出处。">
+<meta property="og:url" content="https://zachclaude.github.io/greenledger/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GreenLedger 绿账","url":"https://zachclaude.github.io/greenledger/","inLanguage":["zh-CN","en"],"description":"帮中小出口工厂看懂并应对欧盟等市场的绿色合规要求","publisher":{"@type":"Organization","name":"GreenLedger","email":"1767311880@qq.com"}}</script>
+<style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
 <style>
 /* Layout: a small institution site with separate pages — a calm home, a one-question-per-page check (GOV.UK pattern), a cited report, a rules library with detail pages, and a methods page. Single light theme by choice: white + forest green. */
 :root{
@@ -372,6 +385,20 @@ dl.gloss dd{margin:0;color:var(--ink)}
 }
 @media (max-width:520px){ .nav .btn.nav-cta{display:none} .brand .nm small{display:none} }
 @media (min-width:521px) and (max-width:1180px){ .nav .btn.nav-cta{display:inline-flex} }
+/* whole timeline card is the tap target */
+ol.tl li{position:relative;transition:border-color .15s}
+.tl-t::after{content:"";position:absolute;inset:0;border-radius:12px}
+ol.tl li:hover{border-color:var(--leaf)}
+.tl-t:focus-visible{outline:none}
+ol.tl li:focus-within{outline:2px solid var(--leaf);outline-offset:2px}
+/* touch screens: fingers need ~40px targets */
+@media (pointer:coarse){
+  .lang button{padding:9px 14px;font-size:13px}
+  .cite{padding:6px 10px;display:inline-block;line-height:1.4}
+  .trust li a{padding:8px 14px}
+  .backlink{display:inline-block;padding:8px 0}
+  footer a{display:inline-block;padding:8px 0}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -413,12 +440,30 @@ dl.gloss dd{margin:0;color:var(--ink)}
   </div>
 </nav>
 
-<main id="app"></main>
+<main id="app">
+  <!-- Static fallback for crawlers and no-JS visitors; replaced by render() on load. -->
+  <div class="container page">
+    <h1>欧洲客户的新规则，会不会卡住你的订单？</h1>
+    <p>GreenLedger 绿账帮中小出口工厂看懂欧盟、英国、美国的绿色合规要求：哪些规则真的和你有关、客户会找你要什么、先做哪一步。每条结论都标明出处：欧盟官方公报、GRI 标准、生态环境部数据。</p>
+    <h2>免费工具</h2>
+    <ul>
+      <li><a href="#check">订单风险自测</a>：10 道题，看你的产品受哪些规则影响。</li>
+      <li><a href="#calc">碳数据计算</a>：把 12 个月电费单和燃料用量换算成范围 1、范围 2 排放，按 GHG Protocol 口径输出中英数据表。</li>
+      <li><a href="#decoder">买家问卷解读</a>：逐题说明客户 ESG 问卷在问什么、要准备什么。</li>
+      <li><a href="#join">免费帮你做第一份客户报告</a>。</li>
+    </ul>
+    <h2>收录的法规</h2>
+    <p>欧盟碳边境调节机制 CBAM、英国 CBAM、欧盟零毁林法规 EUDR、欧盟电池法规（电池护照）、欧盟包装法规 PPWR、REACH、RoHS、加州 SB 253、企业可持续发展尽职调查指令 CSDDD，以及 SMETA、BSCI、EcoVadis、Higg 等买家审核标准。</p>
+    <h2>行业指南</h2>
+    <p><a href="#guide-steel">钢铁 / 铝制品</a> · <a href="#guide-machine">机电 / 家电</a> · <a href="#guide-electronics">电子产品</a> · <a href="#guide-battery">电池</a> · <a href="#guide-wood">木制品 / 家具 / 纸</a> · <a href="#guide-textile">纺织服装鞋</a> · <a href="#guide-food">食品农产品</a> · <a href="#guide-packaging">塑料包装</a> · <a href="#guide-rubber">橡胶皮革</a> · <a href="#guide-cement">水泥化肥</a></p>
+    <p>联系我们：<a href="mailto:1767311880@qq.com">1767311880@qq.com</a></p>
+  </div>
+</main>
 
 <footer>
   <div class="container">
     <div class="fb"><svg viewBox="0 0 64 72" aria-hidden="true"><use href="#crest"/></svg><span data-i="foot1"></span></div>
-    <div class="row" style="gap:16px"><a href="#method" data-i="footMethod"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#join" data-i="navJoin"></a></div>
+    <div class="row" style="gap:16px"><a href="#method" data-i="footMethod"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#join" data-i="navJoin"></a><a href="mailto:1767311880@qq.com">1767311880@qq.com</a></div>
   </div>
 </footer>
 
@@ -429,7 +474,20 @@ dl.gloss dd{margin:0;color:var(--ink)}
 let lang = "zh";
 try{ const v = localStorage.getItem("gl-lang"); if(v==="en"||v==="zh") lang=v; }catch(e){}
 const T = (o) => (o && typeof o==="object" && !Array.isArray(o)) ? (o[lang] ?? o.zh) : o;
-const CONTACT = ""; // fill in: e.g. "WeChat: xxx"
+const CONTACT = "1767311880@qq.com";
+// Outside Claude, forms are emailed to CONTACT via FormSubmit (https://formsubmit.co).
+// The first submission sends an activation mail to CONTACT; nothing arrives until it is confirmed.
+// After activating, you can swap the address below for the random alias FormSubmit gives you to hide it from the page source.
+// Report pricing. During the free beta, charge=false and the report shows a "free for now" note.
+const PRICING = {charge:false, price:"29.9"};
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT;
+async function sendForm(subject, fields){
+  const res = await fetch(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body: JSON.stringify({_subject:subject, _template:"table", _captcha:"false", ...fields})});
+  const j = await res.json().catch(()=>({}));
+  if(!res.ok || j.success===false || j.success==="false") throw new Error(j.message||"send failed");
+  return j;
+}
 let answers = {market:[],product:[]};
 let qIndex = 0;
 let keepIdx = false;
@@ -519,8 +577,12 @@ const S = {
     [{zh:"年度服务",en:"Annual service"},{zh:"数据年度更新、问卷代答、法规更新提醒",en:"Yearly data update, questionnaire answering, rule alerts"},{zh:"定价测试中",en:"Pricing in testing"}]
   ],
   priceNote:{zh:"工厂为「保住订单」付费，所以付费点放在客户报告和问卷代答上，而不是自测本身。",en:"Factories pay to keep orders, so we charge for buyer reports and questionnaire answers, not for the check itself."},
+  metaDesc:{zh:"GreenLedger 绿账：帮中小出口工厂看懂欧盟 CBAM、EUDR、电池法、包装法等绿色合规要求，免费自测订单风险、计算碳排放、解读客户 ESG 问卷。",en:"GreenLedger helps small export factories understand EU CBAM, EUDR, battery and packaging rules: free order-risk check, carbon calculator and ESG questionnaire decoder."},
+  freeBanner:{zh:(p)=>`内测期间报告免费。正式上线后每份报告 ${p} 元，现在用的都是完整版。`,en:(p)=>`Reports are free during the beta. After launch each report will cost ¥${p}; you are getting the full version now.`},
+  contactH:{zh:"联系我们",en:"Contact"},
+  contactP:{zh:"有客户问卷看不懂、碳数据不会算，都可以直接发邮件给我们：",en:"Stuck on a buyer questionnaire or carbon numbers? Email us: "},
   privH:{zh:"隐私说明",en:"Privacy"},
-  privP:{zh:["自测在你的浏览器里计算，答案不会上传。","只有你在「免费报告」页主动提交的信息会被保存，仅用于联系你，不会出售或分享。","问卷解读的 AI 功能会把你粘贴的文字发送给 Claude 处理，使用你自己的 Claude 账号。"],en:["The check runs in your browser; answers are not uploaded.","Only what you submit on the free report page is stored, used only to contact you, never sold or shared.","The AI decoder sends the text you paste to Claude using your own Claude account."]},
+  privP:{zh:["自测在你的浏览器里计算，答案不会上传。","只有你在「免费报告」和「问卷解读」页主动提交的信息会通过表单服务 FormSubmit 发送到我们的邮箱，仅用于联系你，不会出售或分享。","在 Claude 中打开本页时，问卷解读的 AI 功能会把你粘贴的文字发送给 Claude 处理，使用你自己的 Claude 账号。"],en:["The check runs in your browser; answers are not uploaded.","Only what you submit on the free report or questionnaire pages is emailed to us through the form service FormSubmit, used only to contact you, never sold or shared.","When this page is opened inside Claude, the AI decoder sends the text you paste to Claude using your own Claude account."]},
   e1k:{zh:"01 · 自测",en:"01 · CHECK"}, e1h:{zh:"订单风险自测",en:"Order risk check"}, e1p:{zh:"一页一题，答完生成带官方依据的检查单和英文回复。",en:"One question per page; ends with a cited report and an English reply."}, e1g:{zh:"开始 →",en:"Start →"},
   e2k:{zh:"03 · 法规",en:"03 · RULES"}, e2h:{zh:"各市场法规库",en:"Rules by market"}, e2p:{zh:"欧盟、英国、美国、中东的法规，加上 SMETA、BSCI、EcoVadis 等买家审核标准：管什么、何时生效、是否直接约束你。",en:"Rules in the EU, UK, US and Middle East, plus buyer audit standards like SMETA, BSCI and EcoVadis: scope, dates, and whether they bind you directly."}, e2g:{zh:"浏览 →",en:"Browse →"},
   e3k:{zh:"04 · 问卷",en:"04 · QUESTIONNAIRES"}, e3h:{zh:"买家问卷解读",en:"Questionnaire decoder"}, e3p:{zh:"把英文 ESG 问卷逐题翻成大白话，并标出对应的 GRI 指标。",en:"Turns an English ESG questionnaire into plain words, mapped to GRI disclosures."}, e3g:{zh:"打开 →",en:"Open →"},
@@ -606,7 +668,12 @@ const S = {
   dWhat:{zh:"这条规则管什么",en:"What it does"}, dWho:{zh:"适用范围",en:"Who it covers"}, dWhen:{zh:"时间节点",en:"Key dates"}, dNeed:{zh:"客户会找你要什么",en:"What your buyer will ask for"}, dPrep:{zh:"怎么准备",en:"How to prepare"},
   dBasis:{zh:"官方依据",en:"Official basis"}, dStd:{zh:"相关报告标准",en:"Related reporting standards"}, dBack:{zh:"← 返回法规库",en:"← Back to rules"}, dOpen:{zh:"打开原文",en:"Open source"},
   decTitle:{zh:"买家问卷解读",en:"Questionnaire decoder"},
-  decP:{zh:"逐题说明客户在问什么、要准备什么、不答会怎样，并标出它对应的 GRI 披露项。右侧是示例问卷的解读；登录 Claude 打开本页时，可以粘贴你自己的问卷让 AI 解读。",en:"For each question: what the buyer is asking, what to prepare, what happens if you skip it, and the GRI disclosure it maps to. The right side reads the sample; signed in to Claude, paste your own questionnaire for an AI reading."},
+  decP:{zh:"逐题说明客户在问什么、要准备什么、不答会怎样，并标出它对应的 GRI 披露项。右侧是示例问卷的解读。把你自己的问卷粘贴进来、留下联系方式，我们会人工逐题解读后发给你，免费。",en:"For each question: what the buyer is asking, what to prepare, what happens if you skip it, and the GRI disclosure it maps to. The right side reads the sample. Paste your own questionnaire and leave a contact; we will decode it by hand and send it back, free."},
+  trHuman:{zh:"发给我们人工解读",en:"Send for a free human reading"},
+  trContact:{zh:"你的邮箱、微信或手机号",en:"Your email, WeChat or phone"},
+  trPasteOwn:{zh:"左边还是示例问卷，请先把客户发来的问卷粘贴进去。",en:"That is still the sample. Paste your buyer's questionnaire first."},
+  trNeedContact:{zh:"请留下联系方式，我们解读完才能发给你。",en:"Leave a contact so we can send the reading back."},
+  trSent:{zh:"已收到。我们会在 2 个工作日内把逐题解读发给你。",en:"Received. We will send the question-by-question reading within 2 working days."},
   trIn:{zh:"买家发来的问卷",en:"Buyer's questionnaire"}, trOut:{zh:"逐题解读",en:"Question by question"},
   sample:{zh:"示例",en:"Sample"}, outSample:{zh:"示例解读",en:"Sample reading"}, outLive:{zh:"AI 解读",en:"AI reading"},
   trGo:{zh:"用 AI 解读",en:"Decode with AI"}, trStop:{zh:"停止",en:"Stop"}, trReset:{zh:"恢复示例",en:"Restore sample"},
@@ -633,7 +700,8 @@ const S = {
   joinP:{zh:"我们正在找前 20 家工厂一起打磨这个工具。你提供电费单和客户问卷，我们按 GRI 和 GHG Protocol 的口径手工整理成中英双语报告，估算的数据会标清楚。",en:"We are looking for 20 factories to shape this tool with us. Send power bills and the buyer's questionnaire; we hand-build a bilingual report following GRI and the GHG Protocol, with estimates clearly marked."},
   lfName:{zh:"工厂名称",en:"Factory name"}, lfProduct:{zh:"主要产品和出口国家",en:"Main products and export countries"}, lfContact:{zh:"微信或手机号",en:"WeChat or phone"}, lfPain:{zh:"最近客户问过你哪些环保、碳排放问题？（选填）",en:"What green or carbon questions have buyers asked lately? (optional)"},
   lfSubmit:{zh:"提交申请",en:"Apply"}, lfOk:{zh:"已收到。我们会在 2 个工作日内联系你。",en:"Received. We will reach out within 2 working days."},
-  lfCopyContact:{zh:(c)=>`在线提交还未开通。请复制下面的申请信息，发送到：${c}`,en:(c)=>`Online submission is not open yet. Copy the application below and send it to: ${c}`},
+  lfSending:{zh:"正在提交…",en:"Sending…"},
+  lfCopyContact:{zh:(c)=>`在线提交暂时没有成功。请复制下面的申请信息，发邮件到：${c}`,en:(c)=>`Online submission did not go through. Copy the application below and email it to: ${c}`},
   lfCopyNone:{zh:"在线提交还未开通。申请信息已整理好，请先复制保存，联系渠道开通后发给我们。",en:"Online submission is not open yet. Your application is ready below; copy it and send it once our contact channel opens."},
   lfErr:{zh:"没有保存成功，请稍后再试。",en:"Not saved. Please try again later."},
   copyPlain:{zh:"复制",en:"Copy"},
@@ -1029,6 +1097,9 @@ function viewAbout(){
   const pr = el("section","msec"); pr.append(el("h2",null,T(S.priceH)));
   const tw=el("div","tablewrap"); const tb=el("table","score"); const th=el("thead"); const trr=el("tr"); S.priceCols.forEach(x=>trr.append(el("th",null,T(x)))); th.append(trr); tb.append(th);
   const tbd=el("tbody"); S.price.forEach(row=>{ const r=el("tr"); row.forEach(x=>r.append(el("td",null,T(x)))); tbd.append(r); }); tb.append(tbd); tw.append(tb); pr.append(tw); pr.append(el("p","fine",T(S.priceNote))); wrap.append(pr);
+  const ct = el("section","msec"); ct.id="contact"; ct.append(el("h2",null,T(S.contactH)));
+  const cp = el("p",null,T(S.contactP)); cp.append(link("mailto:"+CONTACT,"",CONTACT)); ct.append(cp);
+  const cr = el("div","row"); cr.append(link("#join","btn solid small",T(S.navJoin)), link("#decoder","btn small",T(S.trHuman))); ct.append(cr); wrap.append(ct);
   const pv = el("section","msec"); pv.id="privacy"; pv.append(el("h2",null,T(S.privH))); T(S.privP).forEach(x=>pv.append(el("p",null,x))); wrap.append(pv);
   app.append(wrap);
 }
@@ -1106,6 +1177,7 @@ function viewReport(opts){
   r.buyerHits.forEach(h=>h.r.basis.forEach(num));
 
   if(opts.sample){ const bn=el("div","sample-banner"); bn.append(el("span",null,T(S.sampleBanner)), link("#check","btn solid small",T(S.sampleCta))); wrap.append(bn); }
+  else if(!PRICING.charge){ const bn=el("div","sample-banner"); bn.append(el("span",null,T(S.freeBanner)(PRICING.price))); wrap.append(bn); }
   const card = el("div","rep-card"); card.append(crestSvg("wm"));
   const meta = el("div","rep-meta"); meta.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,refNo(answers)+" · "+T(S.repDate)+" "+new Date().toISOString().slice(0,10))); card.append(meta);
   const top = el("div","rep-top"); top.append(stamp(r.level, lastLevel!==r.level)); lastLevel=r.level;
@@ -1217,9 +1289,14 @@ function viewDecoder(){
   const ta = document.createElement("textarea"); ta.id="tr-input"; ta.setAttribute("aria-label",T(S.trIn)); ta.spellcheck=false; ta.value=trText;
   ta.addEventListener("input",()=>{trText=ta.value; badge.hidden = trText.trim()!==SAMPLE_Q.trim();}); p1.append(ta);
   const row = el("div","row"); row.style.marginTop="12px";
-  const go = el("button","btn solid small",T(S.trGo)); go.type="button";
+  const go = el("button","btn solid small",T(hasClaude?S.trGo:S.trHuman)); go.type="button";
   const stop = el("button","btn small",T(S.trStop)); stop.type="button"; stop.hidden=true;
   const reset = el("button","btn small",T(S.trReset)); reset.type="button";
+  let contactIn = null;
+  if(!hasClaude){
+    const fd=el("div","field"); fd.style.marginTop="12px"; const lb=el("label",null,T(S.trContact)); lb.htmlFor="tr-contact";
+    contactIn=document.createElement("input"); contactIn.id="tr-contact"; contactIn.autocomplete="email"; fd.append(lb,contactIn); p1.append(fd);
+  }
   row.append(go,stop,reset); p1.append(row);
   const status = el("p","status"); p1.append(status);
   const p2 = el("div","panel"); const h2=el("div","panel-h"); const ob=el("span","badge"); h2.append(el("b",null,T(S.trOut)),ob); p2.append(h2);
@@ -1242,6 +1319,15 @@ function viewDecoder(){
   draw();
   go.addEventListener("click", async ()=>{
     const text = ta.value.trim(); if(!text){ status.textContent=T(S.trEmpty); return; }
+    if(!hasClaude){
+      if(text===SAMPLE_Q.trim()){ status.textContent=T(S.trPasteOwn); return; }
+      const who=contactIn.value.trim(); if(!who){ status.textContent=T(S.trNeedContact); contactIn.focus(); return; }
+      go.disabled=true; status.textContent=T(S.lfSending);
+      try{ await sendForm("GreenLedger 问卷人工解读申请", {"联系方式":who.slice(0,100),"问卷内容":text.slice(0,8000),"语言":lang}); status.textContent=T(S.trSent); }
+      catch(e){ status.textContent=T(S.lfCopyContact)(CONTACT); }
+      finally{ go.disabled=false; }
+      return;
+    }
     const sample = await samplePromise; if(!sample){ status.textContent=T(S.trUnavailable); return; }
     const L = lang==="en"?"English":"Simplified Chinese";
     const prompt = "You help the owner of a small Chinese export factory understand a sustainability/ESG questionnaire from a buyer.\n"
@@ -1294,6 +1380,7 @@ function viewJoin(){
   const f = el("form","form");
   const field=(id,labKey,ta,req)=>{ const d=el("div","field"); const l=el("label",null,T(S[labKey])); l.htmlFor=id; const i=document.createElement(ta?"textarea":"input"); i.id=id; if(req) i.required=true; d.append(l,i); return d; };
   f.append(field("lf-name","lfName",false,true), field("lf-product","lfProduct",false,true), field("lf-contact","lfContact",false,true), field("lf-pain","lfPain",true,false));
+  const hp = document.createElement("input"); hp.type="text"; hp.name="_honey"; hp.tabIndex=-1; hp.autocomplete="off"; hp.setAttribute("aria-hidden","true"); hp.style.cssText="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"; f.append(hp);
   const btn = el("button","btn solid",T(S.lfSubmit)); btn.type="submit"; const r=el("div","row"); r.append(btn); f.append(r);
   const st = el("p","status"); f.append(st);
   const copyBox = el("div"); copyBox.hidden=true; const pre=el("div","reply"); const cr=el("div","row"); cr.style.marginTop="8px"; const cb=el("button","btn small",T(S.copyPlain)); cb.type="button"; const cm=el("span","fine"); copyTo(cb,cm,()=>pre.textContent,pre); cr.append(cb,cm); copyBox.append(pre,cr); f.append(copyBox);
@@ -1305,7 +1392,13 @@ function viewJoin(){
     try{
       const db = await dbPromise;
       if(db){ await db.collection("leads").add({...rec,risk,lang,createdAt:new Date().toISOString()}); st.textContent=T(S.lfOk); f.reset(); return; }
+      if(hp.value) return;
+      st.textContent=T(S.lfSending);
       const zh = lang==="zh";
+      try{
+        await sendForm("GreenLedger 免费报告申请："+rec.factory, {"工厂":rec.factory,"产品/市场":rec.product,"联系方式":rec.contact,"客户问过":rec.pain||"—","自测结果":risk?T(S.lvl[risk])+" ("+refNo(answers)+")":"未做","语言":lang});
+        st.textContent=T(S.lfOk); f.reset(); return;
+      }catch(e){ /* fall through to copy-and-send */ }
       const lines=[zh?"GreenLedger 免费报告申请":"GreenLedger free report application", (zh?"工厂：":"Factory: ")+rec.factory, (zh?"产品 / 市场：":"Products / markets: ")+rec.product, (zh?"联系方式：":"Contact: ")+rec.contact];
       if(rec.pain) lines.push((zh?"客户问过：":"Buyer asked: ")+rec.pain);
       if(risk) lines.push((zh?"自测结果：":"Self-check: ")+T(S.lvl[risk])+" ("+refNo(answers)+")");
@@ -1718,6 +1811,17 @@ function route(){
   return ["home"];
 }
 let lastView = null;
+const PAGE_T = {check:"navStart", rules:"navRules", decoder:"navDec", method:"navMethod", join:"navJoin", about:"navAbout", calc:"navCalc", guides:"navGuides", faq:"navFaq"};
+function setMeta(v,arg){
+  const brand = lang==="en" ? "GreenLedger" : "GreenLedger 绿账";
+  let title = null, desc = T(S.metaDesc);
+  if(v==="guide" && IND_BY[arg]){ title = indName(arg)+(lang==="en"?" export compliance guide":" 出口合规指南"); desc = T(IND_BY[arg].one); }
+  else if(v==="rule" && RULE[arg]){ title = T(RULE[arg].t); }
+  else if(v==="sample"){ title = lang==="en"?"Sample order risk checklist":"样例订单风险检查单"; }
+  else if(PAGE_T[v]){ title = T(S[PAGE_T[v]]); }
+  document.title = title ? title+" · "+brand : brand+(lang==="en"?" · Green compliance for export factories":" · 中小出口工厂的买家合规助手");
+  const md = document.querySelector('meta[name="description"]'); if(md) md.setAttribute("content", desc);
+}
 function render(){
   const [v,arg] = route();
   document.documentElement.lang = lang==="en"?"en":"zh-CN";
@@ -1728,6 +1832,7 @@ function render(){
   document.querySelectorAll("[data-nav]").forEach(a=>{ if(a.getAttribute("data-nav")===navKey) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   app.innerHTML="";
   ({home:viewHome,check:viewCheck,report:()=>viewReport(),sample:viewSample,about:viewAbout,calc:viewCalc,guides:viewGuides,guide:()=>viewGuide(arg),faq:viewFAQ,rules:viewRules,rule:()=>viewRule(arg),decoder:viewDecoder,method:viewMethod,join:viewJoin})[v]();
+  setMeta(v,arg);
   const key = v+(arg||"")+(v==="check"?qIndex:"");
   if(key!==lastView) window.scrollTo(0,0);
   lastView = key;
