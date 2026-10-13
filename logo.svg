@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" width="512" height="576">
+  <title>青单 Qingdan</title>
+  <path d="M13 3 H43 L57 17 V64 Q57 69 52 69 H13 Q8 69 8 64 V8 Q8 3 13 3 Z" fill="#0E4A37"/>
+  <path d="M43 3 V12 Q43 17 48 17 H57 Z" fill="#B58A2E"/>
+  <path d="M15 13 H33 M15 19.5 H27" stroke="#2C9A68" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M17 58 C16 38 29 27 49 27 C50 46 39 59 17 58 Z" fill="#FFFFFF"/>
+  <path d="M24.5 44 L31 50 L41.5 36.5" fill="none" stroke="#2C9A68" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
