@@ -475,12 +475,11 @@ let lang = "zh";
 try{ const v = localStorage.getItem("gl-lang"); if(v==="en"||v==="zh") lang=v; }catch(e){}
 const T = (o) => (o && typeof o==="object" && !Array.isArray(o)) ? (o[lang] ?? o.zh) : o;
 const CONTACT = "1767311880@qq.com";
-// Outside Claude, forms are emailed to CONTACT via FormSubmit (https://formsubmit.co).
-// The first submission sends an activation mail to CONTACT; nothing arrives until it is confirmed.
-// After activating, you can swap the address below for the random alias FormSubmit gives you to hide it from the page source.
 // Report pricing. During the free beta, charge=false and the report shows a "free for now" note.
 const PRICING = {charge:false, price:"29.9"};
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT;
+// Outside Claude, forms are emailed to CONTACT via FormSubmit (https://formsubmit.co).
+// The path is FormSubmit's alias for CONTACT, issued when the form was activated (2026-10-13).
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/60ee8b52c62ec9e8e26598d12715d195";
 async function sendForm(subject, fields){
   const res = await fetch(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
     body: JSON.stringify({_subject:subject, _template:"table", _captcha:"false", ...fields})});
@@ -1811,7 +1810,7 @@ function route(){
   return ["home"];
 }
 let lastView = null;
-const PAGE_T = {check:"navStart", rules:"navRules", decoder:"navDec", method:"navMethod", join:"navJoin", about:"navAbout", calc:"navCalc", guides:"navGuides", faq:"navFaq"};
+const PAGE_T = {report:"repTitle", check:"navStart", rules:"navRules", decoder:"navDec", method:"navMethod", join:"navJoin", about:"navAbout", calc:"navCalc", guides:"navGuides", faq:"navFaq"};
 function setMeta(v,arg){
   const brand = lang==="en" ? "GreenLedger" : "GreenLedger 绿账";
   let title = null, desc = T(S.metaDesc);
