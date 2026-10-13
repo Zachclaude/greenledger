@@ -300,6 +300,78 @@ footer .fb svg{width:24px;height:28px}
 .entries{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:1000px){.entries{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.entries{grid-template-columns:minmax(0,1fr)}}
+/* v0.7 */
+.cite{white-space:normal;overflow-wrap:anywhere;max-width:100%}
+.textlink{color:var(--forest);font-weight:500;text-decoration:underline;text-underline-offset:4px;align-self:center}
+.pick{margin-top:26px;display:grid;gap:10px}
+.pick-l{font-size:14px;font-weight:500;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--ink);text-decoration:none;background:var(--white)}
+.chip:hover,.chip.on{border-color:var(--forest);color:var(--forest);background:var(--mint)}
+.stats{background:var(--forest);color:#EAF4EE;padding-block:28px}
+.stats-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:760px){.stats-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{display:grid;gap:2px;border-left:2px solid var(--gold);padding-left:14px}
+.stat b{font-family:var(--f-display);font-size:34px;color:#FFFFFF;line-height:1.1}
+.stat span{font-size:14px;color:#A9C8B8}
+.sec2{padding-block:56px 8px}
+.sec2-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sec2-h h2{font-size:clamp(24px,3vw,32px);margin-top:6px}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:var(--white);padding:6px 14px;font-size:13.5px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--forest);color:var(--white)}
+ol.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+ol.tl li{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:8px;background:var(--white);border-top:3px solid var(--leaf)}
+ol.tl li.past{border-top-color:var(--forest);background:var(--mist)}
+.tl-d{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tl-d b{font-family:var(--f-display);font-size:20px;color:var(--forest);font-variant-numeric:tabular-nums}
+.tl-d span{font-size:12px;color:var(--muted);font-family:var(--f-mono)}
+.tl-t{color:var(--ink);text-decoration:none;font-weight:500;line-height:1.45}
+.tl-t:hover{color:var(--forest);text-decoration:underline}
+.tl-m{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.aside ol.tl{grid-template-columns:minmax(0,1fr)}
+.faq-list{display:grid;gap:10px}
+details.faq{border:1px solid var(--line);border-radius:12px;background:var(--white)}
+details.faq>summary{cursor:pointer;padding:14px 18px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq>summary::-webkit-details-marker{display:none}
+details.faq>summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+details.faq[open]>summary::after{content:"−"}
+.faq-a{padding:0 18px 16px}
+.faq-a p{margin:0 0 8px}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.gcard{display:grid;gap:10px;align-content:start;border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:inherit;background:var(--white);transition:border-color .15s}
+.gcard:hover,.gcard.on{border-color:var(--leaf)}
+.gc-top{display:flex;align-items:center;gap:10px}
+.gc-ic{width:36px;height:36px;border-radius:10px;background:var(--mint);color:var(--forest);display:grid;place-items:center;font-weight:700;font-size:15px;flex:none}
+.gc-top b{font-size:16.5px;color:var(--forest)}
+.gcard p{margin:0;color:var(--muted);font-size:14.5px}
+.gc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.mini{font-size:12px;background:var(--mist);border:1px solid var(--line);border-radius:6px;padding:1px 8px;color:var(--ink)}
+.rlist{display:grid;border-top:1px solid var(--line)}
+.rrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.rrow:hover{background:var(--mist)}
+.rrow b{display:block;font-size:15.5px}
+ul.bul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.checklist{display:grid;gap:8px;margin:8px 0}
+.ck{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
+.ck input{margin-top:5px;accent-color:var(--forest);width:16px;height:16px;flex:none}
+.ck:has(input:checked){background:var(--mint);border-color:var(--leaf)}
+.aside .btn{width:100%}
+dl.gloss{display:grid;grid-template-columns:minmax(120px,max-content) minmax(0,1fr);gap:10px 20px;margin:0}
+dl.gloss dt{font-weight:500;color:var(--forest)}
+dl.gloss dd{margin:0;color:var(--ink)}
+@media (max-width:560px){dl.gloss{grid-template-columns:minmax(0,1fr)} dl.gloss dd{margin-bottom:8px}}
+.menu-cta{display:none}
+@media (max-width:1180px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:8px 20px 16px;box-shadow:0 12px 24px -18px rgba(0,0,0,.3)}
+  .links.open{display:flex}
+  .links a{padding:10px 8px}
+  .links a[aria-current="page"]{box-shadow:inset 3px 0 0 var(--leaf)}
+  .menu-cta{display:inline-flex;margin-top:8px;color:var(--white)!important}
+}
+@media (max-width:520px){ .nav .btn.nav-cta{display:none} .brand .nm small{display:none} }
+@media (min-width:521px) and (max-width:1180px){ .nav .btn.nav-cta{display:inline-flex} }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -322,15 +394,16 @@ footer .fb svg{width:24px;height:28px}
       <span class="nm"><b>GreenLedger</b><small data-i="brandSub"></small></span>
     </a>
     <div class="links" id="links">
-      <a href="#check" data-nav="check" data-i="navCheck"></a>
-      <a href="#rules" data-nav="rules" data-i="navRules"></a>
+      <a href="#guides" data-nav="guides" data-i="navGuides"></a>
       <a href="#calc" data-nav="calc" data-i="navCalc"></a>
       <a href="#decoder" data-nav="decoder" data-i="navDec"></a>
-      <a href="#method" data-nav="method" data-i="navMethod"></a>
+      <a href="#rules" data-nav="rules" data-i="navRules"></a>
+      <a href="#faq" data-nav="faq" data-i="navFaq"></a>
       <a href="#about" data-nav="about" data-i="navAbout"></a>
+      <a href="#check" class="btn solid small menu-cta" data-i="navStart"></a>
     </div>
     <div class="navr">
-      <a class="btn solid small nav-cta" href="#join" data-i="navJoin"></a>
+      <a class="btn solid small nav-cta" href="#check" data-i="navStart"></a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" id="lang-zh" aria-pressed="true">中</button>
         <button type="button" id="lang-en" aria-pressed="false">EN</button>
@@ -345,7 +418,7 @@ footer .fb svg{width:24px;height:28px}
 <footer>
   <div class="container">
     <div class="fb"><svg viewBox="0 0 64 72" aria-hidden="true"><use href="#crest"/></svg><span data-i="foot1"></span></div>
-    <div class="row" style="gap:16px"><a href="#about" data-i="navAbout"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#method" data-i="footMethod"></a></div>
+    <div class="row" style="gap:16px"><a href="#method" data-i="footMethod"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#join" data-i="navJoin"></a></div>
   </div>
 </footer>
 
@@ -487,6 +560,25 @@ const S = {
   calcLimitsH:{zh:"这个数能用到哪一步",en:"What this number is good for"},
   calcLimits:{zh:["可以用来回答客户问卷里的能源和范围 1、2 排放问题，以及 EcoVadis、Higg 等平台的基础数据。","不能直接当作 CBAM 申报数据：CBAM 的隐含排放要把工厂排放分摊到具体产品，还要加上钢材、铝材等原料的排放，并需经核查。","只算了二氧化碳，没有算制冷剂泄漏等其他温室气体，也没有经过第三方核查。"],en:["Good for the energy and Scope 1–2 questions in buyer questionnaires, and the basic data for EcoVadis or Higg.","Not CBAM declaration data as is: CBAM embedded emissions allocate factory emissions to specific products, add precursor emissions from steel or aluminium, and need verification.","CO₂ only; refrigerant leaks and other gases are excluded, and it is not third-party verified."]},
   toCalc:{zh:"用碳数据计算器，把这些数据算出来 →",en:"Calculate these numbers with the carbon data calculator →"},
+  navGuides:{zh:"行业指南",en:"Industry guides"}, navFaq:{zh:"常见问题",en:"FAQ"}, navStart:{zh:"开始自测",en:"Start the check"},
+  heroP2:{zh:"先选你的行业，看哪些规则真的和你有关、客户会找你要什么。每条结论都标明出处：欧盟官方公报、GRI 标准、生态环境部数据。",en:"Pick your industry to see which rules actually reach you and what buyers will ask for. Every conclusion cites its source: the EU Official Journal, GRI Standards, China's official data."},
+  pickL:{zh:"你做什么产品？",en:"What do you make?"},
+  heroCta3:{zh:"先看一份样例检查单 →",en:"See a sample report first →"},
+  st1:{zh:"条法规与买家标准",en:"rules and buyer standards"}, st2:{zh:"份官方文件和国际标准",en:"official documents and standards cited"}, st3:{zh:"个行业指南",en:"industry guides"}, st4:{zh:"个常见问题解答",en:"answered questions"},
+  tlEyebrow:{zh:"时间线",en:"Timeline"}, tlH:{zh:"接下来的关键日期",en:"Key dates ahead"}, tlAll:{zh:"全部",en:"All"},
+  tlDone:{zh:"已生效",en:"In effect"}, tlIn:{zh:(n)=>`还有 ${n} 天`,en:(n)=>`in ${n} days`},
+  faqEyebrow:{zh:"常见问题",en:"FAQ"}, faqH:{zh:"工厂老板最常问的问题",en:"What factory owners ask most"}, faqAll:{zh:"全部常见问题和术语 →",en:"All questions and glossary →"},
+  guidesH:{zh:"按行业看：哪些规则和你有关",en:"By industry: which rules reach you"},
+  guidesP:{zh:"每个行业一页：相关法规、客户会要什么、要准备的资料清单、前三步和常见误区。",en:"One page per industry: relevant rules, what buyers ask for, a document checklist, first steps and common myths."},
+  gBack:{zh:"← 全部行业",en:"← All industries"}, gRules:{zh:"和你有关的规则",en:"Rules that reach you"}, gAsks:{zh:"客户最常找你要的",en:"What buyers ask for most"},
+  gDocs:{zh:"要准备的资料",en:"Documents to prepare"}, gDocsP:{zh:"勾选已经准备好的，进度只保存在你自己的浏览器里。",en:"Tick what you have; progress stays in your own browser."},
+  gProg:{zh:(a,b)=>`已准备 ${a} / ${b}`,en:(a,b)=>`${a} of ${b} ready`},
+  gSteps:{zh:"先做这三步",en:"Do these three first"}, gMyth:{zh:"常见误区",en:"Common myth"}, gFaq:{zh:"相关问题",en:"Related questions"},
+  gNext:{zh:"针对你的工厂",en:"For your factory"}, gCheck:{zh:"用这个行业开始自测",en:"Start the check for this industry"},
+  gCheckP:{zh:"行业已经帮你选好，接着回答出口市场等问题，得到一份针对你工厂的检查单。",en:"Your industry is pre-selected; answer the remaining questions to get a report for your factory."},
+  gCalc:{zh:"或者先算碳数据 →",en:"Or calculate carbon data →"}, gDates:{zh:"关键日期",en:"Key dates"},
+  faqPageH:{zh:"常见问题和术语",en:"Questions and glossary"}, faqPageP:{zh:"用工厂的话解释最常被问到的合规问题，每个回答都附官方出处。",en:"The most common compliance questions in plain words, each answer with its official source."},
+  glossH:{zh:"术语表",en:"Glossary"},
   whyAsk:{zh:"为什么问这道题？",en:"Why do we ask this?"},
   whyThis:{zh:"判断理由",en:"Why this applies to you"},
   bumpNote:{zh:"等级已上调一级：规则要求的数据里，你有多项拿不出来。",en:"Raised one level: you lack several data items the rules require."},
@@ -545,7 +637,7 @@ const S = {
   lfCopyNone:{zh:"在线提交还未开通。申请信息已整理好，请先复制保存，联系渠道开通后发给我们。",en:"Online submission is not open yet. Your application is ready below; copy it and send it once our contact channel opens."},
   lfErr:{zh:"没有保存成功，请稍后再试。",en:"Not saved. Please try again later."},
   copyPlain:{zh:"复制",en:"Copy"},
-  foot1:{zh:"GreenLedger 绿账 · 原型 v0.6 · 仅供参考，不构成法律意见",en:"GreenLedger · prototype v0.6 · Guidance only, not legal advice"},
+  foot1:{zh:"GreenLedger 绿账 · 原型 v0.7 · 仅供参考，不构成法律意见",en:"GreenLedger · prototype v0.7 · Guidance only, not legal advice"},
   footMethod:{zh:"依据与方法",en:"Sources & method"}
 };
 
@@ -925,42 +1017,6 @@ function pageHead(eyebrow,title,p){ const h=el("div","page-head"); if(eyebrow) h
 
 /* ============ views ============ */
 const SAMPLE_ANS = {product:["steel"],market:["eu","uk"],role:"maker",hs:["h7318"],volume:"v1",buyer:"brand",survey:"once",audits:["smeta"],elec:"total",fuel:["gas"],fueldata:"none",origin:"rough",cert:"none",size:"m"};
-function viewHome(){
-  const hero = el("section","hero"); const c = el("div","container");
-  const l = el("div"); l.style.minWidth="0";
-  l.append(el("span","eyebrow",T(S.heroEyebrow)));
-  const h = el("h1"); const [a,b]=T(S.heroH); h.append(document.createTextNode(a), document.createElement("br"), el("em",null,b)); l.append(h);
-  l.append(el("p","lede",T(S.heroP)));
-  const cta = el("div","cta"); cta.append(link("#check","btn solid",T(S.heroCta)), link("#sample","btn",T(S.heroCta2))); l.append(cta);
-  l.append(el("div","meta",T(S.heroMeta)));
-  // product preview: a miniature of the real report
-  const pv = el("a","preview"); pv.href="#sample"; pv.setAttribute("aria-label",T(S.heroCta2));
-  const ex = sampleAssess();
-  const pm = el("div","pv-meta"); pm.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,T(S.sampleTag))); pv.append(pm);
-  const pt = el("div","pv-top"); pt.append(stamp(ex.level,false)); pt.append(el("p",null,T(S.pvLine))); pv.append(pt);
-  const pl = el("div","pv-list");
-  ex.perMarket.forEach(p=>{ const r=el("div","pv-row"); r.append(el("b",null,T(MARKET[p.m])), el("span",null,p.hits.filter(h=>h.r.status!=="indirect")[0]?T(p.hits.filter(h=>h.r.status!=="indirect")[0].r.t):"—"), el("span","pill "+p.lv,T(S.lvl[p.lv]))); pl.append(r); });
-  pv.append(pl);
-  const pc = el("div","cites"); ["cbam","cbam25","ukcbam","gri302","mee"].forEach(id=>pc.append(el("span","cite",SRC[id].ref))); pv.append(pc);
-  pv.append(el("span","pv-go",T(S.pvGo)));
-  c.append(l,pv); hero.append(c); app.append(hero);
-
-  const tr = el("section","trust"); const tc = el("div","container"); tc.append(el("span","eyebrow",T(S.trustH)));
-  const ul = el("ul"); [["cbam","inforce"],["ppwr","inforce"],["eudr","soon"],["ukcbam","soon"],["csddd","indirect"],["ghg","std"],["gri305","std"],["mee","data"]].forEach(([id,st])=>{ const li=el("li"); const a2=link("#method",""); a2.append(el("span",null,SRC[id].ref), el("small",null,st==="std"?T(S.tagStd):st==="data"?T(S.tagData):T(STATUS[st]))); li.append(a2); ul.append(li); });
-  tc.append(ul); tr.append(tc); app.append(tr);
-
-  const gets = el("section","container gets");
-  const gh = el("div","page-head"); gh.append(el("span","eyebrow",T(S.getsEyebrow)), el("h2",null,T(S.getsH))); gets.append(gh);
-  const gg = el("div","gets-grid");
-  S.gets.forEach((g,i)=>{ const d=el("div","get"); d.append(el("span","n",String(i+1)), el("h3",null,T(g[0])), el("p",null,T(g[1]))); gg.append(d); });
-  gets.append(gg); app.append(gets);
-
-  const en = el("div","container entries");
-  [["e1","#check"],["e4","#calc"],["e2","#rules"],["e3","#decoder"]].forEach(([k,href])=>{
-    const a3 = link(href,"entry"); a3.append(el("span","k",T(S[k+"k"])), el("h2",null,T(S[k+"h"])), el("p",null,T(S[k+"p"])), el("span","go",T(S[k+"g"]))); en.append(a3);
-  });
-  app.append(en);
-}
 function sampleAssess(){ return assess(SAMPLE_ANS); }
 function viewSample(){
   const saved=answers, sr=reportReady; answers=JSON.parse(JSON.stringify(SAMPLE_ANS)); reportReady=true;
@@ -1366,11 +1422,299 @@ function viewCalc(){
   grid.append(form,out); wrap.append(grid); app.append(wrap);
 }
 
+/* ============ v0.7: more rules, industry guides, timeline, FAQ, glossary ============ */
+Object.assign(SRC, {
+  reach:{kind:"law", ref:"Regulation (EC) No 1907/2006", t:{zh:"欧盟化学品注册、评估、授权和限制法规（REACH）：物品中高关注物质（SVHC）超过 0.1%（重量比）时，必须向下游客户传递信息（第 33 条）。",en:"EU REACH Regulation: when an article contains a Substance of Very High Concern above 0.1% w/w, suppliers must pass that information to customers (Article 33)."}, by:{zh:"欧洲议会与理事会 · 欧盟官方公报",en:"European Parliament & Council · Official Journal of the EU"}, url:"https://eur-lex.europa.eu/eli/reg/2006/1907/oj"},
+  rohs:{kind:"law", ref:"Directive 2011/65/EU", t:{zh:"欧盟电子电气设备有害物质限制指令（RoHS）：限制铅、汞、镉、六价铬、多溴联苯、多溴二苯醚和四种邻苯二甲酸酯共 10 种物质。",en:"EU RoHS Directive: restricts 10 substances in electrical and electronic equipment, including lead, mercury, cadmium, hexavalent chromium, PBB, PBDE and four phthalates."}, by:{zh:"欧洲议会与理事会 · 欧盟官方公报",en:"European Parliament & Council · Official Journal of the EU"}, url:"https://eur-lex.europa.eu/eli/dir/2011/65/oj"}
+});
+const NEW_RULES = [
+  {id:"reach", mkt:"eu", basis:["reach"], std:["gri308"],
+   t:{zh:"欧盟 REACH 化学品法规",en:"EU REACH chemicals regulation"},
+   short:{zh:"长期有效，客户常要检测报告",en:"In force; buyers often ask for test reports"},
+   when:{zh:"已实施多年；高关注物质（SVHC）候选清单每年更新约两次。",en:"In force for years; the SVHC candidate list is updated about twice a year."},
+   what:{zh:"出口到欧盟的纺织品、塑料、橡胶、电子等物品，如果含有清单上的高关注物质且超过 0.1%，必须告诉客户。很多欧洲客户会直接要求第三方检测报告或 SVHC 声明。",en:"Articles such as textiles, plastics, rubber and electronics must disclose listed SVHCs above 0.1%. Many EU buyers ask directly for third-party test reports or an SVHC declaration."},
+   who:{zh:"几乎所有进入欧盟的物品，纺织、塑料、橡胶、电子最常被要求。",en:"Almost all articles entering the EU; textiles, plastics, rubber and electronics are asked most."},
+   need:{zh:"原材料的物质安全说明、SVHC 检测报告或声明",en:"Material safety data, SVHC test reports or declarations"},
+   prep:{zh:"向面料、塑料粒子、橡胶等原料供应商索取 REACH 声明；主力产品做一次第三方 SVHC 检测，报告可以给多个客户复用。",en:"Ask fabric, resin and rubber suppliers for REACH declarations; test your main products once for SVHC and reuse the report for several buyers."},
+   applies:a=>["textile","electronics","packaging","rubber","battery","machine"].some(p=>has(a.product,p))?"mid":null},
+  {id:"rohs", mkt:"eu", basis:["rohs"], std:[],
+   t:{zh:"欧盟 RoHS 有害物质限制",en:"EU RoHS hazardous substances"},
+   short:{zh:"长期有效，电子电器必查",en:"In force; required for electronics"},
+   when:{zh:"已实施多年，产品要满足后才能加贴 CE 标志。",en:"In force for years; products must comply before carrying the CE mark."},
+   what:{zh:"电子电气产品不能超标含有铅、汞、镉、六价铬等 10 种物质。客户通常要 RoHS 检测报告和符合性声明，否则产品不能在欧盟合法销售。",en:"Electrical and electronic products may not exceed limits for 10 substances such as lead, mercury, cadmium and hexavalent chromium. Buyers usually ask for a RoHS test report and declaration; otherwise the product cannot be sold legally in the EU."},
+   who:{zh:"电子产品、电器、带电路的机电产品。",en:"Electronics, appliances and machinery with circuitry."},
+   need:{zh:"RoHS 检测报告、元器件供应商的 RoHS 声明",en:"RoHS test report; component suppliers' RoHS declarations"},
+   prep:{zh:"收齐 PCB、线材、塑料件供应商的 RoHS 声明；整机做一次检测，报告随货保存。",en:"Collect RoHS declarations for PCBs, cables and plastic parts; test the finished product once and keep the report on file."},
+   applies:a=>["electronics","machine","battery"].some(p=>has(a.product,p))?"mid":null}
+];
+NEW_RULES.forEach(r=>{ r.status="inforce"; RULES.push(r); RULE[r.id]=r; });
+RULE.reach.why = a => [L("你的产品属于 REACH 最常被要求的品类","Your products are in categories where REACH is most often requested"), L("高关注物质超过 0.1% 就必须告知客户","SVHCs above 0.1% must be disclosed to customers")];
+RULE.rohs.why = a => [L("你的产品属于电子电气设备","Your products are electrical or electronic equipment"), L("不合规就不能加贴 CE 标志在欧盟销售","Without compliance the product cannot carry the CE mark in the EU")];
+
+/* ---- key dates ---- */
+const TIMELINE = [
+  {d:"2026-01-01", t:{zh:"欧盟 CBAM 进入正式阶段",en:"EU CBAM definitive phase begins"}, r:"cbam", p:["steel","cement"]},
+  {d:"2026-03-18", t:{zh:"Omnibus I 指令生效",en:"Omnibus I enters into force"}, r:"scope3", p:["*"]},
+  {d:"2026-08-12", t:{zh:"欧盟包装法规 PPWR 开始适用",en:"EU PPWR starts to apply"}, r:"ppwr", p:["*"]},
+  {d:"2026-11-10", t:{zh:"加州 SB 253 首次排放报告截止",en:"First California SB 253 reports due"}, r:"sb253", p:["*"]},
+  {d:"2026-12-30", t:{zh:"欧盟零毁林法规 EUDR 对大中型企业适用",en:"EUDR applies to most operators"}, r:"eudr", p:["wood","rubber","food"]},
+  {d:"2027-01-01", t:{zh:"英国 CBAM 开始实施",en:"UK CBAM starts"}, r:"ukcbam", p:["steel","cement"]},
+  {d:"2027-02-18", t:{zh:"欧盟电池护照和二维码开始要求",en:"EU battery passport and QR code required"}, r:"battery", p:["battery"]},
+  {d:"2027-06-30", t:{zh:"EUDR 对微型和小型企业适用",en:"EUDR applies to micro and small operators"}, r:"eudr", p:["wood","rubber","food"]},
+  {d:"2027-08-18", t:{zh:"欧盟电池供应链尽职调查开始",en:"EU battery due diligence starts"}, r:"battery", p:["battery"]},
+  {d:"2028-01-01", t:{zh:"CBAM 拟扩展到下游钢铝产品（提案）",en:"CBAM proposed to cover downstream goods (proposal)"}, r:"cbamdown", p:["machine","steel"]},
+  {d:"2028-05-31", t:{zh:"英国 CBAM 首次申报和缴费截止",en:"First UK CBAM return and payment due"}, r:"ukcbam", p:["steel","cement"]},
+  {d:"2029-07-26", t:{zh:"CSDDD 对大企业开始适用",en:"CSDDD applies to large companies"}, r:"scope3", p:["*"]}
+];
+
+/* ---- industries ---- */
+const IND = [
+  {id:"steel", icon:"Fe", rules:["cbam","ukcbam","cbamdown","ppwr","scope3"],
+   one:{zh:"受碳规则影响最直接的行业。欧盟 CBAM 已经在算你的产品的碳成本，英国 2027 年跟进。",en:"The industry most directly hit by carbon rules. EU CBAM already prices your products' carbon; the UK follows in 2027."},
+   asks:{zh:["每吨产品的隐含排放（CBAM 申报用）","钢材 / 铝材来自哪家钢厂、铝厂","生产用电和燃料用量","海关编码确认"],en:["Embedded emissions per tonne (for CBAM)","Which mill supplied the steel or aluminium","Production power and fuel use","HS code confirmation"]},
+   docs:{zh:["12 个月电费单","天然气 / 柴油 / 煤的采购发票","原料采购合同和钢厂质保书","产品海关编码清单","年产量和出口量"],en:["12 months of power bills","Gas, diesel or coal invoices","Raw-material contracts and mill certificates","HS code list","Annual output and export volume"]},
+   steps:{zh:["确认产品海关编码是否在 CBAM 附件一","用碳数据计算器算出工厂的范围 1、2 排放","向钢厂 / 铝厂要原料的排放数据"],en:["Check whether your HS codes are in CBAM Annex I","Calculate Scope 1–2 with the carbon calculator","Ask your mills for precursor emissions data"]},
+   myth:{zh:"误区：「CBAM 的钱要我交」。实际是欧盟进口商申报和付费，但拿不到你的数据就按偏高的默认值算，成本最后会压到你的报价上。",en:"Myth: \"I have to pay CBAM.\" The EU importer declares and pays, but without your data it uses high default values, and the cost comes back to your price."},
+   faq:["who-pays","fifty-t","in-scope"]},
+  {id:"machine", icon:"⚙", rules:["cbamdown","rohs","reach","ppwr","scope3"],
+   one:{zh:"现在主要是 RoHS 和 REACH 化学品要求；欧盟已提议 2028 年起把钢铝含量高的机电产品纳入 CBAM。",en:"Today mainly RoHS and REACH; the EU has proposed bringing steel-heavy machinery into CBAM from 2028."},
+   asks:{zh:["RoHS 检测报告和符合性声明","REACH 高关注物质声明","产品的钢铝用量","工厂用电和排放数据"],en:["RoHS test report and declaration","REACH SVHC declaration","Steel and aluminium content","Factory power and emissions data"]},
+   docs:{zh:["物料清单（BOM）里的钢铝重量","元器件供应商的 RoHS / REACH 声明","12 个月电费单"],en:["Steel and aluminium weight in the BOM","Component suppliers' RoHS/REACH declarations","12 months of power bills"]},
+   steps:{zh:["收齐元器件供应商的 RoHS 声明","在物料清单里记录钢铝重量","算出工厂范围 1、2 排放备用"],en:["Collect RoHS declarations from component suppliers","Record steel and aluminium weight in the BOM","Calculate Scope 1–2 for later"]},
+   myth:{zh:"误区：「机电产品不在 CBAM 范围，所以不用管」。下游扩围虽然还是提案，但客户已经开始问钢铝用量了。",en:"Myth: \"Machinery isn't in CBAM, so ignore it.\" The extension is only proposed, but buyers already ask about steel content."},
+   faq:["in-scope","scope-123","verify"]},
+  {id:"electronics", icon:"⚡", rules:["rohs","reach","ppwr","scope3"],
+   one:{zh:"不在碳边境税范围，但 RoHS 和 REACH 是硬门槛，没有报告就不能在欧盟卖。",en:"Outside the carbon border taxes, but RoHS and REACH are hard gates; without reports you cannot sell in the EU."},
+   asks:{zh:["RoHS 检测报告","REACH 高关注物质声明","包装材质和符合性声明","工厂用电数据（大品牌问卷）"],en:["RoHS test report","REACH SVHC declaration","Packaging materials and conformity","Factory power data (brand questionnaires)"]},
+   docs:{zh:["整机 RoHS 检测报告","元器件供应商声明","包装材质清单","12 个月电费单"],en:["Finished-product RoHS report","Component supplier declarations","Packaging material list","12 months of power bills"]},
+   steps:{zh:["确认主力产品都有有效的 RoHS 报告","向塑料件、线材供应商要 REACH 声明","整理包装材质，向包装供应商要 PPWR 声明"],en:["Make sure main products have valid RoHS reports","Get REACH declarations for plastics and cables","List packaging and request PPWR declarations"]},
+   myth:{zh:"误区：「我们不是高碳行业，跟绿色合规没关系」。化学品和包装要求同样会卡订单。",en:"Myth: \"We're not carbon-heavy, so green compliance doesn't apply.\" Chemical and packaging rules can block orders too."},
+   faq:["not-covered","questionnaire","scope-123"]},
+  {id:"battery", icon:"🔋", rules:["battery","rohs","reach","ppwr"],
+   one:{zh:"欧盟电池法规是专门为你们写的：2027 年 2 月起要电池护照，8 月起要供应链尽职调查。",en:"The EU Batteries Regulation is written for you: battery passport from Feb 2027, supply-chain due diligence from Aug 2027."},
+   asks:{zh:["电池成分和电芯来源","电池护照所需数据","钴、锂、镍等原料的尽职调查","RoHS / REACH 声明"],en:["Composition and cell sourcing","Battery passport data","Due diligence on cobalt, lithium and nickel","RoHS/REACH declarations"]},
+   docs:{zh:["每个型号的成分表","电芯供应商名单","原料来源说明"],en:["Composition per model","Cell supplier list","Raw-material origin"]},
+   steps:{zh:["把每个型号的电芯供应商和成分整理成表","向电芯厂要原料来源说明","确认哪些型号属于电动车、轻型交通或 2kWh 以上工业电池"],en:["Tabulate cell suppliers and composition per model","Ask cell makers for raw-material origin","Identify which models are EV, light-transport or industrial >2 kWh"]},
+   myth:{zh:"误区：「电池护照是 2027 年的事，还早」。护照需要的数据要从电芯供应商一层层往上收，现在开始并不早。",en:"Myth: \"The passport is 2027, there's time.\" The data has to come up the chain from cell makers; starting now is not early."},
+   faq:["verify","questionnaire","scope-123"]},
+  {id:"wood", icon:"🪵", rules:["eudr","ppwr","scope3"],
+   one:{zh:"EUDR 要求木材追溯到产地地块，2026 年 12 月 30 日起对大中型进口商适用。",en:"EUDR requires wood to be traced to the plot of land, applying to most importers from 30 Dec 2026."},
+   asks:{zh:["木材的树种和产地国","产地地块的地理坐标","上游供应商名单","采购发票"],en:["Species and country of origin","Geolocation of the plots","Upstream supplier list","Purchase invoices"]},
+   docs:{zh:["板材 / 原木采购合同和发票","供应商的原产地证明","FSC 等认证证书（如有）"],en:["Timber purchase contracts and invoices","Suppliers' proof of origin","FSC or similar certificates (if any)"]},
+   steps:{zh:["列出每种木材原料的供应商","向供应商索取产地和地块信息","把出口到欧盟的产品和原料批次对应起来"],en:["List suppliers for each wood input","Request origin and plot data","Map EU-bound products to raw-material batches"]},
+   myth:{zh:"误区：「有 FSC 证书就够了」。FSC 有帮助，但 EUDR 还要求地块坐标和尽职调查声明，证书不能直接替代。",en:"Myth: \"FSC is enough.\" FSC helps, but EUDR also needs plot coordinates and a due-diligence statement; a certificate is not a substitute."},
+   faq:["eudr","questionnaire","scope-123"]},
+  {id:"textile", icon:"🧵", rules:["reach","ppwr","scope3"],
+   one:{zh:"没有碳边境税，但品牌客户要求最多：Higg FEM、化学品检测、社会责任审核一个都少不了。",en:"No carbon border tax, but brand demands are the heaviest: Higg FEM, chemical testing and social audits."},
+   asks:{zh:["Higg FEM 环境自评","REACH 化学品检测","SMETA 或 BSCI 社会责任审核","用电、用水、废水数据"],en:["Higg FEM self-assessment","REACH chemical testing","SMETA or BSCI social audit","Power, water and wastewater data"]},
+   docs:{zh:["12 个月电、水、燃料记录","染化料清单和供应商声明","工时、工资记录","环评和排污许可"],en:["12 months of power, water and fuel","Dye and chemical list with supplier declarations","Working-hours and pay records","Environmental permits"]},
+   steps:{zh:["按月整理电、水、燃料记录","收齐染化料供应商的 REACH 声明","按 SMETA 4 支柱自查一遍"],en:["Organise power, water and fuel by month","Collect REACH declarations for dyes and chemicals","Self-check against SMETA 4 pillars"]},
+   myth:{zh:"误区：「审核过了就一劳永逸」。Higg 每年自评一次，审核也会定期复审，数据要持续记录。",en:"Myth: \"Pass once and done.\" Higg is annual and audits recur; data must be kept continuously."},
+   faq:["audits","questionnaire","electricity"]},
+  {id:"food", icon:"☕", rules:["eudr","ppwr","scope3"],
+   one:{zh:"可可、咖啡、大豆、棕榈油、牛肉等及其制品属于 EUDR 范围，需要追溯到产地地块。",en:"Cocoa, coffee, soy, palm oil, cattle and derived products fall under EUDR and must be traced to the plot."},
+   asks:{zh:["原料产地国和地块坐标","上游供应商名单","包装材质和符合性声明"],en:["Origin country and plot coordinates","Upstream supplier list","Packaging material and conformity"]},
+   docs:{zh:["原料采购合同和发票","供应商原产地证明","包装材质清单"],en:["Raw-material contracts and invoices","Suppliers' proof of origin","Packaging material list"]},
+   steps:{zh:["确认产品里有哪些 EUDR 商品成分","向原料供应商索取产地信息","整理包装材质"],en:["Identify EUDR commodities in your products","Request origin data from suppliers","List packaging materials"]},
+   myth:{zh:"误区：「我们是加工厂，不是种植园，与我们无关」。EUDR 覆盖衍生产品，加工品同样要追溯。",en:"Myth: \"We process, we don't farm.\" EUDR covers derived products too."},
+   faq:["eudr","questionnaire","not-covered"]},
+  {id:"packaging", icon:"📦", rules:["ppwr","reach","scope3"],
+   one:{zh:"欧盟包装法规 PPWR 从 2026 年 8 月 12 日起适用，包装生产商责任最直接。",en:"The EU Packaging Regulation has applied since 12 Aug 2026; packaging makers carry the most direct duty."},
+   asks:{zh:["欧盟符合性声明","包装技术文件","材质成分和可回收性","塑料包装的再生料比例（2030 年起加严）"],en:["EU declaration of conformity","Technical documentation","Material composition and recyclability","Recycled content for plastic packaging (tightening from 2030)"]},
+   docs:{zh:["每款包装的材质清单","原料供应商声明","REACH 声明"],en:["Material list per packaging type","Raw-material supplier declarations","REACH declarations"]},
+   steps:{zh:["为每款包装建立材质档案","准备欧盟符合性声明和技术文件","向树脂、纸浆供应商要成分声明"],en:["Build a material file for each packaging type","Prepare the EU declaration and technical file","Get composition declarations from resin and pulp suppliers"]},
+   myth:{zh:"误区：「包装法规是进口商的事」。进口商只能投放合规包装，所以会直接要你的技术文件。",en:"Myth: \"Packaging rules are the importer's problem.\" Importers may only place compliant packaging, so they will ask for your technical file."},
+   faq:["not-covered","questionnaire","verify"]},
+  {id:"rubber", icon:"◍", rules:["eudr","reach","ppwr","scope3"],
+   one:{zh:"天然橡胶和牛皮革属于 EUDR 商品，同时常被要求 REACH 化学品检测。",en:"Natural rubber and cattle leather are EUDR commodities and often face REACH testing."},
+   asks:{zh:["橡胶 / 皮革原料的产地和地块","REACH 高关注物质检测","上游供应商名单"],en:["Origin and plots of rubber or leather","REACH SVHC testing","Upstream supplier list"]},
+   docs:{zh:["原料采购合同和发票","供应商原产地证明","SVHC 检测报告"],en:["Contracts and invoices","Proof of origin","SVHC test report"]},
+   steps:{zh:["区分天然橡胶和合成橡胶原料","向天然橡胶 / 皮革供应商索取产地信息","主力产品做一次 SVHC 检测"],en:["Separate natural from synthetic rubber inputs","Request origin data for natural rubber or leather","Test main products for SVHC"]},
+   myth:{zh:"误区：「合成橡胶也要追溯」。EUDR 只管天然橡胶，先把原料分清楚能省很多事。",en:"Myth: \"Synthetic rubber must be traced too.\" EUDR covers natural rubber only; separating inputs saves work."},
+   faq:["eudr","questionnaire","scope-123"]},
+  {id:"cement", icon:"▦", rules:["cbam","ukcbam","ppwr","scope3"],
+   one:{zh:"水泥和化肥是 CBAM 最早覆盖的行业之一，排放强度高，默认值对你最不利。",en:"Cement and fertiliser were among CBAM's first sectors; high intensity makes default values especially costly."},
+   asks:{zh:["每吨产品的隐含排放","熟料、燃料和电力数据","海关编码确认"],en:["Embedded emissions per tonne","Clinker, fuel and power data","HS code confirmation"]},
+   docs:{zh:["燃料采购和化验记录","12 个月电费单","年产量和出口量"],en:["Fuel purchases and lab data","12 months of power bills","Annual output and exports"]},
+   steps:{zh:["确认海关编码","整理燃料用量和化验数据","找有资质的核查机构"],en:["Confirm HS codes","Organise fuel quantities and lab data","Find an accredited verifier"]},
+   myth:{zh:"误区：「出口量小就不用管」。豁免看的是进口商的全年总量，不是你一家的量。",en:"Myth: \"Small exports are exempt.\" The threshold counts the importer's total, not just yours."},
+   faq:["who-pays","fifty-t","verify"]}
+];
+const IND_BY = Object.fromEntries(IND.map(x=>[x.id,x]));
+const indName = id => T(QBY.product.opts.find(o=>o[0]===id)[1]);
+
+/* ---- FAQ ---- */
+const FAQ = [
+  {id:"who-pays", q:{zh:"CBAM 的钱是我交吗？",en:"Do I pay CBAM?"}, a:{zh:"不是。欧盟 CBAM 由欧盟进口商申报并购买证书。但进口商需要你的实际排放数据，拿不到就按欧盟默认值计算。默认值偏高，多出来的成本通常会通过压价转回给你。",en:"No. The EU importer declares and buys certificates. But the importer needs your actual emissions; without them EU default values apply, which run high, and the extra cost usually comes back as price pressure."}, s:["cbam"]},
+  {id:"fifty-t", q:{zh:"50 吨豁免门槛怎么算？",en:"How does the 50-tonne exemption work?"}, a:{zh:"按每个欧盟进口商一年进口的全部 CBAM 商品总质量算，不是只看你这一家供应商。客户从你这里买 20 吨，但从别家也买，总量超过 50 吨就仍然要申报。",en:"It counts each EU importer's total CBAM imports for the year, not just from you. If a buyer takes 20 t from you and more from others, they must still declare once the total passes 50 t."}, s:["cbam25"]},
+  {id:"in-scope", q:{zh:"怎么知道我的产品在不在 CBAM 范围？",en:"Is my product covered by CBAM?"}, a:{zh:"看海关编码是否列在 CBAM 条例附件一。钢铁：72 章（部分铁合金除外）、7301–7311、7318、7326；铝：7601、7603–7614、7616；还有水泥、化肥、氢和电力。7323 钢制厨具、7615 铝制厨具不在范围内。",en:"Check whether the HS code is in Annex I. Steel: chapter 72 (some ferro-alloys excluded), 7301–7311, 7318, 7326; aluminium: 7601, 7603–7614, 7616; plus cement, fertiliser, hydrogen and electricity. 7323 steel kitchenware and 7615 aluminium kitchenware are out."}, s:["cbam"]},
+  {id:"questionnaire", q:{zh:"客户的 ESG 问卷必须每题都答吗？",en:"Must I answer every question in a buyer's ESG questionnaire?"}, a:{zh:"按欧盟 Omnibus I 指令，员工不超过 1000 人的供应商可以拒绝提供超出自愿标准（VSME）的信息。实务上建议先答能源、排放、环保政策三类基础题，其余写明正在准备，并问清楚哪些是必答。",en:"Under Omnibus I, suppliers with up to 1,000 staff may decline requests beyond the voluntary standard (VSME). In practice, answer energy, emissions and policy first, mark the rest in progress, and ask which are mandatory."}, s:["omni","vsme"]},
+  {id:"electricity", q:{zh:"电费单怎么变成碳排放？",en:"How do power bills become carbon emissions?"}, a:{zh:"用电量（千瓦时）乘以电网排放因子。中国官方最新的全国平均值是 2023 年的 0.5306 kgCO₂/kWh，由生态环境部和国家统计局发布。结果就是范围 2 排放，可以直接用碳数据计算器算。",en:"Multiply kWh by the grid factor. China's latest official national average is 0.5306 kgCO₂/kWh (2023, MEE and NBS). The result is Scope 2; the carbon calculator does it for you."}, s:["mee","ghg"]},
+  {id:"scope-123", q:{zh:"范围 1、范围 2、范围 3 有什么区别？",en:"What are Scopes 1, 2 and 3?"}, a:{zh:"这是 GHG Protocol 的分类。范围 1：工厂自己烧燃料的直接排放；范围 2：外购电力和热力的排放；范围 3：供应链上下游的其他排放。你的范围 1 和 2，就是你客户的范围 3，所以客户会找你要。",en:"GHG Protocol categories. Scope 1: fuel you burn; Scope 2: purchased power and heat; Scope 3: everything else in the value chain. Your Scopes 1 and 2 are your buyer's Scope 3, which is why they ask you."}, s:["ghg","gri305"]},
+  {id:"verify", q:{zh:"碳数据需要第三方核查吗？",en:"Does carbon data need third-party verification?"}, a:{zh:"回答一般的客户问卷通常不强制。但用于 CBAM 申报的实际排放需要经认可的核查机构核查，英国 CBAM 也明确要求实际数据经核查才能替代默认值。",en:"Usually not for ordinary questionnaires. Actual emissions used in CBAM declarations must be verified by an accredited verifier, and the UK CBAM also requires verified data to replace defaults."}, s:["cbam","ukcbam","iso14064"]},
+  {id:"audits", q:{zh:"SMETA 和 BSCI 有什么区别？要做哪个？",en:"SMETA or BSCI — which one?"}, a:{zh:"两者都是社会责任审核，不是法律。SMETA 由 Sedex 管理，分 2 支柱和 4 支柱；BSCI 由 amfori 管理，按它的行为准则审核。做哪个取决于你的客户用哪个平台，先问清楚再预约，避免重复审核。",en:"Both are social audits, not laws. SMETA (Sedex) comes in 2- or 4-pillar; BSCI (amfori) follows its Code of Conduct. Which you need depends on your buyer's platform, so ask first to avoid duplicate audits."}, s:["smeta","bsci"]},
+  {id:"eudr", q:{zh:"EUDR 对我意味着什么？",en:"What does EUDR mean for me?"}, a:{zh:"如果产品含木材、天然橡胶、牛皮革、可可、咖啡、大豆或棕榈油，欧盟进口商要提交尽职调查声明，证明原料不来自 2020 年底以后毁林的土地，并提供产地地块坐标。大中型进口商 2026 年 12 月 30 日起适用。",en:"If your products contain wood, natural rubber, cattle leather, cocoa, coffee, soy or palm oil, EU importers must file a due-diligence statement proving no deforestation after 2020, with plot coordinates. Applies to most importers from 30 Dec 2026."}, s:["eudr","eudr25"]},
+  {id:"not-covered", q:{zh:"我的行业不在 CBAM 和 EUDR 里，是不是就不用管？",en:"My industry isn't in CBAM or EUDR — am I fine?"}, a:{zh:"不一定。包装法规 PPWR 几乎覆盖所有带包装的出口货物，REACH 和 RoHS 管化学品和电子产品，大品牌还会通过问卷和审核向你要数据。直接约束少，不等于没有要求。",en:"Not necessarily. PPWR covers almost all packaged goods, REACH and RoHS cover chemicals and electronics, and large brands still request data through questionnaires and audits."}, s:["ppwr","reach","rohs"]},
+  {id:"us", q:{zh:"美国客户也会要碳数据吗？",en:"Will US buyers ask for carbon data?"}, a:{zh:"美国没有联邦层面的进口碳税。但加州 SB 253 要求在当地经营、年营收超 10 亿美元的公司披露排放，供应链排放（范围 3）计划 2027 年起，所以美国大品牌可能会问。",en:"There is no federal import carbon tax. California SB 253 requires companies with over $1bn revenue doing business there to disclose emissions, with Scope 3 planned from 2027, so large US brands may ask."}, s:["sb253"]},
+  {id:"iso", q:{zh:"没有 ISO 14001 会被停单吗？",en:"Will I lose orders without ISO 14001?"}, a:{zh:"ISO 14001 不是法律要求，通常不会单独导致停单，但会影响 EcoVadis 等评级分数。暂时没有证书，可以先写一页环保制度（废水、废气、固废怎么处理）回答问卷。",en:"ISO 14001 isn't a legal requirement and rarely stops orders on its own, but it affects ratings like EcoVadis. Without it, a one-page environmental policy can answer the questionnaire for now."}, s:["iso14001","gri2"]}
+];
+const FAQ_BY = Object.fromEntries(FAQ.map(f=>[f.id,f]));
+const GLOSS = [
+  ["CBAM",{zh:"碳边境调节机制。进口钢、铝、水泥等商品时，按其生产排放购买证书。",en:"Carbon Border Adjustment Mechanism: importers buy certificates for the emissions embedded in steel, aluminium, cement and more."}],
+  [{zh:"隐含排放",en:"Embedded emissions"},{zh:"生产一件产品过程中产生的排放，包括原料（前体）的排放。",en:"Emissions released to make a product, including its precursors."}],
+  [{zh:"默认值",en:"Default value"},{zh:"拿不到实际数据时，官方给出的偏保守的排放强度。",en:"A conservative official emissions intensity used when actual data is missing."}],
+  ["EUDR",{zh:"欧盟零毁林法规，要求木材、橡胶、可可等商品追溯到产地地块。",en:"EU Deforestation Regulation: traces wood, rubber, cocoa and more to the plot."}],
+  ["PPWR",{zh:"欧盟包装和包装废弃物条例，2026 年 8 月 12 日起适用。",en:"EU Packaging and Packaging Waste Regulation, applying from 12 Aug 2026."}],
+  ["REACH",{zh:"欧盟化学品法规，含高关注物质超过 0.1% 的物品必须告知客户。",en:"EU chemicals regulation; articles with SVHC above 0.1% must be disclosed."}],
+  ["RoHS",{zh:"欧盟电子电气产品有害物质限制指令，限制 10 种物质。",en:"EU restriction of 10 hazardous substances in electronics."}],
+  ["CSRD",{zh:"企业可持续发展报告指令，要求大企业披露可持续信息。",en:"Corporate Sustainability Reporting Directive for large companies."}],
+  ["CSDDD",{zh:"企业可持续发展尽职调查指令，要求大企业排查供应链风险。",en:"Corporate Sustainability Due Diligence Directive for large companies' supply chains."}],
+  ["VSME",{zh:"欧盟给中小企业的自愿可持续报告标准，也是大企业向小供应商索要信息的上限。",en:"Voluntary standard for SMEs; also the cap on what large firms can demand from small suppliers."}],
+  ["GHG Protocol",{zh:"全球通用的温室气体核算标准，定义了范围 1、2、3。",en:"The global GHG accounting standard that defines Scopes 1, 2, 3."}],
+  ["GRI",{zh:"全球报告倡议组织的可持续报告标准，问卷里的「302-1」「305-1」就是它的编号。",en:"Global Reporting Initiative standards; codes like 302-1 and 305-1 come from it."}],
+  [{zh:"范围 1 / 2 / 3",en:"Scope 1 / 2 / 3"},{zh:"直接燃烧排放 / 外购电力排放 / 供应链其他排放。",en:"Direct combustion / purchased power / everything else in the value chain."}],
+  ["SMETA",{zh:"Sedex 的道德贸易审核，分 2 支柱和 4 支柱。",en:"Sedex ethical trade audit, 2- or 4-pillar."}],
+  ["amfori BSCI",{zh:"amfori 的社会责任审核体系。",en:"amfori's social compliance audit."}],
+  ["EcoVadis",{zh:"企业可持续评级平台，按四个主题打分。",en:"Sustainability rating platform scoring four themes."}],
+  ["Higg FEM",{zh:"服装鞋类工厂的环境自评模块。",en:"Facility environmental self-assessment for apparel."}]
+];
+
+/* ---- shared bits ---- */
+let myInd = null; try{ myInd = localStorage.getItem("gl-ind"); }catch(e){}
+function setInd(id){ myInd=id; try{ localStorage.setItem("gl-ind",id); }catch(e){} }
+function statusTag(st){ return el("span","stag "+st,T(STATUS[st])); }
+function srcChips(ids){ const d=el("div","cites"); ids.forEach(id=>{ if(SRC[id]) d.append(ext(SRC[id].url,"cite",SRC[id].ref+" ↗")); }); return d; }
+function faqItem(f,open){
+  const d=el("details","faq"); if(open) d.open=true; d.id="q-"+f.id;
+  d.append(el("summary",null,T(f.q)));
+  const b=el("div","faq-a"); b.append(el("p",null,T(f.a)), srcChips(f.s)); d.append(b); return d;
+}
+function timelineEl(filterInd, limit){
+  const today = new Date().toISOString().slice(0,10);
+  const items = TIMELINE.filter(x=>!filterInd || x.p.includes("*") || x.p.includes(filterInd));
+  const upcoming = items.filter(x=>x.d>=today), past = items.filter(x=>x.d<today);
+  const show = past.slice(-1).concat(upcoming).slice(0, limit||99);
+  const wrap = el("ol","tl");
+  show.forEach(x=>{
+    const r = RULE[x.r]; const li = el("li", x.d<today?"past":"");
+    const dd = el("div","tl-d"); dd.append(el("b",null,x.d.slice(0,7).replace("-",".")), el("span",null, x.d<today ? T(S.tlDone) : T(S.tlIn)(Math.ceil((new Date(x.d)-new Date(today))/86400000))));
+    const body = el("div","tl-b"); const a=link("#rule-"+x.r,"tl-t",T(x.t)); body.append(a);
+    const meta=el("div","tl-m"); meta.append(statusTag(r.status), el("span","fine",T(MARKET[r.mkt]))); body.append(meta);
+    li.append(dd, body); wrap.append(li);
+  });
+  return wrap;
+}
+
+/* ---- views ---- */
+function viewHome(){
+  const hero = el("section","hero"); const c = el("div","container");
+  const l = el("div"); l.style.minWidth="0";
+  l.append(el("span","eyebrow",T(S.heroEyebrow)));
+  const h = el("h1"); const [a,b]=T(S.heroH); h.append(document.createTextNode(a), document.createElement("br"), el("em",null,b)); l.append(h);
+  l.append(el("p","lede",T(S.heroP2)));
+  const pick = el("div","pick"); pick.append(el("span","pick-l",T(S.pickL)));
+  const chips = el("div","chips");
+  IND.forEach(x=>{ const a2=link("#guide-"+x.id,"chip"+(myInd===x.id?" on":""),indName(x.id).split("（")[0].split(" (")[0]); a2.addEventListener("click",()=>setInd(x.id)); chips.append(a2); });
+  pick.append(chips); l.append(pick);
+  const cta = el("div","cta"); cta.append(link("#check","btn solid",T(S.heroCta)), link("#sample","textlink",T(S.heroCta3))); l.append(cta);
+  const pv = el("a","preview"); pv.href="#sample";
+  const ex = sampleAssess();
+  const pm = el("div","pv-meta"); pm.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,T(S.sampleTag))); pv.append(pm);
+  const pt = el("div","pv-top"); pt.append(stamp(ex.level,false), el("p",null,T(S.pvLine))); pv.append(pt);
+  const pl = el("div","pv-list");
+  ex.perMarket.forEach(p=>{ const d=p.hits.filter(h=>h.r.status!=="indirect")[0]; const r=el("div","pv-row"); r.append(el("b",null,T(MARKET[p.m])), el("span",null,d?T(d.r.t):"—"), el("span","pill "+p.lv,T(S.lvl[p.lv]))); pl.append(r); });
+  pv.append(pl); pv.append(el("span","pv-go",T(S.pvGo)));
+  c.append(l,pv); hero.append(c); app.append(hero);
+
+  // stats band: real numbers from the content
+  const band = el("section","stats"); const bc = el("div","container stats-g");
+  [[String(RULES.length),T(S.st1)],[String(Object.keys(SRC).length),T(S.st2)],[String(IND.length),T(S.st3)],[String(FAQ.length),T(S.st4)]].forEach(([n,l2])=>{ const d=el("div","stat"); d.append(el("b",null,n), el("span",null,l2)); bc.append(d); });
+  band.append(bc); app.append(band);
+
+  // timeline
+  const ts = el("section","container sec2");
+  const th = el("div","sec2-h"); const tl = el("div"); tl.append(el("span","eyebrow",T(S.tlEyebrow)), el("h2",null,T(S.tlH)));
+  const tf = el("div","seg"); let tFilter = myInd;
+  const tbox = el("div");
+  const drawT = ()=>{ tbox.innerHTML=""; tbox.append(timelineEl(tFilter, 8)); tf.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String((b.dataset.v||null)===(tFilter||null)))); };
+  const b1=el("button",null,T(S.tlAll)); b1.type="button"; b1.addEventListener("click",()=>{tFilter=null; drawT();});
+  tf.append(b1);
+  if(myInd){ const b2=el("button",null,indName(myInd).split("（")[0].split(" (")[0]); b2.type="button"; b2.dataset.v=myInd; b2.addEventListener("click",()=>{tFilter=myInd; drawT();}); tf.append(b2); }
+  th.append(tl,tf); ts.append(th, tbox); drawT(); app.append(ts);
+
+  // FAQ preview
+  const fs = el("section","container sec2");
+  const fh = el("div","sec2-h"); const fl=el("div"); fl.append(el("span","eyebrow",T(S.faqEyebrow)), el("h2",null,T(S.faqH))); fh.append(fl, link("#faq","textlink",T(S.faqAll))); fs.append(fh);
+  const fg = el("div","faq-list"); ["who-pays","questionnaire","not-covered","electricity"].forEach((id,i)=>fg.append(faqItem(FAQ_BY[id], i===0))); fs.append(fg);
+  app.append(fs);
+
+  // sources
+  const tr = el("section","trust"); const tc = el("div","container"); tc.append(el("span","eyebrow",T(S.trustH)));
+  const ul = el("ul"); [["cbam","inforce"],["ppwr","inforce"],["reach","inforce"],["eudr","soon"],["ukcbam","soon"],["csddd","indirect"],["ghg","std"],["mee","data"]].forEach(([id,st])=>{ const li=el("li"); const a2=link("#method",""); a2.append(el("span",null,SRC[id].ref), el("small",null,st==="std"?T(S.tagStd):st==="data"?T(S.tagData):T(STATUS[st]))); li.append(a2); ul.append(li); });
+  tc.append(ul); tr.append(tc); app.append(tr);
+}
+
+function viewGuides(){
+  const wrap = el("div","container page");
+  wrap.append(pageHead(T(S.navGuides),T(S.guidesH),T(S.guidesP)));
+  const g = el("div","guide-grid");
+  IND.forEach(x=>{
+    const a=link("#guide-"+x.id,"gcard"+(myInd===x.id?" on":"")); a.addEventListener("click",()=>setInd(x.id));
+    const top=el("div","gc-top"); top.append(el("span","gc-ic",x.icon), el("b",null,indName(x.id)));
+    a.append(top, el("p",null,T(x.one)));
+    const tags=el("div","gc-tags"); x.rules.slice(0,4).forEach(id=>tags.append(el("span","mini",T(RULE[id].t).replace(/（.*?）|\(.*?\)/g,"")))); a.append(tags);
+    g.append(a);
+  });
+  wrap.append(g); app.append(wrap);
+}
+
+function viewGuide(id){
+  const x = IND_BY[id]; if(!x){ location.hash="#guides"; return; }
+  setInd(id);
+  const wrap = el("div","container page");
+  wrap.append(link("#guides","backlink",T(S.gBack)));
+  const h = pageHead(T(S.navGuides), indName(id), T(x.one)); h.style.marginTop="18px"; wrap.append(h);
+  const grid = el("div","detail"); const main=el("div"); main.style.minWidth="0";
+  const s1 = el("section","dsec"); s1.append(el("h2",null,T(S.gRules)));
+  const rl = el("div","rlist");
+  x.rules.map(r=>RULE[r]).sort((a,b)=>["inforce","soon","proposal","indirect","buyer"].indexOf(a.status)-["inforce","soon","proposal","indirect","buyer"].indexOf(b.status)).forEach(r=>{
+    const a=link("#rule-"+r.id,"rrow"); const m=el("div"); m.style.minWidth="0"; m.append(el("b",null,T(r.t)), el("span","fine",T(r.short)+" · "+T(MARKET[r.mkt]))); a.append(m, statusTag(r.status)); rl.append(a);
+  });
+  s1.append(rl); main.append(s1);
+  const s2 = el("section","dsec"); s2.append(el("h2",null,T(S.gAsks))); const ul=el("ul","bul"); T(x.asks).forEach(t=>ul.append(el("li",null,t))); s2.append(ul); main.append(s2);
+  const s3 = el("section","dsec"); s3.append(el("h2",null,T(S.gDocs)), el("p","fine",T(S.gDocsP)));
+  let done={}; try{ done=JSON.parse(localStorage.getItem("gl-docs-"+id)||"{}"); }catch(e){}
+  const cl = el("div","checklist");
+  T(x.docs).forEach((t,i)=>{ const lb=el("label","ck"); const inp=document.createElement("input"); inp.type="checkbox"; inp.id="doc-"+id+"-"+i; inp.checked=!!done[i]; inp.addEventListener("change",()=>{ done[i]=inp.checked; try{localStorage.setItem("gl-docs-"+id,JSON.stringify(done));}catch(e){} prog.textContent=T(S.gProg)(Object.values(done).filter(Boolean).length, T(x.docs).length); }); lb.append(inp, el("span",null,t)); cl.append(lb); });
+  const prog = el("div","fine",T(S.gProg)(Object.values(done).filter(Boolean).length, T(x.docs).length));
+  s3.append(cl, prog); main.append(s3);
+  const s4 = el("section","dsec"); s4.append(el("h2",null,T(S.gSteps))); const ol=el("ol","todo"); T(x.steps).forEach(t=>{ const li=el("li"); li.append(el("p",null,t)); ol.append(li); }); s4.append(ol); main.append(s4);
+  const s5 = el("div","why"); s5.append(el("span","why-h",T(S.gMyth)), el("p",null,T(x.myth))); s5.querySelector("p").style.margin="4px 0 0"; main.append(s5);
+  const s6 = el("section","dsec"); s6.style.marginTop="28px"; s6.append(el("h2",null,T(S.gFaq))); x.faq.forEach(fid=>s6.append(faqItem(FAQ_BY[fid],false))); main.append(s6);
+  const aside = el("aside","aside");
+  aside.append(el("h3",null,T(S.gNext)));
+  const go = el("button","btn solid",T(S.gCheck)); go.type="button";
+  go.addEventListener("click",()=>{ answers={market:[],product:[id]}; reportReady=false; qIndex=1; keepIdx=true; location.hash="#check"; });
+  aside.append(el("p","fine",T(S.gCheckP)), go, link("#calc","textlink",T(S.gCalc)));
+  aside.append(el("h3",null,T(S.gDates)), timelineEl(id, 5));
+  grid.append(main, aside); wrap.append(grid); app.append(wrap);
+}
+
+function viewFAQ(){
+  const wrap = el("div","narrow page"); wrap.style.maxWidth="860px";
+  wrap.append(pageHead(T(S.navFaq),T(S.faqPageH),T(S.faqPageP)));
+  const fl = el("div","faq-list"); FAQ.forEach(f=>fl.append(faqItem(f,false))); wrap.append(fl);
+  const gs = el("section","msec"); gs.style.marginTop="48px"; gs.id="glossary"; gs.append(el("h2",null,T(S.glossH)));
+  const dl = el("dl","gloss"); GLOSS.forEach(([k,v])=>{ dl.append(el("dt",null,T(k)), el("dd",null,T(v))); }); gs.append(dl); wrap.append(gs);
+  app.append(wrap);
+}
+
 /* ============ router ============ */
 function route(){
   const h = (location.hash||"").replace(/^#/,"");
   if(h.startsWith("rule-")) return ["rule",h.slice(5)];
-  if(["check","report","rules","decoder","method","join","sample","about","calc"].includes(h)) return [h];
+  if(h.startsWith("guide-")) return ["guide",h.slice(6)];
+  if(["check","report","rules","decoder","method","join","sample","about","calc","guides","faq"].includes(h)) return [h];
   return ["home"];
 }
 let lastView = null;
@@ -1380,10 +1724,10 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(n=>{ const k=n.getAttribute("data-i"); const val=T(S[k]); if(typeof val==="string") n.textContent=val; });
   document.getElementById("lang-zh").setAttribute("aria-pressed",String(lang==="zh"));
   document.getElementById("lang-en").setAttribute("aria-pressed",String(lang==="en"));
-  const navKey = v==="rule"?"rules":(v==="report"||v==="sample")?"check":v;
+  const navKey = v==="rule"?"rules":v==="guide"?"guides":v;
   document.querySelectorAll("[data-nav]").forEach(a=>{ if(a.getAttribute("data-nav")===navKey) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   app.innerHTML="";
-  ({home:viewHome,check:viewCheck,report:()=>viewReport(),sample:viewSample,about:viewAbout,calc:viewCalc,rules:viewRules,rule:()=>viewRule(arg),decoder:viewDecoder,method:viewMethod,join:viewJoin})[v]();
+  ({home:viewHome,check:viewCheck,report:()=>viewReport(),sample:viewSample,about:viewAbout,calc:viewCalc,guides:viewGuides,guide:()=>viewGuide(arg),faq:viewFAQ,rules:viewRules,rule:()=>viewRule(arg),decoder:viewDecoder,method:viewMethod,join:viewJoin})[v]();
   const key = v+(arg||"")+(v==="check"?qIndex:"");
   if(key!==lastView) window.scrollTo(0,0);
   lastView = key;
