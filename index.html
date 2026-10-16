@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://zachclaude.github.io/greenledger/">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"青单 Qingdan","url":"https://zachclaude.github.io/greenledger/","inLanguage":["zh-CN","en"],"description":"帮中小出口工厂看懂并应对欧盟等市场的绿色合规要求","publisher":{"@type":"Organization","name":"青单 Qingdan","email":"1767311880@qq.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"青单 Qingdan","url":"https://zachclaude.github.io/greenledger/","inLanguage":["zh-CN","en"],"description":"帮中小出口工厂看懂并应对欧盟等市场的绿色合规要求","publisher":{"@type":"Organization","name":"青单 Qingdan"}}</script>
 <style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -246,7 +246,7 @@ table.score th{font-family:var(--f-mono);font-size:12px;font-weight:500;color:va
 .form{display:grid;gap:14px}
 .field{display:grid;gap:4px}
 .field label{font-weight:500;font-size:14.5px}
-.field input,.field textarea{border:1px solid var(--line-2);border-radius:10px;background:var(--white);padding:10px 12px;font-family:var(--f-body);font-size:15.5px;min-height:0}
+.field input,.field textarea,.field select{border:1px solid var(--line-2);border-radius:10px;background:var(--white);padding:10px 12px;font-family:var(--f-body);font-size:15.5px;min-height:44px;color:var(--ink)}
 .field textarea{min-height:90px}
 
 footer{border-top:1px solid var(--line);padding-block:30px;margin-top:0}
@@ -359,6 +359,20 @@ details.faq[open]>summary::after{content:"−"}
 .gc-top b{font-size:16.5px;color:var(--forest)}
 .gcard p{margin:0;color:var(--muted);font-size:14.5px}
 .gc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.biz{padding-block:42px 8px}
+.biz-head{max-width:720px;margin-bottom:20px}
+.biz-head h2{font-size:clamp(24px,3vw,32px);margin-top:6px}
+.biz-head p{max-width:66ch;color:var(--muted);margin:8px 0 0}
+.biz-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.biz-card{display:grid;align-content:start;gap:10px;min-height:210px;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.biz-card:hover{border-color:var(--leaf);transform:translateY(-2px)}
+.biz-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.biz-label{font:12px var(--f-mono);letter-spacing:.04em;color:var(--leaf)}
+.biz-card h3{font-size:19px}
+.biz-card p{margin:0;color:var(--muted);font-size:14.5px}
+.biz-action{align-self:end;margin-top:6px;color:var(--forest);font-weight:700}
+.biz-note{margin-top:14px;padding:13px 16px;border:1px solid var(--line-2);border-radius:10px;background:var(--mist);color:var(--forest);font-size:14px}
+@media(max-width:760px){.biz-grid{grid-template-columns:minmax(0,1fr)}.biz-card{min-height:0}}
 .mini{font-size:12px;background:var(--mist);border:1px solid var(--line);border-radius:6px;padding:1px 8px;color:var(--ink)}
 .rlist{display:grid;border-top:1px solid var(--line)}
 .rrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
@@ -450,20 +464,20 @@ ol.tl li:focus-within{outline:2px solid var(--leaf);outline-offset:2px}
       <li><a href="#check">订单风险自测</a>：10 道题，看你的产品受哪些规则影响。</li>
       <li><a href="#calc">碳数据计算</a>：把 12 个月电费单和燃料用量换算成范围 1、范围 2 排放，按 GHG Protocol 口径输出中英数据表。</li>
       <li><a href="#decoder">买家问卷解读</a>：逐题说明客户 ESG 问卷在问什么、要准备什么。</li>
-      <li><a href="#join">免费帮你做第一份客户报告</a>。</li>
+      <li><a href="#join">提交问题或申请人工帮助</a>。</li>
     </ul>
     <h2>收录的法规</h2>
     <p>欧盟碳边境调节机制 CBAM、英国 CBAM、欧盟零毁林法规 EUDR、欧盟电池法规（电池护照）、欧盟包装法规 PPWR、REACH、RoHS、加州 SB 253、企业可持续发展尽职调查指令 CSDDD，以及 SMETA、BSCI、EcoVadis、Higg 等买家审核标准。</p>
     <h2>行业指南</h2>
     <p><a href="#guide-steel">钢铁 / 铝制品</a> · <a href="#guide-machine">机电 / 家电</a> · <a href="#guide-electronics">电子产品</a> · <a href="#guide-battery">电池</a> · <a href="#guide-wood">木制品 / 家具 / 纸</a> · <a href="#guide-textile">纺织服装鞋</a> · <a href="#guide-food">食品农产品</a> · <a href="#guide-packaging">塑料包装</a> · <a href="#guide-rubber">橡胶皮革</a> · <a href="#guide-cement">水泥化肥</a></p>
-    <p>联系我们：<a href="mailto:1767311880@qq.com">1767311880@qq.com</a></p>
+    <p>如需人工帮助，请通过网站的“提交问题”表单联系我们。</p>
   </div>
 </main>
 
 <footer>
   <div class="container">
     <div class="fb"><svg viewBox="0 0 64 72" aria-hidden="true"><use href="#crest"/></svg><span data-i="foot1"></span></div>
-    <div class="row" style="gap:16px"><a href="#method" data-i="footMethod"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#join" data-i="navJoin"></a><a href="mailto:1767311880@qq.com">1767311880@qq.com</a></div>
+    <div class="row" style="gap:16px"><a href="#method" data-i="footMethod"></a><a href="#about" id="foot-privacy" data-i="footPrivacy"></a><a href="#join" data-i="navJoin"></a></div>
   </div>
 </footer>
 
@@ -474,11 +488,9 @@ ol.tl li:focus-within{outline:2px solid var(--leaf);outline-offset:2px}
 let lang = "zh";
 try{ const v = localStorage.getItem("gl-lang"); if(v==="en"||v==="zh") lang=v; }catch(e){}
 const T = (o) => (o && typeof o==="object" && !Array.isArray(o)) ? (o[lang] ?? o.zh) : o;
-const CONTACT = "1767311880@qq.com";
 // Report pricing. During the free beta, charge=false and the report shows a "free for now" note.
 const PRICING = {charge:false, price:"29.9"};
-// Outside Claude, forms are emailed to CONTACT via FormSubmit (https://formsubmit.co).
-// The path is FormSubmit's alias for CONTACT, issued when the form was activated (2026-10-13).
+// FormSubmit's activated alias routes form submissions without exposing the mailbox address in the page source.
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/60ee8b52c62ec9e8e26598d12715d195";
 async function sendForm(subject, fields){
   const res = await fetch(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
@@ -531,12 +543,12 @@ const KIND = {law:{zh:"法规与官方文件",en:"Laws and official documents"},
 /* ============ copy ============ */
 const S = {
   brandSub:{zh:"Qingdan · 出口绿色合规",en:"GREEN COMPLIANCE FOR EXPORTERS"},
-  navCheck:{zh:"风险自测",en:"Risk check"}, navRules:{zh:"法规库",en:"Rules"}, navDec:{zh:"问卷解读",en:"Questionnaires"}, navMethod:{zh:"依据与方法",en:"Sources & method"}, navJoin:{zh:"免费报告",en:"Free report"}, menu:{zh:"菜单",en:"Menu"},
-  heroEyebrow:{zh:"为中小出口工厂而做",en:"Built for small export factories"},
-  heroH:{zh:["欧洲客户的新规则，","会不会卡住你的订单？"],en:["Will new green rules","hold up your next order?"]},
+  navCheck:{zh:"风险自测",en:"Risk check"}, navRules:{zh:"法规库",en:"Rules"}, navDec:{zh:"问卷解读",en:"Questionnaires"}, navMethod:{zh:"依据与方法",en:"Sources & method"}, navJoin:{zh:"提交问题",en:"Ask a question"}, menu:{zh:"菜单",en:"Menu"},
+  heroEyebrow:{zh:"给正在应对海外客户要求的出口工厂",en:"For exporters handling buyer requirements"},
+  heroH:{zh:["客户要碳数据、问卷和审核，","你的工厂该先准备什么？"],en:["Carbon data, questionnaires and audits:","what should your factory prepare first?"]},
   heroP:{zh:"先按行业判断哪些规则和你有关，再回答 10 个左右的问题，拿到一份按出口市场分开的检查单。直接约束和间接影响分开写，每条结论都标明官方出处。",en:"Start with your industry to see which rules can reach you, answer about ten questions, and get a report by export market. Direct rules and indirect pressure are kept apart, and every conclusion cites its official source."},
   heroCta:{zh:"开始自测",en:"Start the check"}, heroCta2:{zh:"查看样例检查单",en:"See a sample report"},
-  heroMeta:{zh:"约 2 分钟 · 不用注册 · 法规核对于 2026-10-12",en:"About 2 minutes · No sign-up · Rules checked 12 Oct 2026"},
+  heroMeta:{zh:"约 2 分钟 · 不用注册 · 内测期间免费 · 不上传自测答案",en:"About 2 minutes · No sign-up · Free during beta · Self-check answers stay in your browser"},
   pvLine:{zh:"示例：钢制紧固件出口欧盟和英国。CBAM 已生效，燃料记录拿不出来。",en:"Example: steel fasteners to the EU and UK. CBAM is in force and fuel records are missing."},
   pvGo:{zh:"查看完整样例 →",en:"See the full sample →"},
   sampleTag:{zh:"样例",en:"SAMPLE"},
@@ -566,22 +578,35 @@ const S = {
     [{zh:"我们解决什么问题",en:"The problem"},{zh:["中小出口工厂越来越常收到客户的英文合规要求：碳排放数据、ESG 问卷、验厂。工厂老板怕的往往不是法规本身，而是「客户问我要东西，我答不上来」。","青单把这些要求翻译成工厂听得懂的话：哪些和你有关、要准备什么、先做什么、找谁做。"],en:["Small exporters increasingly get English compliance requests from buyers: carbon data, ESG questionnaires, audits. Owners fear less the law itself than being unable to answer the buyer.","Qingdan turns those requests into plain language: what applies, what to prepare, what to do first and who does it."]}],
     [{zh:"我们的原则",en:"Principles"},{zh:["每条结论都标明官方出处，并附原文链接。","不直接约束你的法规会明确标注「间接影响」，提案会标注「未通过」。","不替你编数据，估算的数字会标清楚。","这是合规方向的参考，不是法律意见。"],en:["Every conclusion cites an official source with a link.","Rules that do not bind you directly are marked indirect; proposals are marked as not adopted.","We never invent numbers; estimates are labelled.","This is orientation, not legal advice."]}],
     [{zh:"谁在做",en:"Who is building it"},{zh:["青单由 Zach 发起。他做过上市公司 ESG 报告的数据收集与核验、银行绿色金融产品推广和外贸单证工作，这个工具连接的正是这三块。"],en:["Qingdan was started by Zach, who has worked on ESG data verification for a listed company's sustainability report, green-finance products at a bank, and export documentation, the three pieces this tool connects."]}],
-    [{zh:"接下来三个月",en:"Next three months"},{zh:["先把钢铝制品、木材家具、纺织服装三个行业做深，和 20 家工厂一起验证检查单是否真的有用。","增加主流买家问卷模板的逐题解读，以及法规更新提醒。"],en:["Go deep on three industries (steel/aluminium, wood/furniture, textiles) and test the report with 20 factories.","Add question-by-question guides for mainstream buyer questionnaires, and rule-change alerts."]}]
+    [{zh:"内测阶段",en:"Beta stage"},{zh:["现在开放行业自测、碳数据计算、法规查询和问卷人工解读，欢迎带着真实客户问题来试。","我们会根据工厂反馈持续调整内容；提交问题不会自动触发收费。"],en:["Industry checks, carbon calculations, rule lookup and human questionnaire reading are open during the beta.","We are improving the service from factory feedback; submitting a question does not trigger a charge."]}]
   ],
   priceH:{zh:"怎么收费",en:"Pricing"},
   priceCols:[{zh:"方案",en:"Plan"},{zh:"包含",en:"Includes"},{zh:"价格",en:"Price"}],
   price:[
-    [{zh:"自测",en:"Self-check"},{zh:"风险检查单、法规库、样例问卷解读",en:"Risk report, rules library, sample questionnaire guide"},{zh:"免费",en:"Free"}],
-    [{zh:"首份客户报告",en:"First buyer report"},{zh:"按客户问卷格式整理的中英双语数据报告",en:"Bilingual data report in the buyer's format"},{zh:"试点期前 20 家免费",en:"Free for the first 20 pilot factories"}],
-    [{zh:"年度服务",en:"Annual service"},{zh:"数据年度更新、问卷代答、法规更新提醒",en:"Yearly data update, questionnaire answering, rule alerts"},{zh:"定价测试中",en:"Pricing in testing"}]
+    [{zh:"风险自测与工具",en:"Self-check and tools"},{zh:"行业风险自测、法规库、碳数据计算器、样例问卷解读",en:"Industry risk check, rules library, carbon calculator and sample questionnaire reading"},{zh:"内测免费",en:"Free during beta"}],
+    [{zh:"个性化订单风险报告",en:"Personalized order-risk report"},{zh:"按你的产品和出口市场生成风险结论、资料缺口和下一步清单",en:"A report based on your products and markets, with gaps and next steps"},{zh:"内测免费；计划正式收费 ¥29.9 / 份",en:"Free during beta; planned price ¥29.9 per report"}],
+    [{zh:"客户问卷人工解读",en:"Human questionnaire reading"},{zh:"逐题解释客户在问什么、要准备什么资料",en:"Question-by-question explanation of what the buyer asks and which documents to prepare"},{zh:"内测免费",en:"Free during beta"}]
   ],
-  priceNote:{zh:"工厂为「保住订单」付费，所以付费点放在客户报告和问卷代答上，而不是自测本身。",en:"Factories pay to keep orders, so we charge for buyer reports and questionnaire answers, not for the check itself."},
+  priceNote:{zh:"目前处于免费内测，不收款。个性化订单风险报告计划正式收费后为 29.9 元 / 份；开始收费前会在网站明确告知。",en:"The beta is free and takes no payments. Personalized risk reports are planned at ¥29.9 each after launch; the site will clearly announce any change before charging."},
   metaDesc:{zh:"青单 Qingdan：帮中小出口工厂看懂欧盟 CBAM、EUDR、电池法、包装法等绿色合规要求，免费自测订单风险、计算碳排放、解读客户 ESG 问卷。",en:"Qingdan helps small export factories understand EU CBAM, EUDR, battery and packaging rules: free order-risk check, carbon calculator and ESG questionnaire decoder."},
-  freeBanner:{zh:(p)=>`内测期间报告免费。正式上线后每份报告 ${p} 元，现在用的都是完整版。`,en:(p)=>`Reports are free during the beta. After launch each report will cost ¥${p}; you are getting the full version now.`},
+  bizEyebrow:{zh:"从问题到下一步",en:"From question to next step"},
+  bizTitle:{zh:"你现在最需要哪种帮助？",en:"What kind of help do you need now?"},
+  bizIntro:{zh:"先用免费工具判断问题，再按需要申请人工支持。",en:"Start with the free tools, then request human help if you need it."},
+  bizCheckLabel:{zh:"免费自助工具",en:"FREE SELF-SERVICE"}, bizCheckTitle:{zh:"先看订单风险和准备清单",en:"Check order risk and what to prepare"},
+  bizCheckBody:{zh:"按产品和出口市场生成检查单，查看相关规则、资料缺口和建议动作；也可直接计算基础碳数据。",en:"Get a checklist by product and market, with relevant rules, data gaps and next steps. You can also calculate basic carbon data."},
+  bizCheckAction:{zh:"开始风险自测 →",en:"Start the risk check →"},
+  bizDecodeLabel:{zh:"人工逐题解读 · 内测免费",en:"HUMAN QUESTIONNAIRE READING · FREE BETA"}, bizDecodeTitle:{zh:"客户问卷看不懂？",en:"A buyer questionnaire is unclear?"},
+  bizDecodeBody:{zh:"提交客户问卷内容，我们逐题解释问题含义、需要准备的资料和可参考的回答方向。",en:"Submit buyer questionnaire text. We explain each question, what to prepare and how you might respond."},
+  bizDecodeAction:{zh:"查看示例并申请解读 →",en:"See an example and request a reading →"},
+  bizAskLabel:{zh:"一对一问题 · 内测免费",en:"ASK A QUESTION · FREE BETA"}, bizAskTitle:{zh:"有具体问题要确认？",en:"Need an answer to a specific question?"},
+  bizAskBody:{zh:"告诉我们你的产品、市场和客户要求，我们按提交顺序回复；通常在 2 个工作日内联系。",en:"Tell us your product, market and buyer request. We respond in order, usually within two working days."},
+  bizAskAction:{zh:"提交问题 →",en:"Send your question →"},
+  bizPriceNote:{zh:"内测阶段不收费、不收款。个性化风险报告计划在正式收费后为 29.9 元 / 份；收费前会在网站提前说明。",en:"No charges or payments during beta. Personalized risk reports are planned at ¥29.9 each after launch; we will announce any change in advance."},
+  freeBanner:{zh:(p)=>`免费内测：这份个性化报告现在不收费。正式收费计划为 ${p} 元 / 份，开始收费前会提前说明。`,en:(p)=>`Free beta: this personalized report is free now. The planned price is ¥${p} per report; we will announce before charging.`},
   contactH:{zh:"联系我们",en:"Contact"},
-  contactP:{zh:"有客户问卷看不懂、碳数据不会算，都可以直接发邮件给我们：",en:"Stuck on a buyer questionnaire or carbon numbers? Email us: "},
+  contactP:{zh:"有客户问卷看不懂、碳数据不会算，或想确认某条规则是否适用？请通过问题表单告诉我们。",en:"Need help with a buyer questionnaire, carbon data or whether a rule applies? Send us a message through the inquiry form."},
   privH:{zh:"隐私说明",en:"Privacy"},
-  privP:{zh:["自测在你的浏览器里计算，答案不会上传。","只有你在「免费报告」和「问卷解读」页主动提交的信息会通过表单服务 FormSubmit 发送到我们的邮箱，仅用于联系你，不会出售或分享。","在 Claude 中打开本页时，问卷解读的 AI 功能会把你粘贴的文字发送给 Claude 处理，使用你自己的 Claude 账号。"],en:["The check runs in your browser; answers are not uploaded.","Only what you submit on the free report or questionnaire pages is emailed to us through the form service FormSubmit, used only to contact you, never sold or shared.","When this page is opened inside Claude, the AI decoder sends the text you paste to Claude using your own Claude account."]},
+  privP:{zh:["自测在你的浏览器里计算，答案不会上传。","只有你主动提交的问题、联系方式和问卷内容会通过表单服务 FormSubmit 发送到我们的邮箱，用于回复本次咨询，不会出售或分享。","在 Claude 中打开本页时，问卷解读的 AI 功能会把你粘贴的文字发送给 Claude 处理，使用你自己的 Claude 账号。"],en:["The check runs in your browser; answers are not uploaded.","Only the question, contact details and questionnaire text you choose to submit are emailed to us through FormSubmit to answer this inquiry; they are not sold or shared.","When this page is opened inside Claude, the AI decoder sends the text you paste to Claude using your own Claude account."]},
   e1k:{zh:"01 · 自测",en:"01 · CHECK"}, e1h:{zh:"订单风险自测",en:"Order risk check"}, e1p:{zh:"一页一题，答完生成带官方依据的检查单和英文回复。",en:"One question per page; ends with a cited report and an English reply."}, e1g:{zh:"开始 →",en:"Start →"},
   e2k:{zh:"03 · 法规",en:"03 · RULES"}, e2h:{zh:"各市场法规库",en:"Rules by market"}, e2p:{zh:"欧盟、英国、美国、中东的法规，加上 SMETA、BSCI、EcoVadis 等买家审核标准：管什么、何时生效、是否直接约束你。",en:"Rules in the EU, UK, US and Middle East, plus buyer audit standards like SMETA, BSCI and EcoVadis: scope, dates, and whether they bind you directly."}, e2g:{zh:"浏览 →",en:"Browse →"},
   e3k:{zh:"04 · 问卷",en:"04 · QUESTIONNAIRES"}, e3h:{zh:"买家问卷解读",en:"Questionnaire decoder"}, e3p:{zh:"把英文 ESG 问卷逐题翻成大白话，并标出对应的 GRI 指标。",en:"Turns an English ESG questionnaire into plain words, mapped to GRI disclosures."}, e3g:{zh:"打开 →",en:"Open →"},
@@ -659,7 +684,7 @@ const S = {
   noRule:{zh:"暂无点名你产品的规则",en:"No rule names your products"},
   noRuleP:{zh:"按你的产品，这个市场目前没有点名你的进口碳规则。客户的供应商问卷仍可能来。",en:"For your products, no import carbon rule names you in this market. Buyer questionnaires may still arrive."},
   copy:{zh:"复制英文回复",en:"Copy reply"}, copied:{zh:"已复制",en:"Copied"}, copyFail:{zh:"复制被拦截，文字已选中",en:"Copy blocked; the text is selected"},
-  edit:{zh:"修改答案",en:"Change answers"}, restart:{zh:"重新自测",en:"Start over"}, toJoin:{zh:"申请免费报告",en:"Apply for a free report"},
+  edit:{zh:"修改答案",en:"Change answers"}, restart:{zh:"重新自测",en:"Start over"}, toDecoder:{zh:"客户问卷？申请逐题解读",en:"Need help with a buyer questionnaire?"}, toAsk:{zh:"还有具体问题？留言",en:"Have a question? Send it to us"},
   noReport:{zh:"还没有检查单。先完成风险自测。",en:"No report yet. Complete the risk check first."},
   rulesTitle:{zh:"各市场法规库",en:"Rules by market"},
   rulesP:{zh:"只收录和中国出口工厂直接相关的规则。点开每一条，可以看到适用范围、时间节点和官方原文链接。",en:"Only rules that directly touch Chinese export factories. Open each for scope, deadlines and links to the official text."},
@@ -667,8 +692,8 @@ const S = {
   dWhat:{zh:"这条规则管什么",en:"What it does"}, dWho:{zh:"适用范围",en:"Who it covers"}, dWhen:{zh:"时间节点",en:"Key dates"}, dNeed:{zh:"客户会找你要什么",en:"What your buyer will ask for"}, dPrep:{zh:"怎么准备",en:"How to prepare"},
   dBasis:{zh:"官方依据",en:"Official basis"}, dStd:{zh:"相关报告标准",en:"Related reporting standards"}, dBack:{zh:"← 返回法规库",en:"← Back to rules"}, dOpen:{zh:"打开原文",en:"Open source"},
   decTitle:{zh:"买家问卷解读",en:"Questionnaire decoder"},
-  decP:{zh:"逐题说明客户在问什么、要准备什么、不答会怎样，并标出它对应的 GRI 披露项。右侧是示例问卷的解读。把你自己的问卷粘贴进来、留下联系方式，我们会人工逐题解读后发给你，免费。",en:"For each question: what the buyer is asking, what to prepare, what happens if you skip it, and the GRI disclosure it maps to. The right side reads the sample. Paste your own questionnaire and leave a contact; we will decode it by hand and send it back, free."},
-  trHuman:{zh:"发给我们人工解读",en:"Send for a free human reading"},
+  decP:{zh:"逐题说明客户在问什么、要准备什么、不答会怎样，并标出它对应的 GRI 披露项。右侧是示例问卷的解读。把你自己的问卷粘贴进来、留下联系方式，我们会在内测期免费人工逐题解读后发给你。",en:"For each question: what the buyer is asking, what to prepare, what happens if you skip it, and the GRI disclosure it maps to. The right side reads the sample. During beta, paste your questionnaire and leave a contact; we will decode it by hand for free."},
+  trHuman:{zh:"申请内测期免费人工解读",en:"Request a free human reading during beta"},
   trContact:{zh:"你的邮箱、微信或手机号",en:"Your email, WeChat or phone"},
   trPasteOwn:{zh:"左边还是示例问卷，请先把客户发来的问卷粘贴进去。",en:"That is still the sample. Paste your buyer's questionnaire first."},
   trNeedContact:{zh:"请留下联系方式，我们解读完才能发给你。",en:"Leave a contact so we can send the reading back."},
@@ -695,13 +720,13 @@ const S = {
     ["mid",{zh:"规则即将生效、只是提案，或者大品牌客户正在发问卷",en:"A rule is coming, still proposed, or large buyers are sending questionnaires"},{zh:"电池产品出口欧盟（电池护照 2027 年起）",en:"Battery products to the EU (battery passport from 2027)"}],
     ["low",{zh:"所选市场没有点名你产品的进口规则",en:"No import rule names your product in the chosen markets"},{zh:"纺织品出口东南亚",en:"Textiles to Southeast Asia"}]
   ],
-  joinTitle:{zh:"免费帮你做第一份客户报告",en:"Your first buyer report, free"},
-  joinP:{zh:"我们正在找前 20 家工厂一起打磨这个工具。你提供电费单和客户问卷，我们按 GRI 和 GHG Protocol 的口径手工整理成中英双语报告，估算的数据会标清楚。",en:"We are looking for 20 factories to shape this tool with us. Send power bills and the buyer's questionnaire; we hand-build a bilingual report following GRI and the GHG Protocol, with estimates clearly marked."},
-  lfName:{zh:"工厂名称",en:"Factory name"}, lfProduct:{zh:"主要产品和出口国家",en:"Main products and export countries"}, lfContact:{zh:"微信或手机号",en:"WeChat or phone"}, lfPain:{zh:"最近客户问过你哪些环保、碳排放问题？（选填）",en:"What green or carbon questions have buyers asked lately? (optional)"},
-  lfSubmit:{zh:"提交申请",en:"Apply"}, lfOk:{zh:"已收到。我们会在 2 个工作日内联系你。",en:"Received. We will reach out within 2 working days."},
+  joinTitle:{zh:"提交问题，获取针对你工厂的回复",en:"Ask a question and get a response for your factory"},
+  joinP:{zh:"可以问法规是否适用、客户问卷怎么答，或申请人工逐题解读。内测期免费；请描述你正在处理的实际问题，我们会按提交顺序回复。请勿上传商业机密或完整的敏感文件。",en:"Ask whether a rule applies, how to answer a buyer, or request a human questionnaire reading. Free during beta. Describe the real issue and we will respond in order. Please do not submit trade secrets or sensitive full documents."},
+  lfType:{zh:"你需要哪类帮助？",en:"What do you need help with?"}, lfTypeQuestion:{zh:"问一个具体问题",en:"Ask a specific question"}, lfTypeQuestionnaire:{zh:"申请客户问卷逐题解读",en:"Request questionnaire reading"}, lfTypeReport:{zh:"咨询自测报告或碳数据",en:"Ask about a risk report or carbon data"}, lfTypeOther:{zh:"其他",en:"Other"},
+  lfName:{zh:"工厂名称（选填）",en:"Factory name (optional)"}, lfProduct:{zh:"产品和主要出口市场（选填）",en:"Products and main export markets (optional)"}, lfContact:{zh:"邮箱、微信或手机号（必填）",en:"Email, WeChat or phone (required)"}, lfPain:{zh:"请描述客户要求或你遇到的问题（必填）",en:"Describe the buyer request or issue (required)"}, lfConsent:{zh:"我同意青单仅使用这些信息回复本次咨询。",en:"I agree Qingdan may use this information to respond to this inquiry."},
+  lfSubmit:{zh:"免费提交问题",en:"Send my question for free"}, lfOk:{zh:"已收到。我们会按提交顺序回复；通常在 2 个工作日内联系你。",en:"Received. We will respond in order, usually within 2 working days."},
   lfSending:{zh:"正在提交…",en:"Sending…"},
-  lfCopyContact:{zh:(c)=>`在线提交暂时没有成功。请复制下面的申请信息，发邮件到：${c}`,en:(c)=>`Online submission did not go through. Copy the application below and email it to: ${c}`},
-  lfCopyNone:{zh:"在线提交还未开通。申请信息已整理好，请先复制保存，联系渠道开通后发给我们。",en:"Online submission is not open yet. Your application is ready below; copy it and send it once our contact channel opens."},
+  lfCopyNone:{zh:"在线提交暂时没有成功。请先复制保存下面的信息，稍后重新打开表单提交。",en:"Online submission did not go through. Copy the information below and retry through the form later."},
   lfErr:{zh:"没有保存成功，请稍后再试。",en:"Not saved. Please try again later."},
   copyPlain:{zh:"复制",en:"Copy"},
   foot1:{zh:"青单 Qingdan · 原型 v0.7 · 仅供参考，不构成法律意见",en:"Qingdan · prototype v0.7 · Guidance only, not legal advice"},
@@ -1097,7 +1122,7 @@ function viewAbout(){
   const tw=el("div","tablewrap"); const tb=el("table","score"); const th=el("thead"); const trr=el("tr"); S.priceCols.forEach(x=>trr.append(el("th",null,T(x)))); th.append(trr); tb.append(th);
   const tbd=el("tbody"); S.price.forEach(row=>{ const r=el("tr"); row.forEach(x=>r.append(el("td",null,T(x)))); tbd.append(r); }); tb.append(tbd); tw.append(tb); pr.append(tw); pr.append(el("p","fine",T(S.priceNote))); wrap.append(pr);
   const ct = el("section","msec"); ct.id="contact"; ct.append(el("h2",null,T(S.contactH)));
-  const cp = el("p",null,T(S.contactP)); cp.append(link("mailto:"+CONTACT,"",CONTACT)); ct.append(cp);
+  ct.append(el("p",null,T(S.contactP)));
   const cr = el("div","row"); cr.append(link("#join","btn solid small",T(S.navJoin)), link("#decoder","btn small",T(S.trHuman))); ct.append(cr); wrap.append(ct);
   const pv = el("section","msec"); pv.id="privacy"; pv.append(el("h2",null,T(S.privH))); T(S.privP).forEach(x=>pv.append(el("p",null,x))); wrap.append(pv);
   app.append(wrap);
@@ -1237,7 +1262,7 @@ function viewReport(opts){
 
   const nav = el("div","row"); nav.style.marginTop="36px";
   if(opts.sample){ nav.append(link("#check","btn solid",T(S.sampleCta))); wrap.append(nav); app.append(wrap); return; }
-  nav.append(link("#join","btn solid",T(S.toJoin)));
+  nav.append(link("#decoder","btn solid",T(S.toDecoder)),link("#join","btn",T(S.toAsk)));
   const e1=el("button","btn",T(S.edit)); e1.type="button"; e1.addEventListener("click",()=>{qIndex=0; location.hash="#check";});
   const e2=el("button","btn",T(S.restart)); e2.type="button"; e2.addEventListener("click",()=>{answers={market:[],product:[]}; qIndex=0; reportReady=false; location.hash="#check";});
   nav.append(e1,e2); wrap.append(nav);
@@ -1323,7 +1348,7 @@ function viewDecoder(){
       const who=contactIn.value.trim(); if(!who){ status.textContent=T(S.trNeedContact); contactIn.focus(); return; }
       go.disabled=true; status.textContent=T(S.lfSending);
       try{ await sendForm("青单问卷人工解读申请", {"联系方式":who.slice(0,100),"问卷内容":text.slice(0,8000),"语言":lang}); status.textContent=T(S.trSent); }
-      catch(e){ status.textContent=T(S.lfCopyContact)(CONTACT); }
+      catch(e){ status.textContent=T(S.lfCopyNone); }
       finally{ go.disabled=false; }
       return;
     }
@@ -1377,8 +1402,15 @@ function viewJoin(){
   const wrap = el("div","narrow page");
   wrap.append(pageHead(T(S.navJoin),T(S.joinTitle),T(S.joinP)));
   const f = el("form","form");
-  const field=(id,labKey,ta,req)=>{ const d=el("div","field"); const l=el("label",null,T(S[labKey])); l.htmlFor=id; const i=document.createElement(ta?"textarea":"input"); i.id=id; if(req) i.required=true; d.append(l,i); return d; };
-  f.append(field("lf-name","lfName",false,true), field("lf-product","lfProduct",false,true), field("lf-contact","lfContact",false,true), field("lf-pain","lfPain",true,false));
+  const field=(id,labKey,tag,req)=>{ const d=el("div","field"); const l=el("label",null,T(S[labKey])); l.htmlFor=id; const i=document.createElement(tag); i.id=id; if(req) i.required=true; d.append(l,i); return {box:d,input:i}; };
+  const kindField=field("lf-type","lfType","select",true); kindField.input.name="request_type";
+  [["question","lfTypeQuestion"],["questionnaire","lfTypeQuestionnaire"],["report","lfTypeReport"],["other","lfTypeOther"]].forEach(([v,k])=>{const o=el("option",null,T(S[k]));o.value=v;kindField.input.append(o);});
+  const nameField=field("lf-name","lfName","input",false); nameField.input.autocomplete="organization";
+  const productField=field("lf-product","lfProduct","input",false);
+  const contactField=field("lf-contact","lfContact","input",true); contactField.input.autocomplete="off";
+  const painField=field("lf-pain","lfPain","textarea",true); painField.input.maxLength=1000;
+  f.append(kindField.box,nameField.box,productField.box,contactField.box,painField.box);
+  const consent=el("label","ck"); const consentInput=document.createElement("input"); consentInput.type="checkbox"; consentInput.required=true; consentInput.name="consent"; consent.append(consentInput,el("span",null,T(S.lfConsent))); f.append(consent);
   const hp = document.createElement("input"); hp.type="text"; hp.name="_honey"; hp.tabIndex=-1; hp.autocomplete="off"; hp.setAttribute("aria-hidden","true"); hp.style.cssText="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"; f.append(hp);
   const btn = el("button","btn solid",T(S.lfSubmit)); btn.type="submit"; const r=el("div","row"); r.append(btn); f.append(r);
   const st = el("p","status"); f.append(st);
@@ -1386,23 +1418,27 @@ function viewJoin(){
   f.addEventListener("submit", async ev=>{
     ev.preventDefault(); btn.disabled=true; copyBox.hidden=true;
     const v=id=>document.getElementById(id).value.trim();
-    const rec={factory:v("lf-name").slice(0,200),product:v("lf-product").slice(0,300),contact:v("lf-contact").slice(0,100),pain:v("lf-pain").slice(0,1000)};
+    const rec={type:kindField.input.value,factory:v("lf-name").slice(0,200),product:v("lf-product").slice(0,300),contact:v("lf-contact").slice(0,100),pain:v("lf-pain").slice(0,1000)};
     const risk = reportReady ? assess(answers).level : "";
+    const query=new URLSearchParams(location.search);
+    const campaign=["utm_source","utm_medium","utm_campaign"].map(k=>{const x=(query.get(k)||"").trim().slice(0,100);return x?k+"="+x:""}).filter(Boolean).join("; ");
+    const kindLabel=kindField.input.selectedOptions[0]?.textContent||rec.type;
     try{
       const db = await dbPromise;
-      if(db){ await db.collection("leads").add({...rec,risk,lang,createdAt:new Date().toISOString()}); st.textContent=T(S.lfOk); f.reset(); return; }
+      if(db){ await db.collection("leads").add({...rec,risk,lang,campaign,consent:true,createdAt:new Date().toISOString()}); st.textContent=T(S.lfOk); f.reset(); return; }
       if(hp.value) return;
       st.textContent=T(S.lfSending);
       const zh = lang==="zh";
       try{
-        await sendForm("青单免费报告申请："+rec.factory, {"工厂":rec.factory,"产品/市场":rec.product,"联系方式":rec.contact,"客户问过":rec.pain||"—","自测结果":risk?T(S.lvl[risk])+" ("+refNo(answers)+")":"未做","语言":lang});
+        await sendForm("青单咨询｜"+kindLabel, {"咨询类型":kindLabel,"工厂":rec.factory||"未填写","产品/市场":rec.product||"未填写","联系方式":rec.contact,"问题描述":rec.pain,"自测结果":risk?T(S.lvl[risk])+" ("+refNo(answers)+")":"未做","来源":campaign||"未提供 UTM","语言":lang,"同意隐私说明":"是"});
         st.textContent=T(S.lfOk); f.reset(); return;
       }catch(e){ /* fall through to copy-and-send */ }
-      const lines=[zh?"青单免费报告申请":"Qingdan free report application", (zh?"工厂：":"Factory: ")+rec.factory, (zh?"产品 / 市场：":"Products / markets: ")+rec.product, (zh?"联系方式：":"Contact: ")+rec.contact];
-      if(rec.pain) lines.push((zh?"客户问过：":"Buyer asked: ")+rec.pain);
+      const lines=[zh?"青单咨询":"Qingdan inquiry",(zh?"咨询类型：":"Request type: ")+kindLabel,(zh?"工厂：":"Factory: ")+(rec.factory||"未填写"),(zh?"产品 / 市场：":"Products / markets: ")+(rec.product||"未填写"),(zh?"联系方式：":"Contact: ")+rec.contact];
+      if(rec.pain) lines.push((zh?"问题描述：":"Issue: ")+rec.pain);
       if(risk) lines.push((zh?"自测结果：":"Self-check: ")+T(S.lvl[risk])+" ("+refNo(answers)+")");
+      if(campaign) lines.push((zh?"来源：":"Campaign: ")+campaign);
       pre.textContent=lines.join("\n"); copyBox.hidden=false;
-      st.textContent = CONTACT ? T(S.lfCopyContact)(CONTACT) : T(S.lfCopyNone);
+      st.textContent = T(S.lfCopyNone);
     }catch(e){ st.textContent=T(S.lfErr); }
     finally{ btn.disabled=false; }
   });
@@ -1722,6 +1758,14 @@ function viewHome(){
   const band = el("section","stats"); const bc = el("div","container stats-g");
   [[String(RULES.length),T(S.st1)],[String(Object.keys(SRC).length),T(S.st2)],[String(IND.length),T(S.st3)],[String(FAQ.length),T(S.st4)]].forEach(([n,l2])=>{ const d=el("div","stat"); d.append(el("b",null,n), el("span",null,l2)); bc.append(d); });
   band.append(bc); app.append(band);
+
+  const biz = el("section","container biz");
+  const bh = el("div","biz-head"); bh.append(el("span","eyebrow",T(S.bizEyebrow)),el("h2",null,T(S.bizTitle)),el("p",null,T(S.bizIntro))); biz.append(bh);
+  const bg=el("div","biz-grid");
+  [["bizCheckLabel","bizCheckTitle","bizCheckBody","bizCheckAction","#check"],["bizDecodeLabel","bizDecodeTitle","bizDecodeBody","bizDecodeAction","#decoder"],["bizAskLabel","bizAskTitle","bizAskBody","bizAskAction","#join"]].forEach(([k1,k2,k3,k4,href])=>{
+    const a=link(href,"biz-card"); a.append(el("span","biz-label",T(S[k1])),el("h3",null,T(S[k2])),el("p",null,T(S[k3])),el("span","biz-action",T(S[k4]))); bg.append(a);
+  });
+  biz.append(bg,el("p","biz-note",T(S.bizPriceNote))); app.append(biz);
 
   // timeline
   const ts = el("section","container sec2");
