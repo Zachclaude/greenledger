@@ -5,33 +5,39 @@
 <meta name="theme-color" content="#0E4A37">
 <link rel="canonical" href="https://zachclaude.github.io/greenledger/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 72'%3E%3Cpath d='M13 3 H43 L57 17 V64 Q57 69 52 69 H13 Q8 69 8 64 V8 Q8 3 13 3 Z' fill='%230E4A37'/%3E%3Cpath d='M43 3 V12 Q43 17 48 17 H57 Z' fill='%23B58A2E'/%3E%3Cpath d='M17 58 C16 38 29 27 49 27 C50 46 39 59 17 58 Z' fill='%23fff'/%3E%3Cpath d='M24.5 44 L31 50 L41.5 36.5' fill='none' stroke='%232C9A68' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="青单 Qingdan">
-<meta property="og:title" content="欧洲客户的新规则，会不会卡住你的订单？ · 青单 Qingdan">
-<meta property="og:description" content="选你的行业，3 分钟看清 CBAM、EUDR、电池法等规则和你有没有关系、客户会找你要什么。免费，每条结论都标明官方出处。">
+<meta property="og:title" content="客户要碳数据、问卷和审核，工厂该先准备什么？ · 青单 Qingdan">
+<meta property="og:description" content="选你的行业和出口市场，2 分钟拿到一份按市场分开的检查单：哪些规则直接管你、客户会找你要什么、这周先做哪三件事。每条结论都标明官方出处。">
 <meta property="og:url" content="https://zachclaude.github.io/greenledger/">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="客户要碳数据、问卷和审核，工厂该先准备什么？ · 青单 Qingdan">
+<meta name="twitter:description" content="选你的行业和出口市场，2 分钟拿到一份按市场分开的检查单，每条结论都标明官方出处。免费内测。">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"青单 Qingdan","url":"https://zachclaude.github.io/greenledger/","inLanguage":["zh-CN","en"],"description":"帮中小出口工厂看懂并应对欧盟等市场的绿色合规要求","publisher":{"@type":"Organization","name":"青单 Qingdan"}}</script>
 <style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style></head><body>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<!-- No external fonts or CDNs: the page must render on a slow or blocked connection in China.
+     Typefaces therefore come from the device: Noto/Source Han or Songti on phones, Microsoft YaHei + SimSun on Windows. -->
+<a class="skip" href="#app" data-i="skip"></a>
 <style>
-/* Layout: a small institution site with separate pages — a calm home, a one-question-per-page check (GOV.UK pattern), a cited report, a rules library with detail pages, and a methods page. Single light theme by choice: white + forest green. */
+
 :root{
   color-scheme:light;
   --white:#FFFFFF; --mist:#F4F8F6; --mint:#E4F1EA; --line:#DCE6E0; --line-2:#C9D8D0;
   --forest:#0E4A37; --forest-2:#0A3A2B; --leaf:#2C9A68; --gold:#B58A2E;
   --ink:#13261D; --muted:#5B6D65;
   --high:#B23A1E; --high-soft:#FBEAE4; --mid:#9C6A0E; --mid-soft:#FBF2DF; --low:#237A4D; --low-soft:#E3F2E9;
-  --f-display:"Source Serif 4","Noto Serif SC",Georgia,serif;
-  --f-cn-display:"Noto Serif SC","Source Serif 4",serif;
-  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-display:"Noto Serif SC","Source Han Serif SC","Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-cn-display:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --f-body:"Noto Sans SC","Source Han Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Heiti SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,"Liberation Mono",Menlo,monospace;
 }
 *{box-sizing:border-box}
 body{background:var(--white);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.7}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--forest);color:#fff;padding:10px 18px;border-radius:0 0 8px 0;text-decoration:none}
+.skip:focus{left:0}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 button,input,textarea{font:inherit;color:inherit}
 a{color:var(--forest)}
 :focus-visible{outline:2.5px solid var(--leaf);outline-offset:2px}
@@ -54,9 +60,11 @@ h1,h2,h3{font-family:var(--f-cn-display);text-wrap:balance;margin:0;color:var(--
 .brand svg{width:32px;height:36px;flex:none}
 .brand .nm{display:grid;line-height:1.15}
 .brand .nm b{font-family:var(--f-display);font-size:19px;color:var(--forest)}
-.brand .nm small{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.brand .nm small{font-size:11px;color:var(--muted);letter-spacing:.1em;white-space:nowrap}
 .links{display:flex;gap:2px;align-items:center}
-.links a{text-decoration:none;color:var(--ink);font-size:14.5px;padding:6px 11px;border-radius:6px}
+.links a{text-decoration:none;color:var(--ink);font-size:14.5px;padding:6px 11px;border-radius:6px;white-space:nowrap}
+:lang(en) .links a{font-size:13.5px;padding:6px 9px}
+:lang(en) .hero h1{font-size:clamp(30px,3.6vw,46px)}
 .links a:hover{background:var(--mist)}
 .links a[aria-current="page"]{color:var(--forest);font-weight:500;box-shadow:inset 0 -2px 0 var(--leaf);border-radius:0}
 .navr{display:flex;align-items:center;gap:10px}
@@ -90,20 +98,6 @@ h1,h2,h3{font-family:var(--f-cn-display);text-wrap:balance;margin:0;color:var(--
 .hero h1 em{font-style:normal;color:var(--leaf)}
 .hero p.lede{font-size:18px;color:var(--muted);margin:0;max-width:34em}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.hero .meta{margin-top:18px;font-size:13.5px;color:var(--muted)}
-.seal{display:grid;place-items:center;gap:14px;text-align:center}
-.seal svg{width:min(220px,60%);height:auto}
-.seal .motto{font-family:var(--f-cn-display);color:var(--forest);font-size:18px;letter-spacing:.2em}
-:lang(en) .seal .motto{font-family:var(--f-display);letter-spacing:.06em}
-.seal .motto small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--gold);margin-top:4px}
-.entries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-block:56px}
-@media (max-width:860px){.entries{grid-template-columns:minmax(0,1fr)}}
-.entry{display:grid;gap:10px;align-content:start;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:14px;padding:24px;transition:border-color .15s, box-shadow .15s}
-.entry:hover{border-color:var(--leaf);box-shadow:0 14px 30px -24px rgba(14,74,55,.5)}
-.entry .k{font-family:var(--f-mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
-.entry h2{font-size:21px}
-.entry p{margin:0;color:var(--muted);font-size:15px}
-.entry .go{color:var(--forest);font-weight:500;font-size:14.5px;margin-top:4px}
 .trust{background:var(--mist);border-block:1px solid var(--line);padding-block:30px}
 .trust .container{display:grid;gap:12px}
 .trust ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
@@ -194,7 +188,7 @@ ol.refs .ref{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
 .lib a:hover{background:var(--mist)}
 .lib .mk{font-family:var(--f-mono);font-size:12px;color:var(--leaf);letter-spacing:.06em}
 .lib b{display:block;font-size:16.5px;color:var(--ink)}
-.lib span.when{font-size:13.5px;color:var(--muted)}
+.lib span.when{display:block;font-size:13.5px;color:var(--muted)}
 .lib .arr{color:var(--muted)}
 @media (max-width:600px){.lib a{grid-template-columns:minmax(0,1fr) auto}.lib .mk{grid-column:1/-1}}
 .detail{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start}
@@ -310,14 +304,9 @@ footer .fb svg{width:24px;height:28px}
 .leg span{display:inline-flex;align-items:center;gap:6px}
 .leg i{width:10px;height:10px;border-radius:3px;display:inline-block}
 .c0{background:#0E4A37}.c1{background:#2C9A68}.c2{background:#B58A2E}.c3{background:#7FB8A0}.c4{background:#5B6D65}
-.entries{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media (max-width:1000px){.entries{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.entries{grid-template-columns:minmax(0,1fr)}}
 /* v0.7 */
 .cite{white-space:normal;overflow-wrap:anywhere;max-width:100%}
 .textlink{color:var(--forest);font-weight:500;text-decoration:underline;text-underline-offset:4px;align-self:center}
-.pick{margin-top:26px;display:grid;gap:10px}
-.pick-l{font-size:14px;font-weight:500;color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--ink);text-decoration:none;background:var(--white)}
 .chip:hover,.chip.on{border-color:var(--forest);color:var(--forest);background:var(--mint)}
@@ -413,6 +402,65 @@ ol.tl li:focus-within{outline:2px solid var(--leaf);outline-offset:2px}
   .backlink{display:inline-block;padding:8px 0}
   footer a{display:inline-block;padding:8px 0}
 }
+/* ---- v0.8: take-it-away report ---- */
+.rep-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 18px;align-items:center;border:1px solid var(--line-2);background:var(--mist);border-radius:12px;padding:14px 16px;margin:0 0 18px}
+@media (max-width:820px){.rep-actions{grid-template-columns:minmax(0,1fr)}}
+.rep-actions b{display:block;font-size:15.5px;color:var(--forest)}
+.rep-actions .fine{display:block;max-width:60ch}
+.rep-profile{margin-top:18px;border-top:1px dashed var(--line);padding-top:14px}
+.rp-h{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+dl.rp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px 24px;margin:10px 0 0;font-size:13.5px}
+dl.rp-list .rp-row{display:grid;gap:1px;min-width:0}
+dl.rp-list dt{font-size:11.5px;color:var(--muted);font-family:var(--f-mono);letter-spacing:.04em}
+dl.rp-list dd{margin:0;font-weight:500}
+.ck-inline{width:fit-content;padding:5px 11px;border-radius:8px;margin-top:6px;align-items:center}
+.ck-inline span{font-size:13px;color:var(--muted)}
+.ck-inline input{margin-top:0}
+ul.mats{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+ul.mats li{border-left:2px solid var(--leaf);padding-left:12px;font-size:15px;display:grid;gap:2px}
+ul.mats li .fine{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.rep-note{margin-top:36px;border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+.rep-note p{margin:0}
+#q-title:focus{outline:none}
+.hero .direct-cta{margin-top:12px}
+/* two-step picker on the home hero */
+.selbox{display:grid;gap:14px;margin-top:24px}
+.sel-step{display:grid;gap:9px}
+.sel-step>span{font-size:14px;font-weight:500}
+.selbox .chips .chip.on{background:var(--forest);color:var(--white);border-color:var(--forest)}
+.sel-go{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.sel-hint{font-size:13px;color:var(--muted);margin:0}
+.lib .needline{display:block;font-size:13.5px;color:var(--muted);margin-top:3px;max-width:70ch}
+.filters .fl{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;color:var(--muted);align-self:center;margin-right:2px;text-transform:uppercase}
+/* print: the report is what people actually print or save as PDF */
+@media print{
+  body{font-size:11pt;background:#fff;color:#000}
+  .nav,footer,.skip,.rep-actions,.rep-nav,.qnav,.menu-btn,.lang,.biz,.trust,.stats,.seg,.hero .cta,.selbox,.sel-go,.faq-list,.guide-grid,.dec,form,.filters,.lib .arr,.more,button,.backlink{display:none!important}
+  details>summary{list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  .rep-actions,.sample-banner{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .container,.narrow{max-width:none;padding:0}
+  .page{padding:0}
+  .rep-card{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  details.mkt>summary{grid-template-columns:minmax(0,1fr) auto;padding:8px 0}
+  details.mkt>summary::after{display:none}
+  .mkt-body{padding:0}
+  .rule,.dsec,.tile,ul.mats li,ol.todo li{break-inside:avoid}
+  .rsec{margin-top:18px}
+  .rsec>h2{font-size:13pt;border-bottom:1px solid #bbb;padding-bottom:4px}
+  ol.refs{font-size:9.5pt}
+  .cite{background:none;border:0;padding:0;color:#333;font-size:9pt}
+  .stamp{transform:none}
+  .pill,.stag{border:1px solid #999}
+  a{color:#000;text-decoration:none}
+  ol.refs a[href^="http"]::after,.srclist a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+  .reply{font-size:9pt;background:#f7f7f7;border:1px solid #ccc}
+  .calc{display:block}
+  .calc-in{display:none}
+  .tile.main{background:#fff;border-color:#999}
+  .tile.main b,.tile.main .tl,.tile.main .tu{color:#000}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -458,19 +506,13 @@ ol.tl li:focus-within{outline:2px solid var(--leaf);outline-offset:2px}
   <!-- Static fallback for crawlers and no-JS visitors; replaced by render() on load. -->
   <div class="container page">
     <h1>欧洲客户的新规则，会不会卡住你的订单？</h1>
-    <p>青单 Qingdan帮中小出口工厂看懂欧盟、英国、美国的绿色合规要求：哪些规则真的和你有关、客户会找你要什么、先做哪一步。每条结论都标明出处：欧盟官方公报、GRI 标准、生态环境部数据。</p>
-    <h2>免费工具</h2>
+    <p>青单 Qingdan 帮中小出口工厂看懂欧盟、英国、美国的绿色合规要求：哪些规则真的和你有关、客户会找你要什么、先做哪一步。每条结论都标明出处。</p>
     <ul>
-      <li><a href="#check">订单风险自测</a>：10 道题，看你的产品受哪些规则影响。</li>
-      <li><a href="#calc">碳数据计算</a>：把 12 个月电费单和燃料用量换算成范围 1、范围 2 排放，按 GHG Protocol 口径输出中英数据表。</li>
-      <li><a href="#decoder">买家问卷解读</a>：逐题说明客户 ESG 问卷在问什么、要准备什么。</li>
-      <li><a href="#join">提交问题或申请人工帮助</a>。</li>
+      <li><a href="#check">订单风险自测</a>：按产品和出口市场生成带官方出处的检查单。</li>
+      <li><a href="#calc">碳数据计算</a>：把 12 个月电费和燃料用量换算成范围 1、范围 2 排放。</li>
+      <li><a href="#decoder">买家问卷解读</a>：逐题说明客户 ESG 问卷在问什么。</li>
+      <li><a href="#rules">法规库</a> · <a href="#guides">行业指南</a> · <a href="#join">提交问题</a></li>
     </ul>
-    <h2>收录的法规</h2>
-    <p>欧盟碳边境调节机制 CBAM、英国 CBAM、欧盟零毁林法规 EUDR、欧盟电池法规（电池护照）、欧盟包装法规 PPWR、REACH、RoHS、加州 SB 253、企业可持续发展尽职调查指令 CSDDD，以及 SMETA、BSCI、EcoVadis、Higg 等买家审核标准。</p>
-    <h2>行业指南</h2>
-    <p><a href="#guide-steel">钢铁 / 铝制品</a> · <a href="#guide-machine">机电 / 家电</a> · <a href="#guide-electronics">电子产品</a> · <a href="#guide-battery">电池</a> · <a href="#guide-wood">木制品 / 家具 / 纸</a> · <a href="#guide-textile">纺织服装鞋</a> · <a href="#guide-food">食品农产品</a> · <a href="#guide-packaging">塑料包装</a> · <a href="#guide-rubber">橡胶皮革</a> · <a href="#guide-cement">水泥化肥</a></p>
-    <p>如需人工帮助，请通过网站的“提交问题”表单联系我们。</p>
   </div>
 </main>
 
@@ -505,6 +547,30 @@ let keepIdx = false;
 let reportReady = false;
 let lastLevel = null;
 let libFilter = "all";
+let ruleStatus = "all";
+let indOnly = false;
+/* Draft persistence: the whole point of the check is that a factory owner can start it,
+   get interrupted, and come back without losing answers. Everything stays in this browser. */
+const DRAFT_KEY = "gl-draft-v1";
+function firstUnanswered(a){ const v=visibleQs(a); const i=v.findIndex(q=> q.multi ? !(a[q.id]&&a[q.id].length) : a[q.id]===undefined); return i<0 ? Math.max(0,v.length-1) : i; }
+function isComplete(a){ return visibleQs(a).every(q=> q.multi ? (a[q.id]&&a[q.id].length) : a[q.id]!==undefined); }
+function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify({v:1,answers,qIndex,reportReady,at:Date.now()})); }catch(e){} }
+function clearDraft(){ try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} }
+function restoreDraft(){
+  let d=null; try{ d=JSON.parse(localStorage.getItem(DRAFT_KEY)||"null"); }catch(e){}
+  if(!d || d.v!==1 || !d.answers || typeof d.answers!=="object") return;
+  const a=d.answers;
+  if(a.product && !Array.isArray(a.product)) a.product=[a.product];
+  if(a.market && !Array.isArray(a.market)) a.market=[a.market];
+  answers=a;
+  reportReady = !!d.reportReady && isComplete(a);
+  const n=visibleQs(a).length;
+  qIndex = Math.min(Math.max(0, (+d.qIndex||0)), Math.max(0,n-1));
+  if(d.qIndex==null) qIndex=firstUnanswered(a);
+}
+const todoKey = ref => "gl-todo-"+ref;
+function loadTodo(ref){ try{ return JSON.parse(localStorage.getItem(todoKey(ref))||"{}"); }catch(e){ return {}; } }
+function saveTodo(ref,o){ try{ localStorage.setItem(todoKey(ref), JSON.stringify(o)); }catch(e){} }
 
 /* ============ sources (official documents & standards) ============ */
 const SRC = {
@@ -542,13 +608,12 @@ const KIND = {law:{zh:"法规与官方文件",en:"Laws and official documents"},
 
 /* ============ copy ============ */
 const S = {
-  brandSub:{zh:"Qingdan · 出口绿色合规",en:"GREEN COMPLIANCE FOR EXPORTERS"},
-  navCheck:{zh:"风险自测",en:"Risk check"}, navRules:{zh:"法规库",en:"Rules"}, navDec:{zh:"问卷解读",en:"Questionnaires"}, navMethod:{zh:"依据与方法",en:"Sources & method"}, navJoin:{zh:"提交问题",en:"Ask a question"}, menu:{zh:"菜单",en:"Menu"},
+  brandSub:{zh:"Qingdan · 出口绿色合规",en:"Qingdan · green compliance"},
+  skip:{zh:"跳到主要内容",en:"Skip to main content"},
+navRules:{zh:"法规库",en:"Rules"}, navDec:{zh:"问卷解读",en:"Questionnaires"}, navMethod:{zh:"依据与方法",en:"Sources & method"}, navJoin:{zh:"提交问题",en:"Ask a question"}, menu:{zh:"菜单",en:"Menu"},
   heroEyebrow:{zh:"给正在应对海外客户要求的出口工厂",en:"For exporters handling buyer requirements"},
   heroH:{zh:["客户要碳数据、问卷和审核，","你的工厂该先准备什么？"],en:["Carbon data, questionnaires and audits:","what should your factory prepare first?"]},
-  heroP:{zh:"先按行业判断哪些规则和你有关，再回答 10 个左右的问题，拿到一份按出口市场分开的检查单。直接约束和间接影响分开写，每条结论都标明官方出处。",en:"Start with your industry to see which rules can reach you, answer about ten questions, and get a report by export market. Direct rules and indirect pressure are kept apart, and every conclusion cites its official source."},
-  heroCta:{zh:"开始自测",en:"Start the check"}, heroCta2:{zh:"查看样例检查单",en:"See a sample report"},
-  heroMeta:{zh:"约 2 分钟 · 不用注册 · 内测期间免费 · 不上传自测答案",en:"About 2 minutes · No sign-up · Free during beta · Self-check answers stay in your browser"},
+  heroCta:{zh:"开始自测",en:"Start the check"},
   pvLine:{zh:"示例：钢制紧固件出口欧盟和英国。CBAM 已生效，燃料记录拿不出来。",en:"Example: steel fasteners to the EU and UK. CBAM is in force and fuel records are missing."},
   pvGo:{zh:"查看完整样例 →",en:"See the full sample →"},
   sampleTag:{zh:"样例",en:"SAMPLE"},
@@ -607,9 +672,6 @@ const S = {
   contactP:{zh:"有客户问卷看不懂、碳数据不会算，或想确认某条规则是否适用？请通过问题表单告诉我们。",en:"Need help with a buyer questionnaire, carbon data or whether a rule applies? Send us a message through the inquiry form."},
   privH:{zh:"隐私说明",en:"Privacy"},
   privP:{zh:["自测在你的浏览器里计算，答案不会上传。","只有你主动提交的问题、联系方式和问卷内容会通过表单服务 FormSubmit 发送到我们的邮箱，用于回复本次咨询，不会出售或分享。","在 Claude 中打开本页时，问卷解读的 AI 功能会把你粘贴的文字发送给 Claude 处理，使用你自己的 Claude 账号。"],en:["The check runs in your browser; answers are not uploaded.","Only the question, contact details and questionnaire text you choose to submit are emailed to us through FormSubmit to answer this inquiry; they are not sold or shared.","When this page is opened inside Claude, the AI decoder sends the text you paste to Claude using your own Claude account."]},
-  e1k:{zh:"01 · 自测",en:"01 · CHECK"}, e1h:{zh:"订单风险自测",en:"Order risk check"}, e1p:{zh:"一页一题，答完生成带官方依据的检查单和英文回复。",en:"One question per page; ends with a cited report and an English reply."}, e1g:{zh:"开始 →",en:"Start →"},
-  e2k:{zh:"03 · 法规",en:"03 · RULES"}, e2h:{zh:"各市场法规库",en:"Rules by market"}, e2p:{zh:"欧盟、英国、美国、中东的法规，加上 SMETA、BSCI、EcoVadis 等买家审核标准：管什么、何时生效、是否直接约束你。",en:"Rules in the EU, UK, US and Middle East, plus buyer audit standards like SMETA, BSCI and EcoVadis: scope, dates, and whether they bind you directly."}, e2g:{zh:"浏览 →",en:"Browse →"},
-  e3k:{zh:"04 · 问卷",en:"04 · QUESTIONNAIRES"}, e3h:{zh:"买家问卷解读",en:"Questionnaire decoder"}, e3p:{zh:"把英文 ESG 问卷逐题翻成大白话，并标出对应的 GRI 指标。",en:"Turns an English ESG questionnaire into plain words, mapped to GRI disclosures."}, e3g:{zh:"打开 →",en:"Open →"},
   trustH:{zh:"我们的结论依据这些官方文件和国际标准",en:"Our conclusions rest on these official documents and standards"},
   chkTitle:{zh:"订单风险自测",en:"Order risk check"},
   qOf:{zh:(i,n)=>`第 ${i} 题，共 ${n} 题`,en:(i,n)=>`Question ${i} of ${n}`},
@@ -626,7 +688,6 @@ const S = {
     low:{zh:"你的主要市场目前没有点名你的进口碳规则。留意跨国品牌客户的供应商问卷即可。",en:"No import carbon rule names you in your main markets. Watch for supplier questionnaires from multinational buyers."}
   },
   navCalc:{zh:"碳数据计算",en:"Carbon data"},
-  e4k:{zh:"02 · 计算",en:"02 · CALCULATE"}, e4h:{zh:"碳数据计算器",en:"Carbon data calculator"}, e4p:{zh:"填电费和燃料用量，按生态环境部缺省值算出范围 1、2 排放，生成可以直接填进客户问卷的数据表。",en:"Enter power and fuel use; get Scope 1–2 emissions using official Chinese defaults and a data sheet ready for buyer questionnaires."}, e4g:{zh:"开始算 →",en:"Calculate →"},
   calcH:{zh:"把电费单变成客户要的碳数据",en:"Turn power bills into the carbon data buyers ask for"},
   calcP:{zh:"几乎每份客户问卷都会问三件事：用了多少能源、范围 1 排放、范围 2 排放。填进 12 个月的电费和一年的燃料用量，这里按 GHG Protocol 和中国官方缺省值算出来，并整理成标注 GRI 编号的中英数据表。",en:"Nearly every buyer questionnaire asks for three things: energy used, Scope 1 and Scope 2 emissions. Enter 12 months of power and a year of fuel; we calculate them with the GHG Protocol and official Chinese defaults, and format a bilingual sheet labelled with GRI codes."},
   calcIn:{zh:"你的数据",en:"Your data"}, calcExample:{zh:"示例数据",en:"Example data"}, calcYours:{zh:"你的数据",en:"Your data"},
@@ -647,8 +708,7 @@ const S = {
   calcLimits:{zh:["可以用来回答客户问卷里的能源和范围 1、2 排放问题，以及 EcoVadis、Higg 等平台的基础数据。","不能直接当作 CBAM 申报数据：CBAM 的隐含排放要把工厂排放分摊到具体产品，还要加上钢材、铝材等原料的排放，并需经核查。","只算了二氧化碳，没有算制冷剂泄漏等其他温室气体，也没有经过第三方核查。"],en:["Good for the energy and Scope 1–2 questions in buyer questionnaires, and the basic data for EcoVadis or Higg.","Not CBAM declaration data as is: CBAM embedded emissions allocate factory emissions to specific products, add precursor emissions from steel or aluminium, and need verification.","CO₂ only; refrigerant leaks and other gases are excluded, and it is not third-party verified."]},
   toCalc:{zh:"用碳数据计算器，把这些数据算出来 →",en:"Calculate these numbers with the carbon data calculator →"},
   navGuides:{zh:"行业指南",en:"Industry guides"}, navFaq:{zh:"常见问题",en:"FAQ"}, navStart:{zh:"开始自测",en:"Start the check"},
-  heroP2:{zh:"先选你的行业，看哪些规则真的和你有关、客户会找你要什么。每条结论都标明出处：欧盟官方公报、GRI 标准、生态环境部数据。",en:"Pick your industry to see which rules actually reach you and what buyers will ask for. Every conclusion cites its source: the EU Official Journal, GRI Standards, China's official data."},
-  pickL:{zh:"你做什么产品？",en:"What do you make?"},
+  heroP2:{zh:"选你的产品和主要出口市场，2 分钟拿到一份按市场分开的检查单：哪些规则直接管你、客户会找你要什么、这周先做哪三件事。每条结论都标明出处。",en:"Pick your product and main export markets, and get a market-by-market checklist in about two minutes: which rules bind you, what buyers will ask for, and the three things to do this week. Every conclusion cites its source."},
   heroCta3:{zh:"先看一份样例检查单 →",en:"See a sample report first →"},
   st1:{zh:"条法规与买家标准",en:"rules and buyer standards"}, st2:{zh:"份官方文件和国际标准",en:"official documents and standards cited"}, st3:{zh:"个行业指南",en:"industry guides"}, st4:{zh:"个常见问题解答",en:"answered questions"},
   tlEyebrow:{zh:"时间线",en:"Timeline"}, tlH:{zh:"接下来的关键日期",en:"Key dates ahead"}, tlAll:{zh:"全部",en:"All"},
@@ -677,13 +737,10 @@ const S = {
   hMarkets:{zh:"按出口市场",en:"By export market"},
   hReply:{zh:"可以直接发给客户的英文回复",en:"An English reply you can send your buyer"},
   hRefs:{zh:"本报告依据",en:"Sources for this report"},
-  basis:{zh:"依据",en:"Source"},
   need:{zh:"客户会找你要：",en:"Your buyer will ask for: "},
   readMore:{zh:"查看这条规则的详细说明 →",en:"Read the full rule →"},
-  rulesN:{zh:(n)=>`${n} 条相关规则`,en:(n)=>`${n} relevant rule${n>1?"s":""}`},
   noRule:{zh:"暂无点名你产品的规则",en:"No rule names your products"},
-  noRuleP:{zh:"按你的产品，这个市场目前没有点名你的进口碳规则。客户的供应商问卷仍可能来。",en:"For your products, no import carbon rule names you in this market. Buyer questionnaires may still arrive."},
-  copy:{zh:"复制英文回复",en:"Copy reply"}, copied:{zh:"已复制",en:"Copied"}, copyFail:{zh:"复制被拦截，文字已选中",en:"Copy blocked; the text is selected"},
+  copy:{zh:"复制英文回复",en:"Copy reply"}, copied:{zh:"已复制",en:"Copied"},
   edit:{zh:"修改答案",en:"Change answers"}, restart:{zh:"重新自测",en:"Start over"}, toDecoder:{zh:"客户问卷？申请逐题解读",en:"Need help with a buyer questionnaire?"}, toAsk:{zh:"还有具体问题？留言",en:"Have a question? Send it to us"},
   noReport:{zh:"还没有检查单。先完成风险自测。",en:"No report yet. Complete the risk check first."},
   rulesTitle:{zh:"各市场法规库",en:"Rules by market"},
@@ -729,7 +786,47 @@ const S = {
   lfCopyNone:{zh:"在线提交暂时没有成功。请先复制保存下面的信息，稍后重新打开表单提交。",en:"Online submission did not go through. Copy the information below and retry through the form later."},
   lfErr:{zh:"没有保存成功，请稍后再试。",en:"Not saved. Please try again later."},
   copyPlain:{zh:"复制",en:"Copy"},
-  foot1:{zh:"青单 Qingdan · 原型 v0.7 · 仅供参考，不构成法律意见",en:"Qingdan · prototype v0.7 · Guidance only, not legal advice"},
+  /* ---- v0.8: keeping progress, taking the report away ---- */
+  draftNote:{zh:"进度自动保存在这台设备的浏览器里，关掉页面也不会丢。",en:"Progress is saved in this browser, so closing the page is safe."},
+  resume:{zh:"继续上次的自测",en:"Continue the check"},
+  resumeP:{zh:(a,b)=>`上次答到第 ${a} 题（共 ${b} 题），答案还在。`,en:(a,b)=>`You reached question ${a} of ${b}; your answers are still here.`},
+  clearAnswers:{zh:"清空答案，重新开始",en:"Clear answers and start over"},
+  clearAsk:{zh:"确定清空所有已填答案？",en:"Clear all your answers?"},
+  qAnswered:{zh:(a,b)=>`已答 ${a} / ${b} 题`,en:(a,b)=>`${a} of ${b} answered`},
+  repProfile:{zh:"你的情况",en:"Your situation"},
+  repActions:{zh:"带走这份检查单",en:"Take this checklist with you"},
+  repActionsP:{zh:"复制成纯文本可直接粘进微信或邮件；打印会去掉导航和按钮。",en:"Copy as plain text for WeChat or email; printing hides the navigation."},
+  copyReport:{zh:"复制整份检查单",en:"Copy the whole checklist"},
+  dlReport:{zh:"下载 .txt",en:"Download .txt"},
+  printReport:{zh:"打印 / 存 PDF",en:"Print / save PDF"},
+  repCopied:{zh:"已复制整份检查单，可以直接粘贴",en:"Copied. Paste it wherever you need it."},
+  copyBlocked:{zh:"浏览器拦住了自动复制：文字已选中，按 Ctrl+C 复制",en:"Copying was blocked: the text is selected, press Ctrl+C."},
+  hDocs:{zh:"客户会找你要这些材料",en:"Documents your buyer will ask for"},
+  hDocsP:{zh:"按上面涉及的规则汇总，同一份材料只列一次。",en:"Collected from the rules above; each document is listed once."},
+  hDone:{zh:"三件事做到哪一步了",en:"How far you have got"},
+  todoDone:{zh:(a,b)=>`已完成 ${a} / ${b}`,en:(a,b)=>`${a} of ${b} done`},
+  repNote:{zh:"本检查单由青单在你的浏览器里按回答生成，仅供参考，不构成法律意见。法规信息核对于 2026-10-12，以官方最新文本为准。答案只保存在这台设备上，没有上传。",en:"This checklist was generated in your browser from your answers. It is orientation, not legal advice. Rules were checked on 12 Oct 2026; the latest official text prevails. Answers stay on this device and are not uploaded."},
+  repRefLabel:{zh:"参考编号",en:"Reference"},
+  step1:{zh:"① 你做什么产品？",en:"1. What do you make?"},
+  step2:{zh:"② 这些货主要出口到哪里？",en:"2. Where do they mainly go?"},
+  step2Hint:{zh:"可多选，之后还能改。",en:"Pick all that apply; you can change this later."},
+  startMine:{zh:"生成我的检查单",en:"Get my checklist"},
+  startMineP:{zh:"约 2 分钟 · 免费 · 答案不上传",en:"About 2 minutes · free · answers stay on your device"},
+  startMineHint:{zh:"先选产品，再选市场；也可以直接开始，边答边选。",en:"Pick a product, then a market. Or just start and choose as you go."},
+  fStatus:{zh:"状态",en:"Status"},
+  fMarket:{zh:"市场",en:"Market"},
+  fMine:{zh:"只看我的行业",en:"My industry only"},
+  rulesCount:{zh:(n)=>`共 ${n} 条规则`,en:(n)=>`${n} rules`},
+  asksYou:{zh:"客户会找你要",en:"Your buyer will ask for"},
+  calcReadH:{zh:"这个数怎么读",en:"How to read these numbers"},
+  calcRead:{zh:["口径：范围 1（自己烧的燃料）+ 范围 2（外购电力），运营控制法，按 GHG Protocol 企业标准。","范围 2 用的是基于位置法：中国 2023 年全国电网平均因子 0.5306 kgCO₂/kWh，所以绿电不会自动扣减。"],en:["Boundary: Scope 1 (fuel you burn) + Scope 2 (purchased electricity), operational control, per the GHG Protocol Corporate Standard.","Scope 2 is location-based: China's 2023 national grid average of 0.5306 kgCO₂/kWh, so green power is not deducted automatically."]},
+  calcGreenNote:{zh:"绿电只影响上面的「可再生电力占比」。要按市场法扣减范围 2，需要绿电合同或绿证数据。",en:"Green power only affects the renewable share. A market-based Scope 2 figure needs green tariffs or certificate data."},
+  markDone:{zh:"这项已完成",en:"Mark done"},
+  errContact:{zh:"请留邮箱、微信或手机号，否则无法回复你",en:"Leave an email, WeChat or phone number, or we cannot reply"},
+  errConsent:{zh:"请先勾选同意这一项",en:"Please tick the consent box"},
+  errPain:{zh:"请简单描述你的问题，至少 5 个字",en:"Describe your question in a few words"},
+  formErrCount:{zh:(n)=>`还有 ${n} 项需要补全`,en:(n)=>`${n} field${n>1?"s":""} still need attention`},
+  foot1:{zh:"青单 Qingdan · 原型 v0.8 · 仅供参考，不构成法律意见",en:"Qingdan · prototype v0.8 · Guidance only, not legal advice"},
   footMethod:{zh:"依据与方法",en:"Sources & method"}
 };
 
@@ -1097,15 +1194,150 @@ function link(href,cls,txt){const a=el("a",cls,txt); a.href=href; return a;}
 function ext(href,cls,txt){const a=link(href,cls,txt); a.target="_blank"; a.rel="noopener"; return a;}
 function crestSvg(cls){const d=document.createElement("div"); d.innerHTML='<svg class="'+(cls||"")+'" viewBox="0 0 64 72" aria-hidden="true"><use href="#crest"/></svg>'; return d.firstChild;}
 function stamp(level,animate){const s=el("div","stamp "+level+(animate?" pop":"")); s.append(el("span","big",T(S.lvl[level])), el("span","sm",S.lvlEn[level])); return s;}
-function copyTo(btn,msg,getText,selEl){
+function legacyCopy(text){
+  try{
+    const ta=document.createElement("textarea"); ta.value=text; ta.setAttribute("readonly","");
+    ta.style.cssText="position:fixed;left:-9999px;top:0;opacity:0";
+    document.body.append(ta); ta.select(); ta.setSelectionRange(0,text.length);
+    const ok=document.execCommand("copy"); ta.remove(); return ok;
+  }catch(e){ return false; }
+}
+function copyTo(btn,msg,getText,selEl,okText){
   btn.addEventListener("click",()=>{
-    const ok=()=>{msg.textContent=T(S.copied);};
-    const fail=()=>{msg.textContent=T(S.copyFail); const s=getSelection(), r=document.createRange(); r.selectNodeContents(selEl); s.removeAllRanges(); s.addRange(r);};
-    try{ navigator.clipboard.writeText(getText()).then(ok,fail); }catch(e){ fail(); }
+    const text=getText();
+    const ok=()=>{msg.textContent=okText||T(S.copied);};
+    const fail=()=>{
+      if(legacyCopy(text)){ ok(); return; }
+      msg.textContent=T(S.copyBlocked);
+      if(selEl){ const s=getSelection(), r=document.createRange(); r.selectNodeContents(selEl); s.removeAllRanges(); s.addRange(r); }
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok,fail); }
+    else fail();
   });
+}
+function downloadText(name,text){
+  try{
+    const blob=new Blob([text],{type:"text/plain;charset=utf-8"});
+    const url=URL.createObjectURL(blob); const a=document.createElement("a");
+    a.href=url; a.download=name; a.style.display="none";
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),5000); return true;
+  }catch(e){ return false; }
 }
 function refNo(a){ const s=JSON.stringify(a); let h=0; for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))>>>0;} return "QD-2026-"+String(h%100000).padStart(5,"0"); }
 function pageHead(eyebrow,title,p){ const h=el("div","page-head"); if(eyebrow) h.append(el("span","eyebrow",eyebrow)); h.append(el("h1",null,title)); if(p) h.append(el("p",null,p)); return h; }
+
+/* Citation numbering is shared by the on-screen report and the exported text, so that
+   "[3]" means the same document in both. Registration order: to-dos, then markets, then buyer standards. */
+function citeOrder(r){
+  const order=[];
+  const num=id=>{ let i=order.indexOf(id); if(i<0){order.push(id); i=order.length-1;} return i+1; };
+  r.todo.forEach(t=>t.b.forEach(num));
+  r.perMarket.forEach(p=>p.hits.forEach(h=>h.r.basis.forEach(num)));
+  r.buyerHits.forEach(h=>h.r.basis.forEach(num));
+  return {order,num};
+}
+const PROF_LABEL = {
+  product:L("做的是什么","What you make"), market:L("出口市场","Export markets"), role:L("身份","You are"),
+  hs:L("海关编码","HS code"), volume:L("年出口量","Volume"), buyer:L("最大客户","Largest buyer"),
+  survey:L("收到的问卷","Questionnaires"), audits:L("客户要求的审核","Audits asked for"),
+  elec:L("用电记录","Power records"), fuel:L("燃料","Fuels"), fueldata:L("燃料记录","Fuel records"),
+  origin:L("原料来源","Material origin"), cert:L("现有认证","Certificates"), size:L("员工人数","Employees")
+};
+function profileRows(a){
+  return visibleQs(a).filter(q=>a[q.id]!==undefined && q.id!=="product" && q.id!=="market")
+    .map(q=>({k:q.id, label:PROF_LABEL[q.id]?T(PROF_LABEL[q.id]):T(q.lab), value:ansText(q.id,a)}));
+}
+function materialRows(r){
+  const seen=new Set(), out=[];
+  const push=(h)=>{ const t=T(h.r.need); if(seen.has(t)) return; seen.add(t);
+    out.push({t, rule:T(h.r.t), b:h.r.basis}); };
+  r.perMarket.forEach(p=>p.hits.forEach(push));
+  r.buyerHits.forEach(push);
+  return out;
+}
+/* Plain-text version of the report: the artefact a factory owner actually forwards. */
+function reportText(r,opts){
+  opts=opts||{};
+  const zh = lang==="zh";
+  const ref = refNo(r.a);
+  const {order,num} = citeOrder(r);
+  const L=[];
+  const cite = ids => ids.filter(id=>SRC[id]).map(id=>"["+num(id)+"] "+SRC[id].ref).join(zh?"；  ":";  ");
+  L.push(zh?"青单 Qingdan · 订单风险检查单":"Qingdan · Order risk report");
+  L.push((zh?"参考编号 ":"Reference ")+ref+(zh?" · 生成于 ":" · generated ")+new Date().toISOString().slice(0,10));
+  if(opts.sample) L.push(zh?"（样例：山东一家 120 人的钢制紧固件工厂，内容为虚构）":"(Sample: a fictional 120-person steel fastener factory in Shandong)");
+  L.push("");
+  L.push((zh?"结论：":"Verdict: ")+T(S.lvl[r.level])+" / "+S.lvlEn[r.level]);
+  L.push(T(S.verdict[r.level]));
+  if(r.bumped) L.push(T(S.bumpNote));
+  L.push("");
+  L.push(zh?"你的情况":"Your situation");
+  L.push((zh?"  产品：" : "  Products: ")+ansText("product",r.a));
+  L.push((zh?"  出口市场：" : "  Export markets: ")+ansText("market",r.a));
+  profileRows(r.a).forEach(x=>L.push("  "+x.label+(zh?"：":" : ")+x.value));
+  L.push("");
+  L.push(zh?"一、本周先做的 3 件事":"1. Three things to do this week");
+  r.todo.forEach((t,i)=>{
+    const who = t.w ? (zh?"【"+T(WHO[t.w])+"】":"["+T(WHO[t.w])+"] ") : "";
+    L.push((i+1)+". "+who+T(t.t));
+    if(t.b.length) L.push((zh?"   依据：":"   Source: ")+cite(t.b));
+  });
+  L.push("");
+  L.push(zh?"二、按出口市场":"2. By export market");
+  r.perMarket.forEach(p=>{
+    const direct=p.hits.filter(h=>h.r.status!=="indirect"), indirect=p.hits.filter(h=>h.r.status==="indirect");
+    L.push("【"+T(MARKET[p.m])+"】"+T(S.lvl[p.lv]));
+    if(direct.length){
+      L.push(zh?"  直接约束你：":"  Binds you directly:");
+      direct.forEach(h=>{
+        L.push("  · "+T(h.r.t)+"（"+T(STATUS[h.r.status])+"）");
+        L.push("    时间："+T(h.r.when));
+        L.push("    "+T(S.asksYou)+"："+T(h.r.need));
+        L.push("    依据："+cite(h.r.basis));
+      });
+    } else L.push("  "+T(S.noDirectP));
+    if(indirect.length){
+      L.push(zh?"  间接影响（约束的是你的客户）：":"  Indirect (binds your buyers):");
+      indirect.forEach(h=>{
+        L.push("  · "+T(h.r.t)+"（"+T(STATUS[h.r.status])+"）");
+        L.push("    "+T(S.asksYou)+"："+T(h.r.need));
+        L.push("    依据："+cite(h.r.basis));
+      });
+    }
+  });
+  L.push("");
+  if(r.buyerHits.length){
+    L.push(zh?"三、买家审核要求（不是法律，但决定能否接单）":"3. Buyer audit requirements (not law, but they decide orders)");
+    r.buyerHits.forEach(h=>{
+      L.push("  · "+T(h.r.t));
+      L.push("    "+T(S.asksYou)+"："+T(h.r.need));
+      L.push("    依据："+cite(h.r.basis));
+    });
+    L.push("");
+  }
+  const mats=materialRows(r);
+  if(mats.length){
+    L.push(zh?"四、客户会找你要这些材料":"4. Documents your buyer will ask for");
+    mats.forEach(m=>L.push("  □ "+m.t+(zh?"　[":"  [")+m.rule+"] "+cite(m.b)));
+    L.push("");
+  }
+  L.push(zh?"五、可以直接发给客户的英文回复（方括号里的内容换成你自己的）":"5. English reply you can send (replace the bracketed parts)");
+  buyerReply(r.a).split("\n").forEach(x=>L.push("  "+x));
+  L.push("");
+  L.push(zh?"六、本报告依据":"6. Sources");
+  const endsDot = t=>/[。.!？?；;]$/.test(t);
+  order.forEach(id=>{
+    const s=SRC[id]; if(!s) return;
+    L.push("["+num(id)+"] "+s.ref+" — "+T(s.t)+(endsDot(T(s.t))?" ":"。 ")+T(s.by)+(endsDot(T(s.by))?" ":"。 "));
+    L.push("    "+s.url);
+  });
+  L.push("");
+  L.push(zh?"说明：":"Note: ");
+  L.push("  "+T(S.repNote));
+  L.push("  "+(zh?"依据与方法：":"Sources & method: ")+"https://zachclaude.github.io/greenledger/#method");
+  return L.join("\n");
+}
 
 /* ============ views ============ */
 const SAMPLE_ANS = {product:["steel"],market:["eu","uk"],role:"maker",hs:["h7318"],volume:"v1",buyer:"brand",survey:"once",audits:["smeta"],elec:"total",fuel:["gas"],fueldata:"none",origin:"rough",cert:"none",size:"m"};
@@ -1131,17 +1363,24 @@ function viewAbout(){
 function viewCheck(){
   const wrap = el("div","narrow page");
   const vis = visibleQs(answers);
-  if(qIndex>=vis.length) qIndex = vis.length-1;
+  if(qIndex>=vis.length) qIndex = Math.max(0,vis.length-1);
   const q = vis[qIndex];
   wrap.append(el("span","eyebrow",T(S.chkTitle)));
-  const pg = el("div","prog"); pg.append(el("span",null,T(S.qOf)(qIndex+1,vis.length)), el("span",null,Math.round(qIndex/vis.length*100)+"%")); wrap.append(pg);
-  const bar = el("div","bar"); const bi = el("i"); bi.style.width=(qIndex/vis.length*100)+"%"; bar.append(bi); wrap.append(bar);
+  const answered = vis.filter(x=> x.multi ? (answers[x.id]&&answers[x.id].length) : answers[x.id]!==undefined).length;
+  const pg = el("div","prog");
+  const pos = el("span",null,T(S.qOf)(qIndex+1,vis.length));
+  const pct = el("span",null,Math.round((qIndex+1)/vis.length*100)+"%");
+  pg.append(pos,pct); wrap.append(pg);
+  const bar = el("div","bar"); bar.setAttribute("role","progressbar");
+  bar.setAttribute("aria-valuemin","0"); bar.setAttribute("aria-valuemax",String(vis.length));
+  bar.setAttribute("aria-valuenow",String(qIndex+1)); bar.setAttribute("aria-label",T(S.chkTitle)+" "+T(S.qOf)(qIndex+1,vis.length));
+  const bi = el("i"); bi.style.width=((qIndex+1)/vis.length*100)+"%"; bar.append(bi); wrap.append(bar);
   const box = el("div","q");
   const h = el("h1",null,T(q.lab)); h.id="q-title"; h.tabIndex=-1; box.append(h);
   const hint = [q.hint?T(q.hint):"", q.multi?T(S.multi):""].filter(Boolean).join(" ");
   if(hint) box.append(el("p","hint",hint));
   const opts = el("div","opts"); opts.setAttribute("role",q.multi?"group":"radiogroup"); opts.setAttribute("aria-labelledby","q-title");
-  const err = el("span","err");
+  const err = el("span","err"); err.setAttribute("role","alert");
   q.opts.forEach(([v,lab])=>{
     const lb = el("label","opt"); const inp=document.createElement("input");
     inp.type=q.multi?"checkbox":"radio"; inp.name=q.id; inp.value=v; inp.id="q-"+q.id+"-"+v;
@@ -1155,8 +1394,11 @@ function viewCheck(){
         else if(inp.checked){ cur=cur.filter(x=>!excl.includes(x)); opts.querySelectorAll("input").forEach(x=>{ if(excl.includes(x.value)) x.checked=false; }); }
         answers[q.id]=cur;
       } else answers[q.id]=v;
-      err.textContent="";
-      pg.firstChild.textContent = T(S.qOf)(qIndex+1, visibleQs(answers).length);
+      err.textContent=""; saveDraft();
+      const n = visibleQs(answers).length;
+      pos.textContent = T(S.qOf)(qIndex+1,n);
+      pct.textContent = Math.round((qIndex+1)/n*100)+"%";
+      counter.textContent = T(S.qAnswered)(visibleQs(answers).filter(x=> x.multi ? (answers[x.id]&&answers[x.id].length) : answers[x.id]!==undefined).length, n);
     });
     lb.append(inp, el("span",null,T(lab))); opts.append(lb);
   });
@@ -1168,55 +1410,114 @@ function viewCheck(){
   box.append(why);
   const nav = el("div","qnav");
   const back = el("button","backlink",T(S.back)); back.type="button"; back.hidden = qIndex===0;
-  back.addEventListener("click",()=>{ qIndex--; render(); });
+  back.addEventListener("click",()=>{ qIndex--; saveDraft(); render(); });
   const right = el("div","row"); const next = el("button","btn solid", qIndex===vis.length-1?T(S.finish):T(S.next)); next.type="button";
   next.addEventListener("click",()=>{
     const ok = q.multi ? (answers[q.id]&&answers[q.id].length) : answers[q.id];
     if(!ok){ err.textContent=T(S.pick); return; }
     const nv = visibleQs(answers);
-    const pos = nv.indexOf(q);
-    if(pos<nv.length-1){ qIndex=pos+1; render(); }
-    else { reportReady=true; lastLevel=null; location.hash="#report"; }
+    const p = nv.indexOf(q);
+    if(p<nv.length-1){ qIndex=p+1; saveDraft(); render(); }
+    else { reportReady=true; lastLevel=null; saveDraft(); location.hash="#report"; }
   });
   right.append(err,next); nav.append(back,right); box.append(nav);
+  const counter = el("p","fine"); counter.style.marginTop="18px"; counter.style.display="flex"; counter.style.gap="10px"; counter.style.flexWrap="wrap"; counter.style.alignItems="baseline";
+  const cnt = el("span",null,T(S.qAnswered)(answered,vis.length));
+  const saveNote = el("span",null,"· "+T(S.draftNote));
+  const clr = el("button","backlink","· "+T(S.clearAnswers)); clr.type="button";
+  clr.addEventListener("click",()=>{ if(confirm(T(S.clearAsk))){ answers={market:[],product:[]}; qIndex=0; reportReady=false; lastLevel=null; clearDraft(); render(); } });
+  counter.append(cnt,saveNote,clr); box.append(counter);
   wrap.append(box); app.append(wrap);
   setTimeout(()=>h.focus({preventScroll:true}),0);
 }
 
-function viewReport(opts){
+﻿function viewReport(opts){
   opts = opts||{};
   const wrap = el("div","container page");
+  // A bookmarked or refreshed #report reopens from the saved draft instead of showing an empty page.
+  if(!reportReady && !opts.sample && isComplete(answers)) reportReady = true;
   if(!reportReady){
+    const h1=el("h1","sr-only",T(S.repTitle)); wrap.append(h1);
     wrap.append(pageHead(null,T(S.repTitle)));
-    const e = el("div","empty"); e.append(el("p","muted",T(S.noReport)), link("#check","btn solid",T(S.heroCta))); wrap.append(e); app.append(wrap); return;
+    const e = el("div","empty");
+    let partial=null; try{ partial=JSON.parse(localStorage.getItem(DRAFT_KEY)||"null"); }catch(err){}
+    const nv=visibleQs(answers).length;
+    const nb=visibleQs(answers).filter(q=> q.multi ? (answers[q.id]&&answers[q.id].length) : answers[q.id]!==undefined).length;
+    if(partial && partial.answers && nb>0){
+      e.append(el("p","muted",T(S.resumeP)(Math.min(nb+1,nv),nv)));
+      const b1=link("#check","btn solid",T(S.resume)); e.append(b1);
+      const b2=el("button","btn",T(S.restart)); b2.type="button";
+      b2.addEventListener("click",()=>{ answers={market:[],product:[]}; qIndex=0; reportReady=false; clearDraft(); render(); });
+      e.append(b2);
+    } else {
+      e.append(el("p","muted",T(S.noReport)), link("#check","btn solid",T(S.heroCta)));
+    }
+    wrap.append(e); app.append(wrap); return;
   }
   const r = assess(answers);
-  // collect citations in order of appearance
-  const order = []; const num = (id)=>{ let i=order.indexOf(id); if(i<0){order.push(id); i=order.length-1;} return i+1; };
+  const {order,num} = citeOrder(r);
   const chips = (ids)=>{ const d=el("div","cites"); ids.forEach(id=>{ const a=link("#ref-"+id,"cite","["+num(id)+"] "+SRC[id].ref); a.addEventListener("click",ev=>{ev.preventDefault(); const t=document.getElementById("ref-"+id); if(t) t.scrollIntoView({behavior:"smooth",block:"center"});}); d.append(a); }); return d; };
-
-  // pre-register citation order: todo first, then markets
-  r.todo.forEach(t=>t.b.forEach(num));
-  r.perMarket.forEach(p=>p.hits.forEach(h=>h.r.basis.forEach(num)));
-  r.buyerHits.forEach(h=>h.r.basis.forEach(num));
+  const ref = refNo(r.a);
 
   if(opts.sample){ const bn=el("div","sample-banner"); bn.append(el("span",null,T(S.sampleBanner)), link("#check","btn solid small",T(S.sampleCta))); wrap.append(bn); }
   else if(!PRICING.charge){ const bn=el("div","sample-banner"); bn.append(el("span",null,T(S.freeBanner)(PRICING.price))); wrap.append(bn); }
+
+  // Take-it-away toolbar: the same data as the page, as plain text a boss can forward.
+  const bar = el("div","rep-actions");
+  const bt = el("div"); bt.append(el("b",null,T(S.repActions)), el("span","fine",T(S.repActionsP)));
+  const btr = el("div","row");
+  const cbtn=el("button","btn solid small",T(S.copyReport)); cbtn.type="button";
+  const cmsg=el("span","fine"); copyTo(cbtn,cmsg,()=>reportText(r,{sample:opts.sample}),null,T(S.repCopied));
+  const dbtn=el("button","btn small",T(S.dlReport)); dbtn.type="button";
+  const dmsg=el("span","fine"); dmsg.hidden=true;
+  dbtn.addEventListener("click",()=>{ const ok=downloadText("qingdan-"+ref+".txt",reportText(r,{sample:opts.sample})); dmsg.hidden=false; dmsg.textContent = ok ? "✓ "+ref : T(S.copyBlocked); });
+  const pbtn=el("button","btn small",T(S.printReport)); pbtn.type="button"; pbtn.addEventListener("click",()=>window.print());
+  btr.append(cbtn,cmsg,dbtn,dmsg,pbtn); bar.append(bt,btr); wrap.append(bar);
+
   const card = el("div","rep-card"); card.append(crestSvg("wm"));
-  const meta = el("div","rep-meta"); meta.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,refNo(answers)+" · "+T(S.repDate)+" "+new Date().toISOString().slice(0,10))); card.append(meta);
+  card.append(el("h1","sr-only",T(S.repTitle)+(opts.sample?" · "+T(S.sampleTag):"")+" · "+T(S.repRefLabel)+" "+ref));
+  const meta = el("div","rep-meta"); meta.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,ref+" · "+T(S.repDate)+" "+new Date().toISOString().slice(0,10))); card.append(meta);
   const top = el("div","rep-top"); top.append(stamp(r.level, lastLevel!==r.level)); lastLevel=r.level;
   const txt = el("div","txt"); txt.append(el("p",null,T(S.verdict[r.level])));
   if(r.bumped) txt.append(el("span","fine",T(S.bumpNote)));
   txt.append(el("span","fine",T(S.repCount)(order.length)));
-  top.append(txt); card.append(top); wrap.append(card);
+  top.append(txt); card.append(top);
+  // "Your situation": so a printed page or a forwarded photo still makes sense on its own.
+  const prof = el("div","rep-profile"); prof.append(el("span","rp-h",T(S.repProfile)));
+  const pl = el("dl","rp-list");
+  const addRow=(k,v)=>{ const row=el("div","rp-row"); row.append(el("dt",null,k), el("dd",null,v)); pl.append(row); };
+  addRow(T(PROF_LABEL.product), ansText("product",r.a));
+  addRow(T(PROF_LABEL.market), ansText("market",r.a));
+  profileRows(r.a).forEach(x=>addRow(x.label,x.value));
+  prof.append(pl); card.append(prof);
+  wrap.append(card);
 
   const s0 = el("section","rsec"); const ad = el("details","plain"); ad.append(el("summary",null,T(S.hAnswers)(visibleQs(r.a).length)));
   const dl = el("dl","answers"); visibleQs(r.a).forEach((q,i)=>{ const dt=el("dt",null,T(q.lab)); const dd2=el("dd"); dd2.append(el("span",null,ansText(q.id,r.a))); const eb=el("button","backlink",T(S.change)); eb.type="button"; eb.style.fontSize="13px"; eb.addEventListener("click",()=>{qIndex=i; keepIdx=true; location.hash="#check";}); dd2.append(eb); dl.append(dt,dd2); });
   ad.append(dl); s0.append(ad); if(!opts.sample) wrap.append(s0);
 
   const s1 = el("section","rsec"); s1.append(el("h2",null,T(S.hTodo)));
-  const ol = el("ol","todo"); r.todo.forEach(t=>{ const li=el("li"); const d=el("div"); const pp=el("p"); if(t.w){ pp.append(el("span","who",T(WHO[t.w]))); } pp.append(document.createTextNode(T(t.t))); d.append(pp); if(t.b.length) d.append(chips(t.b)); li.append(d); ol.append(li); });
-  s1.append(ol); const tc=link("#calc","more",T(S.toCalc)); tc.style.display="inline-block"; tc.style.marginTop="12px"; s1.append(tc); wrap.append(s1);
+  const done = opts.sample ? {} : loadTodo(ref);
+  const doneLine = el("p","fine");
+  function drawDone(){
+    const n=Object.values(done).filter(Boolean).length;
+    doneLine.textContent = n ? T(S.hDone)+" · "+T(S.todoDone)(n,r.todo.length) : "";
+  }
+  const ol = el("ol","todo"); r.todo.forEach((t,i)=>{
+    const li=el("li"); const d=el("div"); const pp=el("p");
+    if(t.w){ pp.append(el("span","who",T(WHO[t.w]))); }
+    pp.append(document.createTextNode(T(t.t))); d.append(pp); if(t.b.length) d.append(chips(t.b));
+    if(!opts.sample){
+      const ck=el("label","ck ck-inline"); const inp=document.createElement("input"); inp.type="checkbox";
+      inp.checked=!!done[i]; inp.setAttribute("aria-label",T(S.markDone)+" "+(i+1));
+      inp.addEventListener("change",()=>{ done[i]=inp.checked; saveTodo(ref,done); drawDone(); });
+      ck.append(inp, el("span",null,T(S.markDone))); d.append(ck);
+    }
+    li.append(d); ol.append(li);
+  });
+  s1.append(ol); const tc=link("#calc","more",T(S.toCalc)); tc.style.display="inline-block"; tc.style.marginTop="12px"; s1.append(tc);
+  if(!opts.sample){ s1.append(doneLine); drawDone(); }
+  wrap.append(s1);
 
   const ruleEl = (h)=>{
     const g=h.r, rule=el("div","rule");
@@ -1250,6 +1551,18 @@ function viewReport(opts){
     const body=el("div","mkt-body"); r.buyerHits.forEach(h=>body.append(ruleEl(h))); d.append(body); sb.append(d); wrap.append(sb);
   }
 
+  // Aggregated material list: one line per document the rules above actually ask for.
+  const mats = materialRows(r);
+  if(mats.length){
+    const sm = el("section","rsec"); sm.append(el("h2",null,T(S.hDocs)), el("p","muted",T(S.hDocsP)));
+    const ul = el("ul","mats");
+    mats.forEach(m=>{ const li=el("li"); li.append(el("span",null,m.t));
+      li.append(el("span","fine",m.rule));
+      const c=el("div","cites"); m.b.forEach(id=>{ if(SRC[id]){ const a=link("#ref-"+id,"cite","["+num(id)+"] "+SRC[id].ref); a.addEventListener("click",ev=>{ev.preventDefault(); const t=document.getElementById("ref-"+id); if(t) t.scrollIntoView({behavior:"smooth",block:"center"});}); c.append(a);} });
+      li.append(c); ul.append(li); });
+    sm.append(ul); wrap.append(sm);
+  }
+
   const s3 = el("section","rsec"); const dd = el("details","plain"); dd.append(el("summary",null,T(S.hReply)));
   const reply = buyerReply(r.a); const pre = el("div","reply",reply); dd.append(pre);
   const cr = el("div","row"); cr.style.marginTop="10px"; const cb=el("button","btn small",T(S.copy)); cb.type="button"; const cm=el("span","fine"); copyTo(cb,cm,()=>reply,pre); cr.append(cb,cm); dd.append(cr);
@@ -1257,14 +1570,19 @@ function viewReport(opts){
 
   const s4 = el("section","rsec"); s4.append(el("h2",null,T(S.hRefs)));
   const refs = el("ol","refs"); order.forEach(id=>{ const s=SRC[id]; const li=el("li"); li.id="ref-"+id; li.style.scrollMarginTop="90px";
-    li.append(el("span","ref",s.ref+" — "), document.createTextNode(T(s.t)+"。"+T(s.by)+"。 ")); li.append(ext(s.url,"",T(S.dOpen)+" ↗")); refs.append(li); });
+    const ends = t=>/[。.!？?；;]$/.test(t);
+    li.append(el("span","ref",s.ref+" — "), document.createTextNode(T(s.t)+(ends(T(s.t))?" ":"。 ")+T(s.by)+(ends(T(s.by))?" ":"。 ")));
+    li.append(ext(s.url,"",T(S.dOpen)+" ↗")); refs.append(li); });
   s4.append(refs); wrap.append(s4);
 
-  const nav = el("div","row"); nav.style.marginTop="36px";
+  const note = el("div","rep-note"); note.append(el("p",null,T(S.repNote)), el("p","fine",T(S.repRefLabel)+" "+ref));
+  wrap.append(note);
+
+  const nav = el("div","row rep-nav"); nav.style.marginTop="36px";
   if(opts.sample){ nav.append(link("#check","btn solid",T(S.sampleCta))); wrap.append(nav); app.append(wrap); return; }
   nav.append(link("#decoder","btn solid",T(S.toDecoder)),link("#join","btn",T(S.toAsk)));
-  const e1=el("button","btn",T(S.edit)); e1.type="button"; e1.addEventListener("click",()=>{qIndex=0; location.hash="#check";});
-  const e2=el("button","btn",T(S.restart)); e2.type="button"; e2.addEventListener("click",()=>{answers={market:[],product:[]}; qIndex=0; reportReady=false; location.hash="#check";});
+  const e1=el("button","btn",T(S.edit)); e1.type="button"; e1.addEventListener("click",()=>{qIndex=0; keepIdx=true; location.hash="#check";});
+  const e2=el("button","btn",T(S.restart)); e2.type="button"; e2.addEventListener("click",()=>{answers={market:[],product:[]}; qIndex=0; reportReady=false; lastLevel=null; clearDraft(); location.hash="#check";});
   nav.append(e1,e2); wrap.append(nav);
   app.append(wrap);
 }
@@ -1273,12 +1591,34 @@ function viewRules(){
   const wrap = el("div","container page");
   wrap.append(pageHead(T(S.navRules),T(S.rulesTitle),T(S.rulesP)));
   const f = el("div","filters"); f.setAttribute("role","group");
+  f.append(el("span","fl",T(S.fMarket)));
   const mk = ["all","eu","uk","us","me","buyer"];
   mk.forEach(v=>{ const b=el("button",null, v==="all"?T(S.all):T(MARKET[v])); b.type="button"; b.setAttribute("aria-pressed",String(libFilter===v)); b.addEventListener("click",()=>{libFilter=v; render();}); f.append(b); });
-  wrap.append(f);
+  const f2 = el("div","filters"); f2.setAttribute("role","group"); f2.append(el("span","fl",T(S.fStatus)));
+  [["all",T(S.all)],["inforce",T(STATUS.inforce)],["soon",T(STATUS.soon)],["proposal",T(STATUS.proposal)],["buyer",T(STATUS.buyer)]].forEach(([v,lab])=>{
+    const b=el("button",null,lab); b.type="button"; b.setAttribute("aria-pressed",String(ruleStatus===v));
+    b.addEventListener("click",()=>{ruleStatus=v; render();}); f2.append(b);
+  });
+  if(myInd && IND_BY[myInd]){
+    const b=el("button",null,T(S.fMine)+" · "+indName(myInd).split("（")[0].split(" (")[0]); b.type="button";
+    b.setAttribute("aria-pressed",String(indOnly));
+    b.addEventListener("click",()=>{ indOnly=!indOnly; render(); });
+    f2.append(b);
+  }
+  wrap.append(f,f2);
+  const mine = (myInd && IND_BY[myInd]) ? IND_BY[myInd].rules : null;
+  const list = RULES.filter(r=>(libFilter==="all"||r.mkt===libFilter)
+    && (ruleStatus==="all" || r.status===ruleStatus)
+    && (!indOnly || (mine && mine.includes(r.id))));
+  wrap.append(el("p","fine",T(S.rulesCount)(list.length)));
+  if(!list.length){ const e=el("div","empty"); e.append(el("p","muted",T(S.noRule))); wrap.append(e); }
   const lib = el("div","lib");
-  RULES.filter(r=>libFilter==="all"||r.mkt===libFilter).forEach(r=>{
-    const a = link("#rule-"+r.id); const mid=el("div"); mid.style.minWidth="0"; mid.append(el("b",null,T(r.t)), el("span","when",T(r.short)+" · "+r.basis.map(id=>SRC[id].ref).join(" · "))); mid.append(el("span","stag "+r.status,T(STATUS[r.status])));
+  list.forEach(r=>{
+    const a = link("#rule-"+r.id); const mid=el("div"); mid.style.minWidth="0";
+    mid.append(el("b",null,T(r.t)));
+    mid.append(el("span","when",T(r.short)+" · "+r.basis.map(id=>SRC[id].ref).join(" · ")));
+    mid.append(el("span","stag "+r.status,T(STATUS[r.status])));
+    mid.append(el("span","needline",T(S.asksYou)+"："+T(r.need)));
     a.append(el("span","mk",T(MARKET[r.mkt]).toUpperCase()), mid, el("span","arr","→")); lib.append(a);
   });
   wrap.append(lib); app.append(wrap);
@@ -1401,8 +1741,10 @@ function viewMethod(){
 function viewJoin(){
   const wrap = el("div","narrow page");
   wrap.append(pageHead(T(S.navJoin),T(S.joinTitle),T(S.joinP)));
-  const f = el("form","form");
-  const field=(id,labKey,tag,req)=>{ const d=el("div","field"); const l=el("label",null,T(S[labKey])); l.htmlFor=id; const i=document.createElement(tag); i.id=id; if(req) i.required=true; d.append(l,i); return {box:d,input:i}; };
+  const f = el("form","form"); f.noValidate=true;
+  const field=(id,labKey,tag,req)=>{ const d=el("div","field"); const l=el("label",null,T(S[labKey])); l.htmlFor=id; const i=document.createElement(tag); i.id=id; if(req) i.required=true; const e=el("span","err"); e.id=id+"-err"; e.hidden=true; i.setAttribute("aria-describedby",id+"-err"); d.append(l,i,e); return {box:d,input:i,error:e}; };
+  const showErr=(fd,msg)=>{ fd.error.textContent=msg; fd.error.hidden=false; fd.input.setAttribute("aria-invalid","true"); };
+  const clearErr=(fd)=>{ fd.error.hidden=true; fd.error.textContent=""; fd.input.removeAttribute("aria-invalid"); };
   const kindField=field("lf-type","lfType","select",true); kindField.input.name="request_type";
   [["question","lfTypeQuestion"],["questionnaire","lfTypeQuestionnaire"],["report","lfTypeReport"],["other","lfTypeOther"]].forEach(([v,k])=>{const o=el("option",null,T(S[k]));o.value=v;kindField.input.append(o);});
   const nameField=field("lf-name","lfName","input",false); nameField.input.autocomplete="organization";
@@ -1410,14 +1752,27 @@ function viewJoin(){
   const contactField=field("lf-contact","lfContact","input",true); contactField.input.autocomplete="off";
   const painField=field("lf-pain","lfPain","textarea",true); painField.input.maxLength=1000;
   f.append(kindField.box,nameField.box,productField.box,contactField.box,painField.box);
-  const consent=el("label","ck"); const consentInput=document.createElement("input"); consentInput.type="checkbox"; consentInput.required=true; consentInput.name="consent"; consent.append(consentInput,el("span",null,T(S.lfConsent))); f.append(consent);
+  const consentWrap=el("div","field");
+  const consent=el("label","ck"); const consentInput=document.createElement("input"); consentInput.type="checkbox"; consentInput.required=true; consentInput.name="consent"; consent.append(consentInput,el("span",null,T(S.lfConsent)));
+  const consentErr=el("span","err"); consentErr.hidden=true; consentWrap.append(consent,consentErr); f.append(consentWrap);
+  contactField.input.addEventListener("input",()=>clearErr(contactField));
+  painField.input.addEventListener("input",()=>clearErr(painField));
+  consentInput.addEventListener("change",()=>{ consentErr.hidden=true; });
   const hp = document.createElement("input"); hp.type="text"; hp.name="_honey"; hp.tabIndex=-1; hp.autocomplete="off"; hp.setAttribute("aria-hidden","true"); hp.style.cssText="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"; f.append(hp);
   const btn = el("button","btn solid",T(S.lfSubmit)); btn.type="submit"; const r=el("div","row"); r.append(btn); f.append(r);
   const st = el("p","status"); f.append(st);
   const copyBox = el("div"); copyBox.hidden=true; const pre=el("div","reply"); const cr=el("div","row"); cr.style.marginTop="8px"; const cb=el("button","btn small",T(S.copyPlain)); cb.type="button"; const cm=el("span","fine"); copyTo(cb,cm,()=>pre.textContent,pre); cr.append(cb,cm); copyBox.append(pre,cr); f.append(copyBox);
   f.addEventListener("submit", async ev=>{
-    ev.preventDefault(); btn.disabled=true; copyBox.hidden=true;
+    ev.preventDefault(); copyBox.hidden=true;
     const v=id=>document.getElementById(id).value.trim();
+    // Inline, bilingual validation so the user is never bounced by the browser's own popup.
+    [contactField,painField].forEach(clearErr); consentErr.hidden=true; st.textContent=""; st.className="status";
+    const missing=[];
+    if(!v("lf-contact")){ showErr(contactField,T(S.errContact)); missing.push(contactField.input); }
+    if(v("lf-pain").length<5){ showErr(painField,T(S.errPain)); missing.push(painField.input); }
+    if(!consentInput.checked){ consentErr.textContent=T(S.errConsent); consentErr.hidden=false; missing.push(consentInput); }
+    if(missing.length){ st.textContent=T(S.formErrCount)(missing.length); missing[0].focus(); return; }
+    btn.disabled=true;
     const rec={type:kindField.input.value,factory:v("lf-name").slice(0,200),product:v("lf-product").slice(0,300),contact:v("lf-contact").slice(0,100),pain:v("lf-pain").slice(0,1000)};
     const risk = reportReady ? assess(answers).level : "";
     const query=new URLSearchParams(location.search);
@@ -1493,7 +1848,7 @@ function viewCalc(){
   wrap.append(pageHead(T(S.navCalc),T(S.calcH),T(S.calcP)));
   const grid = el("div","calc");
   // inputs
-  const form = el("div","panel"); form.style.minWidth="0";
+  const form = el("div","panel calc-in"); form.style.minWidth="0";
   const fh = el("div","panel-h"); const eb = el("span","badge",calcIsExample?T(S.calcExample):T(S.calcYours)); fh.append(el("b",null,T(S.calcIn)), eb); form.append(fh);
   const rerender = ()=>{ calcIsExample=false; eb.textContent=T(S.calcYours); drawOut(); };
   const num = (id,val,step)=>{ const i=document.createElement("input"); i.type="number"; i.min="0"; i.step=step||"any"; i.inputMode="decimal"; i.id=id; i.value=val; return i; };
@@ -1502,6 +1857,7 @@ function viewCalc(){
   calc.kwh.forEach((v,k)=>{ const f=el("label","mf"); f.append(el("span",null,MONTHS[lang][k])); const i=num("kwh-"+k,v,"1"); i.addEventListener("input",()=>{calc.kwh[k]=+i.value||0; rerender();}); f.append(i); mg.append(f); });
   form.append(mg);
   const gl = el("label","fld"); gl.append(el("span",null,T(S.calcGreen))); const gi=num("green",calc.green,"1"); gi.addEventListener("input",()=>{calc.green=+gi.value||0; rerender();}); gl.append(gi); form.append(gl);
+  form.append(el("p","fine",T(S.calcGreenNote)));
   form.append(el("div","calc-sec",T(S.calcFuel)));
   FUELS.forEach(f=>{ const l=el("label","fld"); l.append(el("span",null,T(f.lab)+(lang==="zh"?"（"+T(f.unit)+"/年）":" ("+T(f.unit)+"/yr)"))); const i=num("f-"+f.id,calc[f.id]); i.addEventListener("input",()=>{calc[f.id]=+i.value||0; rerender();}); l.append(i); form.append(l); });
   form.append(el("p","fine",T(S.calcCoal)));
@@ -1520,6 +1876,13 @@ function viewCalc(){
     [[T(S.tS1),r.s1,"tCO₂e","GRI 305-1"],[T(S.tS2),r.s2,"tCO₂e","GRI 305-2"],[T(S.tTot),r.total,"tCO₂e","GHG Protocol"],[T(S.tInt),r.intensity,"tCO₂e/t",lang==="zh"?"每吨产品":"per tonne"]].forEach(([l,v,u,c],i)=>{
       const t=el("div","tile"+(i===2?" main":"")); t.append(el("span","tl",l), el("b",null,fmt(v,i===3?3:1)), el("span","tu",u+" · "+c)); tiles.append(t); });
     out.append(tiles);
+    // How to read the numbers: boundary, factor, exclusions, and the use limits — next to the figures, not buried.
+    const rd = el("div","why"); rd.style.marginTop="16px";
+    rd.append(el("span","why-h",T(S.calcReadH)));
+    const ul1=el("ul"); T(S.calcRead).forEach(x=>ul1.append(el("li",null,x))); rd.append(ul1);
+    const h2=el("span","why-h",T(S.calcLimitsH)); h2.style.display="block"; h2.style.marginTop="12px"; rd.append(h2);
+    const ul2=el("ul"); T(S.calcLimits).forEach(x=>ul2.append(el("li",null,x))); rd.append(ul2);
+    out.append(rd);
     // breakdown bar
     const parts = [{l:T(S.calcElecShort),v:r.s2}].concat(r.fuels.filter(x=>x.t>0).map(x=>({l:T(x.f.lab),v:x.t})));
     const tot = parts.reduce((s,x)=>s+x.v,0);
@@ -1544,7 +1907,6 @@ function viewCalc(){
     const txt = dataSheet(calc,r); const pre=el("div","reply",txt); ds.append(pre);
     const cr=el("div","row"); cr.style.marginTop="8px"; const cb=el("button","btn small",T(S.copyPlain)); cb.type="button"; const cm=el("span","fine"); copyTo(cb,cm,()=>txt,pre); cr.append(cb,cm); ds.append(cr);
     out.append(ds);
-    const nt = el("div","why"); nt.style.marginTop="18px"; nt.append(el("span","why-h",T(S.calcLimitsH))); const ul=el("ul"); T(S.calcLimits).forEach(x=>ul.append(el("li",null,x))); nt.append(ul); out.append(nt);
   }
   drawOut();
   grid.append(form,out); wrap.append(grid); app.append(wrap);
@@ -1740,11 +2102,42 @@ function viewHome(){
   l.append(el("span","eyebrow",T(S.heroEyebrow)));
   const h = el("h1"); const [a,b]=T(S.heroH); h.append(document.createTextNode(a), document.createElement("br"), el("em",null,b)); l.append(h);
   l.append(el("p","lede",T(S.heroP2)));
-  const pick = el("div","pick"); pick.append(el("span","pick-l",T(S.pickL)));
-  const chips = el("div","chips");
-  IND.forEach(x=>{ const a2=link("#guide-"+x.id,"chip"+(myInd===x.id?" on":""),indName(x.id).split("（")[0].split(" (")[0]); a2.addEventListener("click",()=>setInd(x.id)); chips.append(a2); });
-  pick.append(chips); l.append(pick);
-  const cta = el("div","cta"); cta.append(link("#check","btn solid",T(S.heroCta)), link("#sample","textlink",T(S.heroCta3))); l.append(cta);
+  // Two-step picker: product -> market -> straight into the check with those two answers filled in.
+  const shortInd = id => indName(id).split("（")[0].split(" (")[0];
+  const sel = {ind: (myInd && IND_BY[myInd]) ? myInd : null, markets: (answers.market||[]).slice()};
+  const selbox = el("div","selbox");
+  const q1 = el("div","sel-step"); q1.append(el("span",null,T(S.step1)));
+  const c1 = el("div","chips"); const chip1 = {};
+  IND.forEach(x=>{ const b2=el("button","chip",shortInd(x.id)); b2.type="button"; b2.setAttribute("aria-pressed","false");
+    b2.addEventListener("click",()=>{ sel.ind = (sel.ind===x.id) ? null : x.id; if(sel.ind) setInd(sel.ind); drawSel(); });
+    chip1[x.id]=b2; c1.append(b2); });
+  q1.append(c1); selbox.append(q1);
+  const q2 = el("div","sel-step"); q2.append(el("span",null,T(S.step2)), el("span","sel-hint",T(S.step2Hint)));
+  const c2 = el("div","chips"); const chip2 = {};
+  ["eu","uk","us","me","sea","other"].forEach(m=>{ const b2=el("button","chip",T(MARKET[m])); b2.type="button";
+    b2.addEventListener("click",()=>{ const i=sel.markets.indexOf(m); if(i<0) sel.markets.push(m); else sel.markets.splice(i,1); drawSel(); });
+    chip2[m]=b2; c2.append(b2); });
+  q2.append(c2); selbox.append(q2);
+  const goRow = el("div","sel-go");
+  const go = el("button","btn solid",T(S.heroCta)); go.type="button";
+  const hint = el("span","sel-hint",T(S.startMineHint));
+  go.addEventListener("click",()=>{
+    if(sel.ind) answers.product=[sel.ind];
+    answers.market=sel.markets.slice();
+    reportReady=false; lastLevel=null;
+    qIndex = firstUnanswered(answers); saveDraft(); location.hash="#check";
+  });
+  goRow.append(go,hint); selbox.append(goRow);
+  l.append(selbox);
+  function drawSel(){
+    Object.entries(chip1).forEach(([id,b2])=>{ const on=sel.ind===id; b2.classList.toggle("on",on); b2.setAttribute("aria-pressed",String(on)); });
+    Object.entries(chip2).forEach(([m,b2])=>{ const on=sel.markets.includes(m); b2.classList.toggle("on",on); b2.setAttribute("aria-pressed",String(on)); });
+    q2.hidden = !sel.ind;
+    go.textContent = (sel.ind && sel.markets.length) ? T(S.startMine) : T(S.heroCta);
+    hint.textContent = (sel.ind && sel.markets.length) ? T(S.startMineP) : T(S.startMineHint);
+  }
+  drawSel();
+  const cta = el("div","cta direct-cta"); cta.append(link("#sample","textlink",T(S.heroCta3))); l.append(cta);
   const pv = el("a","preview"); pv.href="#sample";
   const ex = sampleAssess();
   const pm = el("div","pv-meta"); pm.append(el("span",null,T(S.repTitle).toUpperCase()), el("span",null,T(S.sampleTag))); pv.append(pm);
@@ -1758,6 +2151,13 @@ function viewHome(){
   const band = el("section","stats"); const bc = el("div","container stats-g");
   [[String(RULES.length),T(S.st1)],[String(Object.keys(SRC).length),T(S.st2)],[String(IND.length),T(S.st3)],[String(FAQ.length),T(S.st4)]].forEach(([n,l2])=>{ const d=el("div","stat"); d.append(el("b",null,n), el("span",null,l2)); bc.append(d); });
   band.append(bc); app.append(band);
+
+  // What you get, stated before the first click (copy already used by the report itself).
+  const gs = el("section","container gets");
+  const gh = el("div"); gh.append(el("span","eyebrow",T(S.getsEyebrow)), el("h2",null,T(S.getsH))); gs.append(gh);
+  const gg = el("div","gets-grid");
+  S.gets.forEach(([t,d],i)=>{ const d2=el("div","get"); d2.append(el("div","n",String(i+1).padStart(2,"0")), el("h3",null,T(t)), el("p",null,T(d))); gg.append(d2); });
+  gs.append(gg); app.append(gs);
 
   const biz = el("section","container biz");
   const bh = el("div","biz-head"); bh.append(el("span","eyebrow",T(S.bizEyebrow)),el("h2",null,T(S.bizTitle)),el("p",null,T(S.bizIntro))); biz.append(bh);
@@ -1830,7 +2230,7 @@ function viewGuide(id){
   const aside = el("aside","aside");
   aside.append(el("h3",null,T(S.gNext)));
   const go = el("button","btn solid",T(S.gCheck)); go.type="button";
-  go.addEventListener("click",()=>{ answers={market:[],product:[id]}; reportReady=false; qIndex=1; keepIdx=true; location.hash="#check"; });
+  go.addEventListener("click",()=>{ answers={market:[],product:[id]}; reportReady=false; qIndex=1; keepIdx=true; saveDraft(); location.hash="#check"; });
   aside.append(el("p","fine",T(S.gCheckP)), go, link("#calc","textlink",T(S.gCalc)));
   aside.append(el("h3",null,T(S.gDates)), timelineEl(id, 5));
   grid.append(main, aside); wrap.append(grid); app.append(wrap);
@@ -1880,11 +2280,24 @@ function render(){
   if(key!==lastView) window.scrollTo(0,0);
   lastView = key;
 }
-window.addEventListener("hashchange",()=>{ if(route()[0]==="check" && lastView && !lastView.startsWith("check") && !keepIdx) qIndex=0; keepIdx=false; document.getElementById("links").classList.remove("open"); document.getElementById("menu-btn").setAttribute("aria-expanded","false"); render(); });
+window.addEventListener("hashchange",()=>{
+  const rv=route()[0];
+  // Coming back to the check from elsewhere: resume where the saved draft stopped, unless a view asked to keep the index.
+  if(rv==="check" && lastView && !lastView.startsWith("check") && !keepIdx) qIndex = reportReady ? 0 : firstUnanswered(answers);
+  keepIdx=false;
+  document.getElementById("links").classList.remove("open");
+  document.getElementById("menu-btn").setAttribute("aria-expanded","false");
+  render();
+});
 document.getElementById("menu-btn").addEventListener("click",e=>{ const l=document.getElementById("links"); const o=l.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded",String(o)); });
+/* Printing: <details> content is hidden when closed, so open everything before the print dialog. */
+let printWasClosed=[];
+window.addEventListener("beforeprint",()=>{ printWasClosed=[...document.querySelectorAll("details:not([open])")]; printWasClosed.forEach(d=>{d.open=true;}); });
+window.addEventListener("afterprint",()=>{ printWasClosed.forEach(d=>{d.open=false;}); printWasClosed=[]; });
 function setLang(x){ lang=x; try{localStorage.setItem("gl-lang",x);}catch(e){} lastView="__"; const y=window.scrollY; render(); window.scrollTo(0,y); }
 document.getElementById("lang-zh").addEventListener("click",()=>setLang("zh"));
 document.getElementById("lang-en").addEventListener("click",()=>setLang("en"));
+restoreDraft();
 render();
 })();
 </script>
