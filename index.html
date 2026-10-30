@@ -680,12 +680,12 @@ navRules:{zh:"法规库",en:"Rules"}, navDec:{zh:"问卷解读",en:"Questionnair
   repTitle:{zh:"订单风险检查单",en:"Order risk report"},
   repDate:{zh:"生成于",en:"Generated"},
   repCount:{zh:(n)=>`本报告引用 ${n} 份官方文件和国际标准，见文末。`,en:(n)=>`This report cites ${n} official documents and standards, listed at the end.`},
-  lvl:{high:{zh:"高风险",en:"High risk"},mid:{zh:"需要准备",en:"Prepare now"},low:{zh:"暂时安全",en:"Low for now"}},
+  lvl:{high:{zh:"高风险",en:"High risk"},mid:{zh:"需要准备",en:"Prepare now"},low:{zh:"目前未发现较高风险",en:"No higher risk found"}},
   lvlEn:{high:"HIGH",mid:"MEDIUM",low:"LOW"},
   verdict:{
-    high:{zh:"已有生效的规则直接点到你的产品或客户。拿不出数据，客户要么压价，要么换一家能给数据的供应商。",en:"A rule in force applies directly to your product or buyer. Without data, buyers push price down or move to a supplier who can provide it."},
-    mid:{zh:"现在还不会卡单，但客户问卷和新规则正在路上。现在整理基础数据，成本最低。",en:"Orders are not blocked yet, but questionnaires and new rules are coming. Organising basic data now costs least."},
-    low:{zh:"你的主要市场目前没有点名你的进口碳规则。留意跨国品牌客户的供应商问卷即可。",en:"No import carbon rule names you in your main markets. Watch for supplier questionnaires from multinational buyers."}
+    high:{zh:"根据已填信息，部分规则或客户要求可能需要优先核实。请结合产品编码、交易角色和官方最新要求确认。",en:"Based on your answers, some rules or buyer requirements may need priority review. Check product codes, your role and current official requirements."},
+    mid:{zh:"根据已填信息，有需要准备或进一步核实的事项。建议先整理基础资料，再向客户和相关机构确认。",en:"Your answers indicate items to prepare or verify. Organise your records and confirm requirements with your buyer and relevant authorities."},
+    low:{zh:"在本工具覆盖的规则和已填信息范围内，暂未识别出较高风险；这不代表合规或没有其他要求。请核对客户要求和官方最新信息。",en:"No higher risk was identified within the rules covered and answers provided. This does not establish compliance or rule out other obligations; check buyer requirements and current official sources."}
   },
   navCalc:{zh:"碳数据计算",en:"Carbon data"},
   calcH:{zh:"把电费单变成客户要的碳数据",en:"Turn power bills into the carbon data buyers ask for"},
@@ -1481,6 +1481,7 @@ function viewCheck(){
   const txt = el("div","txt"); txt.append(el("p",null,T(S.verdict[r.level])));
   if(r.bumped) txt.append(el("span","fine",T(S.bumpNote)));
   txt.append(el("span","fine",T(S.repCount)(order.length)));
+  txt.append(el("p","fine",T(S.m3p)));
   top.append(txt); card.append(top);
   // "Your situation": so a printed page or a forwarded photo still makes sense on its own.
   const prof = el("div","rep-profile"); prof.append(el("span","rp-h",T(S.repProfile)));
