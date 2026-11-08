@@ -2545,6 +2545,55 @@ document.getElementById("lang-en").addEventListener("click",()=>setLang("en"));
   }
 })();
 
+/* ---- export key dates to calendar ---- */
+(function(){
+  function esc(v){ return String(v||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
+  function pad(n){ return String(n).padStart(2,"0"); }
+  function stamp(){ const d=new Date(); return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+"Z"; }
+  function download(){
+    const today=new Date().toISOString().slice(0,10);
+    const items=TIMELINE.filter(function(x){ return x.d>=today; }).slice().sort(function(a,b){ return a.d<b.d?-1:1; });
+    const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Qingdan//Key dates//"+(lang==="en"?"EN":"ZH"),"CALSCALE:GREGORIAN","METHOD:PUBLISH","X-WR-CALNAME:"+(lang==="en"?"Qingdan key dates":"青单 · 关键日期")];
+    items.forEach(function(x){
+      const d=x.d.replace(/-/g,"");
+      const nx=new Date(x.d); nx.setDate(nx.getDate()+1);
+      const d2=nx.toISOString().slice(0,10).replace(/-/g,"");
+      const r=RULE[x.r];
+      lines.push("BEGIN:VEVENT");
+      lines.push("UID:qingdan-"+x.r+"-"+d+"@zachclaude.github.io");
+      lines.push("DTSTAMP:"+stamp());
+      lines.push("DTSTART;VALUE=DATE:"+d);
+      lines.push("DTEND;VALUE=DATE:"+d2);
+      lines.push("SUMMARY:"+esc(T(x.t)));
+      if(r) lines.push("DESCRIPTION:"+esc(T(r.short)));
+      lines.push("END:VEVENT");
+    });
+    lines.push("END:VCALENDAR");
+    const blob=new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url; a.download=(lang==="en"?"qingdan-key-dates":"青单-关键日期")+".ics";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+  }
+  function addBtn(){
+    const sec=document.querySelector("main .sec2");
+    if(!sec || sec.querySelector(".ics-btn")) return;
+    const b=document.createElement("button");
+    b.type="button"; b.className="btn ics-btn";
+    b.textContent=lang==="en"?"Add to calendar":"加入日历";
+    b.addEventListener("click", download);
+    const head=sec.querySelector(".sec2-h") || sec;
+    head.appendChild(b);
+  }
+  const appEl=document.getElementById("app");
+  if(appEl && "MutationObserver" in window){
+    new MutationObserver(function(){ addBtn(); }).observe(appEl,{childList:true});
+  }
+  const baseRender=render;
+  render=function(){ baseRender(); setTimeout(addBtn, 60); };
+})();
+
 restoreDraft();
 render();
 })();
@@ -2731,6 +2780,11 @@ p{text-wrap:pretty}
  .nav .links a:not(.btn) + a:not(.btn){border-top:1px solid var(--line)}
  .nav .links a[aria-current="page"]{background:var(--mint);box-shadow:none}
 }
+
+/* calendar export button */
+.ics-btn{margin-left:10px;min-height:40px;padding:7px 16px;font-size:14px;border-radius:999px;border-width:1px;background:var(--white)}
+.ics-btn:hover{background:var(--mint);border-color:var(--leaf)}
+@media (max-width:700px){.ics-btn{margin-left:0;margin-top:8px}}
 </style>
 
 
